@@ -1,13 +1,12 @@
 package main
 import "fmt"
 
-func main() {
-
+func main(){
     var nome string
     var idade int
     var classificacao string
 
-    fmt.Scan(&nome, &idade)
+    fmt.Scan(&nome,&idade)
 
     if idade < 12 {
         classificacao = "crianca"
@@ -21,5 +20,5 @@ func main() {
         classificacao = "mumia"
     }
 
-    fmt.Print(nome, " eh ", classificacao,"\n")
+    fmt.Println(nome,"eh",classificacao)
 }

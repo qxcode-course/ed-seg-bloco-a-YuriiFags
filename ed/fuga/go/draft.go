@@ -6,16 +6,14 @@ func main() {
 
     pos := F
 
-    for {
-        pos = ((pos + D) + 16) % 16 
+    for{
+        pos = ((pos + D) + 16) % 16
 
-        if pos == P {
-            fmt.Println("N")
-            return
-        }
         if pos == H {
             fmt.Println("S")
-            return
+        }
+        if pos == P {
+            fmt.Println("N")
         }
     }
 }

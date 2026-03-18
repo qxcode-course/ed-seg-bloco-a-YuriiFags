@@ -1,0 +1,16 @@
+2026-03-17 08:19:44, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-17 08:19:45, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-17 08:20:00, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-17 08:23:21, EXEC, v:1, k:ed@pintando, mode:FULL, size:17, fail:COMP
+2026-03-17 08:23:33, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:17
+2026-03-17 08:24:01, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100, size:17
+2026-03-17 08:24:02, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-17 08:24:33, SELF, v:1, k:ed@pintando, self:1, rate:100, study:8
+2026-03-17 08:24:45, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-17 08:29:23, EXEC, v:1, k:ed@mumia, mode:FULL, rate:100, size:24
+2026-03-17 08:29:30, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-17 08:29:54, SELF, v:1, k:ed@mumia, self:1, rate:100, study:5
+2026-03-17 08:31:04, SELF, v:1, k:ed@pintando, self:1, rate:100, study:5
+2026-03-17 08:31:24, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-17 08:40:06, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-17 15:45:54, MOVE, v:1, k:ed@pedra, mode:PICK
