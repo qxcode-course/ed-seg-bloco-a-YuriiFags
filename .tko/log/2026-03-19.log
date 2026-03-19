@@ -1,0 +1,34 @@
+2026-03-19 14:55:49, MOVE, v:1, k:ed@baruel, mode:DOWN
+2026-03-19 14:55:51, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-19 15:03:37, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:23
+2026-03-19 15:04:02, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:22
+2026-03-19 15:04:13, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-19 15:21:43, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:44
+2026-03-19 15:22:58, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:47
+2026-03-19 15:23:15, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:47
+2026-03-19 15:25:16, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:47
+2026-03-19 15:25:32, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:47
+2026-03-19 15:25:46, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:47
+2026-03-19 15:26:39, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-19 15:33:12, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-19 15:33:14, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-19 15:33:19, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-19 15:45:44, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-19 15:45:49, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-19 15:45:52, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:47
+2026-03-19 15:45:55, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0
+2026-03-19 15:47:02, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:47
+2026-03-19 15:47:39, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:47
+2026-03-19 15:48:18, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:47
+2026-03-19 15:48:44, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:47
+2026-03-19 15:53:42, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-19 16:20:04, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-19 16:20:18, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0
+2026-03-19 16:28:53, EXEC, v:1, k:ed@baruel, mode:FULL, size:60, fail:COMP
+2026-03-19 16:29:06, EXEC, v:1, k:ed@baruel, mode:FULL, rate:75, size:60
+2026-03-19 16:33:28, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100, size:64
+2026-03-19 16:33:30, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-19 16:34:56, SELF, v:1, k:ed@baruel, self:1, rate:100, study:110, concept:1, code:1
+2026-03-19 16:35:10, SELF, v:1, k:ed@baruel, self:1, rate:100, study:110, code:1
+2026-03-19 16:35:22, SELF, v:1, k:ed@baruel, self:1, rate:100, study:110, debug:1
+2026-03-19 16:35:29, SELF, v:1, k:ed@baruel, self:1, rate:100, study:110, concept:1, debug:1

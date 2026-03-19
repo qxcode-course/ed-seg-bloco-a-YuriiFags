@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-18_12-50-23",
+            "content": "@@ -215,19 +215,8 @@\n cies\n-,descasados\n )%0A  \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-18_12-50-29",
+            "content": "@@ -204,64 +204,20 @@\n rint\n-ln(N)%0A        fmt.Println(especies)%0A        fmt.Println(\n+(N,especies,\n desc\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-18_12-51-59",
+            "content": "@@ -191,15 +191,8 @@\n     \n-%0A    %7D%0A\n     \n@@ -268,15 +268,21 @@\n asados)%0A\n+    %7D%0A\n     %0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-18_12-52-18",
+            "content": "@@ -55,18 +55,25 @@\n     \n-pares := 0\n+var especies int \n %0A%0A  \n@@ -166,206 +166,93 @@\n     \n-var animal int%0A        fmt.Scan(&animal)%0A%0A        if descasados%5B-animal%5D %3E 0%7B%0A            descasados%5B-animal%5D--%0A            pares++\n+fmt.Scan(&especies)%0A\n %0A    \n+%0A\n     %7D\n- else %7B%0A            descasados%5Banimal%5D++%0A        %7D%0A    %7D%0A\n+%0A    fmt.Println(N)%0A        fmt.Println(especies)%0A    \n     \n@@ -267,12 +267,17 @@\n tln(\n-pare\n+descasado\n s)%0A \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-18_13-09-46",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var N int\n    pares := 0\n\n    fmt.Scan(&N)\n\n    descasados := make(map[int]int)\n\n    for i := 0; i < N; i++ {\n        var animal int\n        fmt.Scan(&animal)\n\n        if descasados[-animal] > 0{\n            descasados[-animal]--\n            pares++\n        } else {\n            descasados[animal]++\n        }\n    }\n    fmt.Println(pares)\n    \n}\n",
+            "lines": "24"
+        }
+    ]
+}

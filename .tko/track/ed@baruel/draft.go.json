@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-19_15-03-37",
+            "content": "@@ -157,48 +157,8 @@\n ol)%0A\n-fmt.Println(total_figurinhas,fig_Baruel)\n %0A   \n@@ -374,10 +374,55 @@\n %0A    %7D%0A%0A\n+    fmt.Println(total_figurinhas,fig_Baruel)%0A\n %7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-19_15-04-02",
+            "content": "@@ -99,17 +99,16 @@\n mt.Scan(\n-&\n total_fi\n@@ -125,64 +125,80 @@\n     \n-fmt.Scan(&fig_Baruel)%0A    contagem := make(map%5Bint%5Dint)%0A\n+repetidas := make(map%5Bint%5Dbool)%0Afmt.Println(total_figurinhas,fig_Baruel)\n %0A   \n@@ -279,436 +279,91 @@\n um)%0A\n-        contagem%5Bnum%5D++\n %0A    \n-%7D%0A%0A\n     i\n-sR\n+f r\n epetida\n- := false%0A%0A    for num,qtd := range contagem %7B%0A        if qtd %3E 1 %7B%0A            isRepetida = true%0A            for i := 0; i %3C qtd - 1; i++ %7B%0A                fmt.Print(num,%22 %22)%0A            %7D%0A        %7D%0A    %7D%0A%0A    if !isRepetida %7B%0A        fmt.Println(%22N%22\n+s%5Bnum%5D %7B%0A            fmt.Println(repetidas%5Bi%5D\n )%0A    \n-%7D %0A\n     \n-%0A    falta := false%0A%0A    for i :=0 ; i %3C total_figurinhas; i++ %7B%0A        if contagem%5Bi%5D == 0 %7B%0A            falta = true\n+%7D else %7B\n %0A   \n@@ -384,13 +384,13 @@\n rint\n-(i,%22 \n+ln(%22N\n %22)%0A \n@@ -406,55 +406,18 @@\n     \n-%7D%0A%0A\n     \n-if falta %7B%0A        fmt.Println(%22N%22)\n %0A    %7D\n+%0A\n %0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-19_15-21-43",
+            "content": "@@ -570,34 +570,16 @@\n %7D %0A    %0A\n-    fmt.Println()%0A\n     falt\n@@ -784,26 +784,7 @@\n    %7D\n-%0A%0A    fmt.Println()\n %0A%7D%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-19_15-22-58",
+            "content": "@@ -760,17 +760,16 @@\n %0A    if \n-!\n falta %7B%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-19_15-23-15",
+            "content": "@@ -620,18 +620,17 @@\n for i :=\n- 1\n+0\n  ; i %3C t\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-19_15-25-16",
+            "content": "@@ -733,16 +733,17 @@\n rint(i,%22\n+ \n %22)%0A     \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-19_15-25-32",
+            "content": "@@ -733,17 +733,16 @@\n rint(i,%22\n- \n %22)%0A     \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-19_15-25-46",
+            "content": "@@ -645,20 +645,16 @@\n gurinhas\n- - 1\n ; i++ %7B%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-19_15-45-52",
+            "content": "@@ -645,16 +645,20 @@\n gurinhas\n+ - 1\n ; i++ %7B%0A\n@@ -791,16 +791,18 @@\n mt.Print\n+ln\n (%22N%22)%0A  \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-19_15-47-02",
+            "content": "@@ -476,17 +476,16 @@\n int(num,\n- \n %22 %22)%0A   \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-19_15-47-39",
+            "content": "@@ -629,17 +629,16 @@\n  1 ; i %3C\n-=\n  total_f\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-19_15-48-18",
+            "content": "@@ -543,32 +543,34 @@\n        fmt.Print\n+ln\n (%22N%22)%0A    %7D %0A   \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-19_15-48-44",
+            "content": "@@ -299,28 +299,27 @@\n     \n-r\n+isR\n epetida\n-s\n  := \n-%5B%5Dint%7B%7D\n+false\n %0A%0A  \n@@ -373,16 +373,46 @@\n d %3E 1 %7B%0A\n+            isRepetida = true%0A\n         \n@@ -466,41 +466,26 @@\n     \n-repetidas = append(repetidas, num\n+fmt.Print(num, %22 %22\n )%0A  \n@@ -524,140 +524,22 @@\n  if \n-len(repetidas)== 0%7B%0A        fmt.Print(%22N%22)%0A    %7D else %7B%0A        for i := 0; i %3C len(repetidas) i++ %7B%0A            if i %3E 0 %7B%0A        \n+!isRepetida %7B%0A\n     \n@@ -557,80 +557,23 @@\n nt(%22\n- \n+N\n %22)%0A    \n+%7D %0A\n     \n-    %7D%0A            fmt.Print(rerepetidas%5Bi%5D)%0A        %7D%0A    %7D%0A\n %0A   \n@@ -587,20 +587,16 @@\n intln()%0A\n-   %0A\n     falt\n@@ -600,23 +600,17 @@\n alta\n-ntes := %5B%5Dint%7B%7D\n+ := false\n %0A%0A  \n@@ -698,85 +698,30 @@\n     \n+ \n falta\n-ntes = append(faltantes, i)%0A        %7D%0A    %7D%0A%0A  if len(faltantes) == 0 %7B%0A\n+ = true%0A        \n     \n@@ -734,89 +734,48 @@\n int(\n-%22N\n+i,%22 \n %22)%0A  \n-%7D else %7B%0A    for i := 0; i %3C len(faltantes); i++ %7B%0A        if i %3E 0 %7B%0A    \n+      %7D%0A    %7D%0A%0A    if !falta %7B%0A\n     \n@@ -793,60 +793,14 @@\n nt(%22\n- \n+N\n %22)%0A  \n-      %7D%0A        fmt.Print(faltantes%5Bi%5D)%0A    %7D%0A\n   %7D%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-19_16-28-53",
+            "content": "@@ -600,17 +600,16 @@\n petidas)\n-;\n  i++ %7B%0A \n@@ -697,16 +697,18 @@\n t.Print(\n+re\n repetida\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-19_16-29-06",
+            "content": "@@ -17,32 +17,13 @@\n ort \n-(%0A    %22fmt%22%0A    %22sort%22%0A)\n+%22fmt%22\n %0Afun\n@@ -503,29 +503,8 @@\n  %7D%0A%0A\n-sort.Ints(repetidas)%0A\n     \n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-19_16-33-28",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"sort\"\n)\nfunc main() {\n    var total_figurinhas int\n    var fig_Baruel int\n\n    fmt.Scan(&total_figurinhas)\n    fmt.Scan(&fig_Baruel)\n    contagem := make(map[int]int)\n\n    for i := 0; i < fig_Baruel; i++ {\n        var num int\n        fmt.Scan(&num)\n        contagem[num]++\n    }\n\n    repetidas := []int{}\n\n    for num,qtd := range contagem {\n        if qtd > 1 {\n            for i := 0; i < qtd - 1; i++ {\n                repetidas = append(repetidas, num)\n            }\n        }\n    }\n\nsort.Ints(repetidas)\n    if len(repetidas)== 0{\n        fmt.Print(\"N\")\n    } else {\n        for i := 0; i < len(repetidas); i++ {\n            if i > 0 {\n                fmt.Print(\" \")\n            }\n            fmt.Print(repetidas[i])\n        }\n    }\n\n    fmt.Println()\n   \n    faltantes := []int{}\n\n    for i := 1 ; i <= total_figurinhas; i++ {\n        if contagem[i] == 0 {\n           faltantes = append(faltantes, i)\n        }\n    }\n\n  if len(faltantes) == 0 {\n    fmt.Print(\"N\")\n  } else {\n    for i := 0; i < len(faltantes); i++ {\n        if i > 0 {\n            fmt.Print(\" \")\n        }\n        fmt.Print(faltantes[i])\n    }\n  }\n\n    fmt.Println()\n}\n",
+            "lines": "64"
+        }
+    ]
+}

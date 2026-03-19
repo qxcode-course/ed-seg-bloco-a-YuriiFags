@@ -11,9 +11,11 @@ func main() {
 
         if pos == H {
             fmt.Println("S")
+            return
         }
         if pos == P {
             fmt.Println("N")
+            return
         }
     }
 }
