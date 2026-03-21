@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-21_16-59-09",
+            "content": "@@ -41,444 +41,34 @@\n     \n-var qtd, E int%0A%0A    fmt.Scan(&qtd,&E)%0A%0A    vivos := make(%5B%5Dbool,qtd)%0A%0A    for i := 0; i %3C qtd; i++ %7B%0A        vivos%5Bi%5D = true%0A    %7D%0A%0A    pos := E - 1%0A%0A    for qtd %3E 1 %7B%0A        prox := (pos + 1) %25 qtd%0A        for vivos%5Bprox%5D == false %7B%0A            prox = (pos + 1) %25 qtd%0A        %7D%0A        vivos%5Bprox%5D = false%0A        qtd--%0A    %7D%0A    pos = (prox + 1) %25 qtd%0A    for vivos%5Bpos%5D == false%7B%0A        pos = (pos + 1)%25 qtd%0A    %7D%0A%0A    fmt.Print(%22%5B\n+fmt.Println(%22Hello, World!\n %22)%0A%7D\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-21_17-17-38",
+            "content": "@@ -186,16 +186,39 @@\n = E - 1%0A\n+%0A    for qtd %3E 1 %7B%0A    \n     prox\n@@ -240,27 +240,8 @@\n  qtd\n- %0A    for qtd %3E 1 %7B\n %0A   \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-21_17-18-12",
+            "content": "@@ -355,17 +355,22 @@\n   qtd--%0A\n+    %7D\n %0A\n-\n     pos \n@@ -449,24 +449,24 @@\n  qtd%0A    %7D%0A%0A\n+\n     fmt.Prin\n@@ -476,215 +476,6 @@\n %5B%22)%0A\n-    for i := 0; i %3C qtd; i++ %7B%0A        if vivos%5Bi%5D %7B%0A            if i == pos %7B%0A                fmt.Printf(%22%25v%3E%22,i+1)%0A            %7D else %7B%0A                fmt.Printf(%22%25v%22,i+1)%0A            %7D%0A        %7D%0A    %7D%0A  %7D%0A\n %7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-21_17-27-08",
+            "content": "@@ -173,31 +173,8 @@\n  %7D%0A%0A\n-    countAmount := qtd%0A\n     \n@@ -285,27 +285,26 @@\n    prox = (p\n-rox\n+os\n  + 1) %25 qtd%0A\n@@ -353,19 +353,11 @@\n     \n-countAmount\n+qtd\n --%0A%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-21_17-29-36",
+            "content": "@@ -169,30 +169,31 @@\n %0A    %7D%0A%0A    \n-vivosC\n+countAm\n ount := qtd%0A\n@@ -246,26 +246,19 @@\n     for \n-vivosCount\n+qtd\n  %3E 1 %7B%0A \n@@ -377,14 +377,15 @@\n     \n-vivosC\n+countAm\n ount\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-21_17-30-51",
+            "content": "@@ -713,29 +713,8 @@\n   %7D%0A\n-    fmt.Println(%22%5D%22)%0A\n   %7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-21_19-30-52",
+            "content": "@@ -501,17 +501,16 @@\n Print(%22%5B\n- \n %22)%0A    f\n@@ -614,17 +614,16 @@\n ntf(%22%25v%3E\n- \n %22,i+1)%0A \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-21_19-31-19",
+            "content": "@@ -672,17 +672,16 @@\n Printf(%22\n- \n %25v%22,i+1)\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-21_19-31-28",
+            "content": "@@ -212,16 +212,40 @@\n - 1%0A    \n+prox := (pos + 1) %25 qtd \n %0A    for\n@@ -266,41 +266,8 @@\n 1 %7B%0A\n-        prox := (pos + 1) %25 qtd %0A\n     \n@@ -672,16 +672,17 @@\n Printf(%22\n+ \n %25v%22,i+1)\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-21_19-33-04",
+            "content": "@@ -627,17 +627,16 @@\n (%22%25v%3E %22,\n- \n i+1)%0A   \n@@ -687,12 +687,10 @@\n (%22%25v\n- \n %22,\n- \n i+1)\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-21_19-33-35",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -52,16 +52,17 @@\n , E int%0A\n+%0A\n     fmt.\n@@ -71,17 +71,16 @@\n an(&qtd,\n- \n &E)%0A%0A   \n@@ -101,17 +101,16 @@\n (%5B%5Dbool,\n- \n qtd)%0A%0A  \n@@ -212,229 +212,12 @@\n - 1%0A\n-%0A\n     \n-// estado inicial%0A    fmt.Print(%22%5B %22)%0A    for i := 0; i %3C qtd; i++ %7B%0A        if i == pos %7B%0A            fmt.Printf(%22%25d%3E %22, i+1)%0A        %7D else %7B%0A            fmt.Printf(%22%25d %22, i+1)%0A        %7D%0A    %7D%0A    fmt.Println(%22%5D%22)%0A\n %0A   \n@@ -269,17 +269,17 @@\n 1) %25 qtd\n-%0A\n+ \n %0A       \n@@ -344,33 +344,32 @@\n %25 qtd%0A        %7D%0A\n-%0A\n         vivos%5Bpr\n@@ -402,20 +402,16 @@\n ount--%0A%0A\n-    \n     pos \n@@ -429,28 +429,24 @@\n ) %25 qtd%0A    \n- \n-   \n for vivos%5Bpo\n@@ -448,33 +448,32 @@\n os%5Bpos%5D == false\n- \n %7B%0A            po\n@@ -466,20 +466,16 @@\n         \n-    \n pos = (p\n@@ -485,30 +485,21 @@\n + 1)\n- \n %25 qtd%0A\n-    \n     %7D%0A%0A\n-    \n     \n@@ -514,20 +514,16 @@\n t(%22%5B %22)%0A\n-    \n     for \n@@ -553,20 +553,16 @@\n         \n- \n-   \n if vivos\n@@ -567,20 +567,16 @@\n os%5Bi%5D %7B%0A\n-    \n         \n@@ -601,36 +601,32 @@\n                 \n- \n-   \n fmt.Printf(%22%25d%3E \n@@ -622,17 +622,17 @@\n rintf(%22%25\n-d\n+v\n %3E %22, i+1\n@@ -625,36 +625,32 @@\n tf(%22%25v%3E %22, i+1)%0A\n-    \n             %7D el\n@@ -662,36 +662,32 @@\n                 \n-    \n fmt.Printf(%22%25d %22\n@@ -683,17 +683,17 @@\n rintf(%22%25\n-d\n+v\n  %22, i+1)\n@@ -709,25 +709,18 @@\n     \n-  \n-  %7D%0A   \n+%7D%0A\n         \n  %7D%0A \n@@ -719,25 +719,16 @@\n     \n- \n %7D%0A    \n-   \n- \n %7D%0A\n-    \n     \n@@ -748,11 +748,10 @@\n %5D%22)%0A\n-  \n   %7D%0A%7D\n+%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-21_19-35-28",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var qtd, E int\n    fmt.Scan(&qtd, &E)\n\n    vivos := make([]bool, qtd)\n\n    for i := 0; i < qtd; i++ {\n        vivos[i] = true\n    }\n\n    vivosCount := qtd\n    pos := E - 1\n\n    // estado inicial\n    fmt.Print(\"[ \")\n    for i := 0; i < qtd; i++ {\n        if i == pos {\n            fmt.Printf(\"%d> \", i+1)\n        } else {\n            fmt.Printf(\"%d \", i+1)\n        }\n    }\n    fmt.Println(\"]\")\n\n    for vivosCount > 1 {\n        prox := (pos + 1) % qtd\n\n        for vivos[prox] == false {\n            prox = (prox + 1) % qtd\n        }\n\n        vivos[prox] = false\n        vivosCount--\n\n        pos = (prox + 1) % qtd\n        for vivos[pos] == false {\n            pos = (pos + 1) % qtd\n        }\n\n        fmt.Print(\"[ \")\n        for i := 0; i < qtd; i++ {\n            if vivos[i] {\n                if i == pos {\n                    fmt.Printf(\"%d> \", i+1)\n                } else {\n                    fmt.Printf(\"%d \", i+1)\n                }\n            }\n        }\n        fmt.Println(\"]\")\n    }\n}",
+            "lines": "56"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-20_14-40-51",
+            "content": "@@ -40,216 +40,36 @@\n %0A   \n-var Q int%0A   var D string %0A   var X,Y int%0A%0A   fmt.Scan(&Q,&D,&X,&Y)%0A%0A   switch D %7B%0A   case %22L%22:%0A    X--  %0A   case %22R%22:%0A    X++%0A   case %22D%22:%0A    Y++%0A   case %22U%22:%0A    Y--%0A   default:%0A    fmt.Println(%22Erro%22)%0A   %7D\n+ fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-20_14-51-42",
+            "content": "@@ -149,151 +149,67 @@\n %0A   \n- fmt.Println(X,Y)%0A   case %22R%22:%0A    X++%0A    fmt.Println(X,Y)%0A   case %22D%22:%0A    Y++%0A    fmt.Println(X,Y)%0A   case %22U%22:%0A    Y--%0A    fmt.Println(X,Y)\n+case %22R%22:%0A    X++%0A   case %22D%22:%0A    Y++%0A   case %22U%22:%0A    Y--\n %0A   \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-20_14-52-36",
+            "content": "@@ -70,252 +70,156 @@\n %0A   \n-fmt.Scan(&Q,&D)%0A%0A   type gomo struct%7B%0A     x,y int%0A   %7D%0A   %0A   cobra := make(%5B%5Dgomo,Q)%0A%0A   for i := range cobra %7B%0A    fmt.Scan(&cobra%5Bi%5D.x, &cobra%5Bi%5D.y)%0A   %7D%0A%0A   for i := Q - 1; i %3E 0; i-- %7B%0A    cobra%5Bi%5D = cobra%5Bi-1%5D%0A   %7D%0A%0A  switch D %7B%0A\n+var X,Y int%0A%0A   fmt.Scan(&Q,&D,&X,&Y)%0A%0A   switch D %7B%0A   case %22L%22:%0A    X--  %0A    fmt.Println(X,Y)%0A   case %22R%22:%0A    X++%0A    fmt.Println(X,Y)%0A \n   case %22\n L%22:%0A\n@@ -218,159 +218,122 @@\n se %22\n-L\n+D\n %22:%0A    \n-cobra%5B0%5D.x--%0A  case %22R%22:%0A    cobra%5B0%5D.x++%0A  case %22U%22:%0A    cobra%5B0%5D.y--%0A  case %22D%22:%0A    cobra%5B0%5D.y++%0A  %7D%0A%0A  fmt.Printf(%22%25v %25v%5Cn%22,cobra.x,cobra.y)\n+Y++%0A    fmt.Println(X,Y)%0A   case %22U%22:%0A    Y--%0A    fmt.Println(X,Y)%0A   default:%0A    fmt.Println(%22Erro%22)%0A   %7D\n %0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-20_15-19-00",
+            "content": "@@ -109,19 +109,16 @@\n t%7B%0A     \n-   \n x,y int%0A\n@@ -430,81 +430,43 @@\n %0A  f\n-or _, gomo := range cobra %7B%0A     fmt.Printf(%22%25v %25v%5Cn%22,gomo.x,gomo.y)%0A  %7D%0A \n+mt.Printf(%22%25v %25v%5Cn%22,cobra.x,cobra.y)\n %0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-20_15-49-06",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n   var Q int\n   var D string \n   fmt.Scan(&Q,&D)\n\n   type gomo struct{\n        x,y int\n   }\n   \n   cobra := make([]gomo,Q)\n\n   for i := range cobra {\n    fmt.Scan(&cobra[i].x, &cobra[i].y)\n   }\n\n   for i := Q - 1; i > 0; i-- {\n    cobra[i] = cobra[i-1]\n   }\n\n  switch D {\n  case \"L\":\n    cobra[0].x--\n  case \"R\":\n    cobra[0].x++\n  case \"U\":\n    cobra[0].y--\n  case \"D\":\n    cobra[0].y++\n  }\n\n  for _, gomo := range cobra {\n     fmt.Printf(\"%v %v\\n\",gomo.x,gomo.y)\n  }\n \n}\n",
+            "lines": "37"
+        }
+    ]
+}

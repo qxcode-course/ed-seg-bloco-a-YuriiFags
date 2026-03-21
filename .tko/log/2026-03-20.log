@@ -1,0 +1,37 @@
+2026-03-20 10:10:26, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-03-20 10:10:28, EXEC, v:1, k:sandbox@user_001, mode:FREE, size:0
+2026-03-20 10:10:35, MOVE, v:1, k:sandbox@user_001, mode:BACK
+2026-03-20 10:10:45, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-20 10:10:46, EXEC, v:1, k:ed@baruel, mode:FREE
+2026-03-20 10:10:53, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-20 10:10:55, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-20 10:10:59, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100
+2026-03-20 10:11:07, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-20 14:40:47, MOVE, v:1, k:ed@gomos, mode:DOWN
+2026-03-20 14:40:50, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-20 14:40:51, EXEC, v:1, k:ed@gomos, mode:FREE, size:5
+2026-03-20 14:40:56, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0
+2026-03-20 14:40:56, EXEC, v:1, k:ed@gomos, mode:FREE
+2026-03-20 14:41:09, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-20 14:41:12, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-20 14:41:14, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0
+2026-03-20 14:41:35, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-20 14:41:43, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-20 14:41:58, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-20 14:42:08, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-20 14:51:42, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:22
+2026-03-20 14:52:36, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:26
+2026-03-20 15:19:00, EXEC, v:1, k:ed@gomos, mode:FULL, size:34, fail:COMP
+2026-03-20 15:20:14, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-20 15:20:21, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-20 15:24:26, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-20 15:24:30, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-20 15:29:28, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-20 15:29:32, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-20 15:49:02, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-20 15:49:04, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-20 15:49:06, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100, size:37
+2026-03-20 15:49:09, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-20 15:49:32, SELF, v:1, k:ed@gomos, self:1, rate:100, study:70, guided:1, concept:1
+2026-03-20 16:01:48, MOVE, v:1, k:ed@princesa, mode:DOWN
+2026-03-20 16:01:57, MOVE, v:1, k:ed@princesa, mode:PICK
