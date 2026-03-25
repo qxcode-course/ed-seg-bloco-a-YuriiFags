@@ -2,55 +2,37 @@ package main
 
 import "fmt"
 
-func main() {
-    var qtd, E int
-    fmt.Scan(&qtd, &E)
-
-    vivos := make([]bool, qtd)
-
-    for i := 0; i < qtd; i++ {
-        vivos[i] = true
-    }
-
-    contagemVivos := qtd
-    pos := E - 1
-
-   
+func imprimir(num[]int, pos int) {
     fmt.Print("[ ")
-    for i := 0; i < qtd; i++ {
+    for i, valor := range num {
         if i == pos {
-            fmt.Printf("%d> ", i+1)
+            fmt.Printf("%v> ",valor)
         } else {
-            fmt.Printf("%d ", i+1)
+            fmt.Printf("%v ",valor)
         }
     }
     fmt.Println("]")
+}
 
-    for contagemVivos > 1 {
-        prox := (pos + 1) % qtd
+func main() {
+   var qtd_Numeros, num_Escolhido int
+   fmt.Scan(&qtd_Numeros,&num_Escolhido)
+   num := make([]int,qtd_Numeros)
 
-        for vivos[prox] == false {
-            prox = (prox + 1) % qtd
-        }
+   for i := 0 ; i < qtd_Numeros; i++{
+    num[i] = i + 1
+   }
 
-        vivos[prox] = false
-        contagemVivos--
+   pos_Atual := num_Escolhido - 1
+   for len(num) > 0 {
+    imprimir(num,pos_Atual)
 
-        pos = (prox + 1) % qtd
-        for vivos[pos] == false {
-            pos = (pos + 1) % qtd
-        }
-
-        fmt.Print("[ ")
-        for i := 0; i < qtd; i++ {
-            if vivos[i] {
-                if i == pos {
-                    fmt.Printf("%d> ", i+1)
-                } else {
-                    fmt.Printf("%d ", i+1)
-                }
-            }
-        }
-        fmt.Println("]")
+    if len(num) == 1 {
+        break
     }
+   
+    morto := (pos_Atual + 1) % len(num)
+    num = append(num[:morto],num[morto + 1:]...)
+    pos_Atual = morto % len(num)
+   }
 }

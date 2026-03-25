@@ -57,8 +57,48 @@
         },
         {
             "label": "2026-03-21_19-35-28",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var qtd, E int\n    fmt.Scan(&qtd, &E)\n\n    vivos := make([]bool, qtd)\n\n    for i := 0; i < qtd; i++ {\n        vivos[i] = true\n    }\n\n    vivosCount := qtd\n    pos := E - 1\n\n    // estado inicial\n    fmt.Print(\"[ \")\n    for i := 0; i < qtd; i++ {\n        if i == pos {\n            fmt.Printf(\"%d> \", i+1)\n        } else {\n            fmt.Printf(\"%d \", i+1)\n        }\n    }\n    fmt.Println(\"]\")\n\n    for vivosCount > 1 {\n        prox := (pos + 1) % qtd\n\n        for vivos[prox] == false {\n            prox = (prox + 1) % qtd\n        }\n\n        vivos[prox] = false\n        vivosCount--\n\n        pos = (prox + 1) % qtd\n        for vivos[pos] == false {\n            pos = (pos + 1) % qtd\n        }\n\n        fmt.Print(\"[ \")\n        for i := 0; i < qtd; i++ {\n            if vivos[i] {\n                if i == pos {\n                    fmt.Printf(\"%d> \", i+1)\n                } else {\n                    fmt.Printf(\"%d \", i+1)\n                }\n            }\n        }\n        fmt.Println(\"]\")\n    }\n}",
+            "content": "@@ -176,29 +176,26 @@\n  %7D%0A%0A    \n-contagemVivos\n+vivosCount\n  := qtd%0A\n@@ -215,16 +215,34 @@\n - 1%0A%0A   \n+ // estado inicial\n %0A    fmt\n@@ -441,29 +441,26 @@\n     for \n-contagemVivos\n+vivosCount\n  %3E 1 %7B%0A \n@@ -613,21 +613,18 @@\n     \n-contagemVivos\n+vivosCount\n --%0A%0A\n",
             "lines": "56"
+        },
+        {
+            "label": "2026-03-22_09-06-57",
+            "content": "@@ -30,37 +30,200 @@\n unc \n-imprimir(num%5B%5Dint, pos int) %7B\n+main() %7B%0A    var qtd, E int%0A    fmt.Scan(&qtd, &E)%0A%0A    vivos := make(%5B%5Dbool, qtd)%0A%0A    for i := 0; i %3C qtd; i++ %7B%0A        vivos%5Bi%5D = true%0A    %7D%0A%0A    contagemVivos := qtd%0A    pos := E - 1%0A%0A   \n %0A   \n@@ -235,16 +235,17 @@\n Print(%22%5B\n+ \n %22)%0A    f\n@@ -252,28 +252,27 @@\n or i\n-, valor := range num\n+ := 0; i %3C qtd; i++\n  %7B%0A \n@@ -321,17 +321,17 @@\n f(%22%25\n-v%3E%22,valor\n+d%3E %22, i+1\n )%0A  \n@@ -374,16 +374,16 @@\n f(%22%25\n-v%22,valor\n+d %22, i+1\n )%0A  \n@@ -413,145 +413,352 @@\n rint\n+ln\n (%22%5D%22)%0A\n-%7D%0A%0Afunc main() %7B%0A   var qtd_Numeros, num_Escolhido int%0A   fmt.Scan(&qtd_Numeros,&num_Escolhido)%0A   num := make(%5B%5Dint,qtd_Numeros)%0A%0A\n+%0A    for contagemVivos %3E 1 %7B%0A        prox := (pos + 1) %25 qtd%0A%0A        for vivos%5Bprox%5D == false %7B%0A            prox = (prox + 1) %25 qtd%0A        %7D%0A%0A        vivos%5Bprox%5D = false%0A        contagemVivos--%0A%0A        pos = (prox + 1) %25 qtd%0A        for vivos%5Bpos%5D == false %7B%0A            pos = (pos + 1) %25 qtd%0A        %7D%0A%0A        fmt.Print(%22%5B %22)%0A     \n    f\n@@ -766,17 +766,16 @@\n r i := 0\n- \n ; i %3C qt\n@@ -779,256 +779,254 @@\n  qtd\n-_Numeros\n ; i++\n+ \n %7B%0A    \n-num%5Bi%5D = i + 1%0A   %7D%0A%0A   pos_Atual := num_Escolhido - 1%0A   for len(num) %3E 1 %7B%0A    imprimir(num,pos_Atual)%0A   %7D%0A%0A   morto := (pos_Atual + 1) %25 len(num)%0A%0A   num = append(num%5B:morto%5D,num%5Bmorto + 1:%5D...)%0A%0A   pos_Atual = morto %25 len(num)\n+        if vivos%5Bi%5D %7B%0A                if i == pos %7B%0A                    fmt.Printf(%22%25d%3E %22, i+1)%0A                %7D else %7B%0A                    fmt.Printf(%22%25d %22, i+1)%0A                %7D%0A            %7D%0A        %7D%0A        fmt.Println(%22%5D%22)%0A    %7D\n %0A%7D\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-22_09-20-15",
+            "content": "@@ -534,18 +534,8 @@\n al)%0A\n-    break%0A\n    %7D\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-22_09-20-32",
+            "content": "@@ -533,21 +533,32 @@\n ual)%0A   \n-%0A  \n+ break%0A   %7D%0A%0A\n   \n+ \n morto :=\n@@ -585,17 +585,17 @@\n en(num)%0A\n- \n+%0A\n    num =\n@@ -634,17 +634,17 @@\n 1:%5D...)%0A\n- \n+%0A\n    pos_A\n@@ -667,14 +667,9 @@\n en(num)%0A\n-   %7D%0A\n %7D\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-22_09-22-00",
+            "content": "@@ -498,17 +498,17 @@\n (num) %3E \n-0\n+1\n  %7B%0A    i\n@@ -533,52 +533,8 @@\n ual)\n-%0A%0A    if len(num) == 1 %7B%0A        break%0A    %7D\n %0A   \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-22_09-23-03",
+            "content": "@@ -250,10 +250,8 @@\n rint\n-ln\n (%22%5D%22\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-22_09-23-22",
+            "content": "@@ -156,17 +156,16 @@\n ntf(%22%25v%3E\n- \n %22,valor)\n@@ -208,17 +208,16 @@\n intf(%22%25v\n- \n %22,valor)\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-22_09-23-46",
+            "content": "@@ -72,17 +72,16 @@\n Print(%22%5B\n- \n %22)%0A    f\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-22_09-24-01",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc imprimir(num[]int, pos int) {\n    fmt.Print(\"[ \")\n    for i, valor := range num {\n        if i == pos {\n            fmt.Printf(\"%v> \",valor)\n        } else {\n            fmt.Printf(\"%v \",valor)\n        }\n    }\n    fmt.Println(\"]\")\n}\n\nfunc main() {\n   var qtd_Numeros, num_Escolhido int\n   fmt.Scan(&qtd_Numeros,&num_Escolhido)\n   num := make([]int,qtd_Numeros)\n\n   for i := 0 ; i < qtd_Numeros; i++{\n    num[i] = i + 1\n   }\n\n   pos_Atual := num_Escolhido - 1\n   for len(num) > 0 {\n    imprimir(num,pos_Atual)\n\n    if len(num) == 1 {\n        break\n    }\n   \n    morto := (pos_Atual + 1) % len(num)\n    num = append(num[:morto],num[morto + 1:]...)\n    pos_Atual = morto % len(num)\n   }\n}",
+            "lines": "38"
         }
     ]
 }

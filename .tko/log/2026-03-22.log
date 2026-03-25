@@ -1,0 +1,32 @@
+2026-03-22 09:06:54, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-22 09:06:57, EXEC, v:1, k:ed@princesa, mode:FREE, size:56
+2026-03-22 09:07:09, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-22 09:07:19, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-22 09:07:20, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100
+2026-03-22 09:07:20, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100
+2026-03-22 09:07:59, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-22 09:11:28, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-22 09:11:29, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-22 09:20:12, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-22 09:20:15, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:36
+2026-03-22 09:20:32, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:37
+2026-03-22 09:22:00, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:34
+2026-03-22 09:23:03, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:38
+2026-03-22 09:23:22, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:38
+2026-03-22 09:23:46, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0, size:38
+2026-03-22 09:24:01, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100, size:38
+2026-03-22 09:24:03, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-22 09:24:40, SELF, v:1, k:ed@princesa, self:1, rate:100, study:30, concept:1
+2026-03-22 17:45:35, MOVE, v:1, k:ed@apagando, mode:DOWN
+2026-03-22 17:45:39, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-03-22 17:50:31, EXEC, v:1, k:ed@apagando, mode:FULL, size:12, fail:COMP
+2026-03-22 17:51:38, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:13
+2026-03-22 18:26:51, EXEC, v:1, k:ed@apagando, mode:FULL, size:46, fail:COMP
+2026-03-22 18:27:19, EXEC, v:1, k:ed@apagando, mode:FREE, size:46
+2026-03-22 18:27:32, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-03-22 18:45:41, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-03-22 18:45:42, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-03-22 18:45:49, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-03-22 18:45:50, EXEC, v:1, k:ed@apagando, mode:FULL, rate:100
+2026-03-22 18:45:54, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-03-22 18:46:24, SELF, v:1, k:ed@apagando, self:1, rate:100, study:110, concept:1, debug:1

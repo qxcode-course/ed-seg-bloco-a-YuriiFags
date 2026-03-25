@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-22_17-50-31",
+            "content": "@@ -38,54 +38,10 @@\n mir(\n-pessoas_Fila%5B%5Dint,sairam int)%7B%0A%09fmt.Print(%224%22\n )\n+%7B\n %0A%0A%7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-22_17-51-38",
+            "content": "@@ -29,196 +29,26 @@\n unc \n-marcar_quem_saiu(sairam%5B%5Dint) map%5Bint%5Dbool%7B%0A%09registro_saidas := make(map%5Bint%5Dbool)%0A%0A%09for _, id := range sairam %7B%0A%09%09registro_saidas%5Bid%5D =  true%0A%09%7D%0A%09return registro_saidas%0A%7D%0A%0Afunc imprimir(f\n+imprimir(pessoas_F\n ila%5B\n@@ -56,82 +56,21 @@\n int,\n- \n sai\n-u map%5Bint%5Dbool)%7B%0A%09for _, pessoa := range fila %7B%0A%09%09if !saiu%5Bpessoa%5D%7B%0A%09%09\n+ram int)%7B%0A\n %09fmt\n@@ -79,427 +79,33 @@\n rint\n-f\n (%22\n-%25v %22,pessoa)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println()%0A%7D%0A%0Afunc main()%7B%0A%09var qtd_pessoas, identificador int%0A%0A%09fmt.Scan(&qtd_pessoas)%0A%0A%09fila := make(%5B%5Dint, qtd_pessoas)%0A%09for i := 0; i %3C qtd_pessoas; i++ %7B%0A%09%09fmt.Scan(&fila%5Bi%5D)%0A%09%7D%0A%0A%09fmt.Scan(&identificador)%0A%0A%09sairam := make(%5B%5Dint,identificador)%0A%0A%09for i := 0; i %3C identificador; i++ %7B%0A%09%09fmt.Scan(&sairam%5Bi%5D)%0A%09%7D%0A%0A%09registro_saidas = marcar_quem_saiu(sairam)%0A%09imprimir(fila,registro_saidas)%0A%0A%7D%0A%0A%0A\n+4%22)%0A%0A%7D%0A%0A%0A%0A%0Afunc main() %7B%0A%7D\n %0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-22_18-26-51",
+            "content": "@@ -660,25 +660,24 @@\n stro_saidas \n-:\n = marcar_que\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-22_18-27-19",
+            "content": "package main\nimport \"fmt\"\n\nfunc marcar_quem_saiu(sairam[]int) map[int]bool{\n\tregistro_saidas := make(map[int]bool)\n\n\tfor _, id := range sairam {\n\t\tregistro_saidas[id] =  true\n\t}\n\treturn registro_saidas\n}\n\nfunc imprimir(fila[]int, saiu map[int]bool){\n\tfor _, pessoa := range fila {\n\t\tif !saiu[pessoa]{\n\t\t\tfmt.Printf(\"%v \",pessoa)\n\t\t}\n\t}\n\tfmt.Println()\n}\n\nfunc main(){\n\tvar qtd_pessoas, identificador int\n\n\tfmt.Scan(&qtd_pessoas)\n\n\tfila := make([]int, qtd_pessoas)\n\tfor i := 0; i < qtd_pessoas; i++ {\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\tfmt.Scan(&identificador)\n\n\tsairam := make([]int,identificador)\n\n\tfor i := 0; i < identificador; i++ {\n\t\tfmt.Scan(&sairam[i])\n\t}\n\n\tregistro_saidas := marcar_quem_saiu(sairam)\n\timprimir(fila,registro_saidas)\n\n}\n\n\n\n",
+            "lines": "46"
+        }
+    ]
+}
