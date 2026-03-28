@@ -13,12 +13,11 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@analise-map_set-map_set-basic
-- '@ed@analise-map_set-map_set-basic_sem_quest'
+- ed@basic
 tasks:
   ed@pintando: '{self:1, rate:100, study:5}'
   ed@mumia: '{self:1, rate:100, study:5}'
-  ed@fuga: '{self:1, rate:100, study:17, concept:1}'
+  ed@fuga: '{self:1, rate:100, study:19}'
   ed@pedra: '{self:1, rate:100, study:25, refactor:1}'
   ed@casais: '{self:1, rate:100, study:26, refactor:1}'
   ed@baruel: '{self:1, rate:100, study:110, concept:1, debug:1}'
@@ -27,11 +26,10 @@ tasks:
   ed@apagando: '{self:1, rate:100, study:110, concept:1, debug:1}'
   ed@manipulacao: '{self:1, rate:100, study:115, concept:1, debug:1}'
 flags:
-  painel: 0
-  quests: 0
-  tracks: 1
-  tasks: 0
+  panel: 3
+  inbox: 0
+  show_panel: 1
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@manipulacao
+selected: sandbox@00_rascunhos

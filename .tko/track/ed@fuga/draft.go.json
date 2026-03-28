@@ -7,8 +7,53 @@
         },
         {
             "label": "2026-03-18_12-41-20",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var H,P,F,D int\n    fmt.Scan(&H,&P,&F,&D)\n\n    pos := F\n\n    for{\n        pos = ((pos + D) + 16) % 16\n\n        if pos == H {\n            fmt.Println(\"S\")\n            return\n        }\n        if pos == P {\n            fmt.Println(\"N\")\n            return\n        }\n    }\n}",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -30,16 +30,17 @@\n c main()\n+ \n %7B%0A    va\n@@ -88,15 +88,46 @@\n     \n-F\n+pos := F%0A%0A    for%7B%0A        pos\n  = ((\n-F\n+pos\n  + D\n@@ -142,47 +142,42 @@\n %25 16\n- \n %0A%0A    \n-switch F %7B%0A    case P :%0A\n+    if pos == H %7B%0A  \n         \n fmt.\n@@ -164,32 +164,34 @@\n = H %7B%0A          \n+  \n fmt.Print(%22N%22)%0A \n@@ -187,26 +187,71 @@\n rint\n+ln\n (%22\n-N\n+S\n %22)%0A    \n-case H:%0A\n+        return%0A        %7D%0A        if pos == P %7B%0A    \n     \n@@ -267,52 +267,44 @@\n rint\n+ln\n (%22\n-S\n+N\n %22)%0A    \n-default:%0A        fmt.Print(%22Erro%22)\n+        return%0A        %7D\n %0A   \n",
             "lines": "21"
+        },
+        {
+            "label": "2026-03-25_14-42-49",
+            "content": "@@ -155,18 +155,16 @@\n mt.Print\n-ln\n (%22N%22)%0A  \n@@ -194,10 +194,8 @@\n rint\n-ln\n (%22S%22\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-25_14-43-13",
+            "content": "@@ -118,19 +118,31 @@\n     \n-if F == P %7B\n+switch F %7B%0A    case P :\n %0A   \n@@ -171,25 +171,15 @@\n     \n-%7D%0A    if F == H %7B\n+case H:\n %0A   \n@@ -207,123 +207,8 @@\n %0A   \n- %7D%0A%0A    // switch F %7B%0A    // case P :%0A    //     fmt.Println(%22N%22)%0A    // case H:%0A    //     fmt.Println(%22S%22)%0A    //\n  def\n@@ -216,19 +216,16 @@\n ult:%0A   \n- //\n      fmt\n@@ -246,11 +246,8 @@\n %0A   \n- //\n  %7D%0A%7D\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-25_14-44-24",
+            "content": "@@ -84,18 +84,8 @@\n D)%0A%0A\n-%0A   for%7B%0A \n     \n@@ -109,17 +109,17 @@\n ) %25 16 %0A\n- \n+%0A\n     if F\n@@ -151,31 +151,16 @@\n ln(%22N%22)%0A\n-        return%0A\n     %7D%0A  \n@@ -206,34 +206,9 @@\n     \n-    return%0A    %7D%0A   %7D%0A%0A   \n+%7D\n %0A%0A  \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-25_14-46-47",
+            "content": "@@ -128,31 +128,19 @@\n     \n-switch F %7B%0A    case P :\n+if F == P %7B\n %0A   \n@@ -173,25 +173,36 @@\n     \n-b\n re\n-ak\n+turn\n %0A    \n-case H:\n+%7D%0A    if F == H %7B\n %0A   \n@@ -235,78 +235,65 @@\n     \n-b\n re\n-ak\n+turn\n %0A    \n-default:\n+%7D%0A   %7D%0A\n %0A   \n+%0A%0A\n     \n- fmt.Print(%22Erro%22)%0A    %7D%0A    //  if F == P %7B\n+// switch F %7B%0A    // case P :\n %0A   \n@@ -328,46 +328,15 @@\n  // \n-    return%0A    // %7D%0A    // if F == H %7B\n+case H:\n %0A   \n@@ -371,26 +371,24 @@\n  // \n-    return\n+default:\n %0A    // \n %7D%0A  \n@@ -383,27 +383,40 @@\n %0A    // \n-%7D%0A   %7D%0A%0A   %0A%0A    \n+    fmt.Print(%22Erro%22)%0A    // %7D\n %0A%7D\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-25_14-47-39",
+            "content": "@@ -177,24 +177,29 @@\n N%22)%0A        \n+break\n %0A    case H:\n@@ -232,16 +232,21 @@\n         \n+break\n %0A    def\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-25_14-49-46",
+            "content": "@@ -177,30 +177,24 @@\n N%22)%0A        \n-return\n %0A    case H:\n@@ -223,30 +223,24 @@\n S%22)%0A        \n-return\n %0A    default\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-25_14-51-40",
+            "content": "@@ -279,31 +279,16 @@\n %22Erro%22)%0A\n-        return%0A\n     %7D%0A  \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-25_14-51-51",
+            "content": "@@ -244,16 +244,65 @@\n urn%0A    \n+default:%0A        fmt.Print(%22Erro%22)%0A        return\n %0A    %7D%0A \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-25_14-52-15",
+            "content": "package main\nimport \"fmt\"\n\nfunc main(){\n    var H,P,F,D int\n    fmt.Scan(&H,&P,&F,&D)\n\n\n   for{\n     F = ((F + D) + 16) % 16 \n     switch F {\n    case P :\n        fmt.Println(\"N\")\n        return\n    case H:\n        fmt.Println(\"S\")\n        return\n    \n    }\n    //  if F == P {\n    //     fmt.Println(\"N\")\n    //     return\n    // }\n    // if F == H {\n    //     fmt.Println(\"S\")\n    //     return\n    // }\n   }\n\n   \n\n    \n}",
+            "lines": "33"
         }
     ]
 }

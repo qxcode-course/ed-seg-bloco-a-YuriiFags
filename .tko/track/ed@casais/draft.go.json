@@ -22,8 +22,28 @@
         },
         {
             "label": "2026-03-18_13-09-46",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var N int\n    pares := 0\n\n    fmt.Scan(&N)\n\n    descasados := make(map[int]int)\n\n    for i := 0; i < N; i++ {\n        var animal int\n        fmt.Scan(&animal)\n\n        if descasados[-animal] > 0{\n            descasados[-animal]--\n            pares++\n        } else {\n            descasados[animal]++\n        }\n    }\n    fmt.Println(pares)\n    \n}\n",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,143 +23,194 @@\n mt%22%0A\n-%0A\n func \n-encontrarCasal(vet %5B%5Dint) int %7B%0A%09descasados := make(map%5Bint%5Dint)%0A%09casais := 0%0A%0A%09for _, animal := range vet %7B%0A%09%09par := -\n+main() %7B%0A    var N int%0A    pares := 0%0A%0A    fmt.Scan(&N)%0A%0A    descasados := make(map%5Bint%5Dint)%0A%0A    for i := 0; i %3C N; i++ %7B%0A        var animal int%0A        fmt.Scan(&\n animal\n+)\n %0A%0A\n-%09%09\n+        \n if d\n@@ -223,66 +223,34 @@\n dos%5B\n-par\n+-animal\n %5D %3E 0\n- \n %7B%0A\n-%09%09%09descasados%5Bpar%5D--%0A%09%09%09casais++%0A%09%09%7D else %7B%0A%09%09%09\n+            \n desc\n@@ -260,277 +260,131 @@\n dos%5B\n+-\n animal%5D\n-++%0A%09%09%7D%0A%09%7D%0A%09return casais%0A%7D%0Afunc imprimir(casais int)%7B%0A    fmt.Print(casais)%0A%7D%0A%0Afunc main()%7B%0A\n+--%0A        \n     \n-var N int\n+pares++\n %0A    \n-%0A\n     \n-%0A    vet := make(%5B%5Dint,N)%0A%0A    for i := 0; i %3C N; i++ %7B%0A        fmt.Scan(&vet%5Bi%5D)%0A    %7D%0A     resultado:= encontrarCasal(vet)%0A     imprimir(resultado)\n+%7D else %7B%0A            descasados%5Banimal%5D++%0A        %7D%0A    %7D%0A    fmt.Println(pares)%0A    \n %0A%7D\n+%0A\n",
             "lines": "24"
+        },
+        {
+            "label": "2026-03-25_16-10-15",
+            "content": "@@ -383,17 +383,16 @@\n e(%5B%5Dint,\n- \n N)%0A%0A    \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-25_16-11-37",
+            "content": "@@ -364,20 +364,8 @@\n     \n-fmt.Scan(&N)\n %0A   \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-25_16-12-00",
+            "content": "@@ -316,10 +316,8 @@\n rint\n-ln\n (cas\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-25_16-12-11",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc encontrarCasal(vet []int) int {\n\tdescasados := make(map[int]int)\n\tcasais := 0\n\n\tfor _, animal := range vet {\n\t\tpar := -animal\n\n\t\tif descasados[par] > 0 {\n\t\t\tdescasados[par]--\n\t\t\tcasais++\n\t\t} else {\n\t\t\tdescasados[animal]++\n\t\t}\n\t}\n\treturn casais\n}\nfunc imprimir(casais int){\n    fmt.Println(casais)\n}\n\nfunc main(){\n    var N int\n    \n    fmt.Scan(&N)\n    vet := make([]int, N)\n\n    for i := 0; i < N; i++ {\n        fmt.Scan(&vet[i])\n    }\n     resultado:= encontrarCasal(vet)\n     imprimir(resultado)\n}",
+            "lines": "36"
         }
     ]
 }

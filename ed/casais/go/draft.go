@@ -1,24 +1,36 @@
 package main
+
 import "fmt"
-func main() {
+
+func encontrarCasal(vet []int) int {
+	solteiros := make(map[int]int)
+	casais := 0
+
+	for _, animal := range vet {
+		par := -animal
+
+		if solteiros[par] > 0 {
+			solteiros[par]--
+			casais++
+		} else {
+			solteiros[animal]++
+		}
+	}
+	return casais
+}
+func imprimir(casais int){
+    fmt.Println(casais)
+}
+
+func main(){
     var N int
-    pares := 0
-
+    
     fmt.Scan(&N)
-
-    descasados := make(map[int]int)
+    vet := make([]int, N)
 
     for i := 0; i < N; i++ {
-        var animal int
-        fmt.Scan(&animal)
-
-        if descasados[-animal] > 0{
-            descasados[-animal]--
-            pares++
-        } else {
-            descasados[animal]++
-        }
+        fmt.Scan(&vet[i])
     }
-    fmt.Println(pares)
-    
+     resultado:= encontrarCasal(vet)
+     imprimir(resultado)
 }

@@ -1,34 +1,49 @@
 package main
-import(
-    "fmt"
-    "math"
-) 
+
+import "fmt"
+
+func validarLancamento(a, b int) bool {
+	if a >= 10 && b >= 10 {
+		return true
+	}
+	return false
+}
+
+func abs(x int) int {
+	if x < 0 {
+		return -x
+	}
+	return x
+}
+
+func pontuacao(a, b int) int {
+	return abs(a - b)
+}
+
 func main() {
-    var N_competidores int
-    var melhor_Pontuacao = math.MaxFloat64
-    var melhor_Indice = -1
+	var qtdCompetidores, A, B int
+	fmt.Scan(&qtdCompetidores)
 
-    fmt.Scan(&N_competidores)
+	melhorIndice := -1
+	melhorPontuacao := 101
 
-    for i:= 0; i < N_competidores;i++{
-       var A,B int
-        fmt.Scan(&A,&B)
+	for i := 0; i < qtdCompetidores; i++ {
+		fmt.Scan(&A, &B)
 
-       
+		if validarLancamento(A, B) {
+			Pontuacao := pontuacao(A, B)
 
-        if A < 10 || B < 10 {
-            continue
-        }
-        diferenca := math.Abs(float64(A-B))
-        if diferenca < melhor_Pontuacao{
-            melhor_Pontuacao = diferenca
-            melhor_Indice = i
-          
-        }
-    }
-    if melhor_Indice == -1 {
+			if Pontuacao < melhorPontuacao {
+				melhorPontuacao = Pontuacao
+				melhorIndice = i
+			}
+		}
+
+	}
+    if melhorIndice == -1 {
         fmt.Println("sem ganhador")
-    } else {
-        fmt.Println(melhor_Indice)
+    }else {
+        fmt.Println(melhorIndice)
     }
+
 }

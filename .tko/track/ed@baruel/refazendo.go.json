@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-28_15-44-37",
+            "content": "@@ -127,24 +127,19 @@\n igs %7B%0A%09%09\n-repetida\n+fig\n s%5Bvalor%5D\n@@ -238,19 +238,8 @@\n s %5B%5D\n-int, total \n int)\n@@ -545,266 +545,4 @@\n %0A%7D%0A%0A\n-func main () %7B%0A%09var total_figurinhas int%0A%09var qtd int%0A%0A%09fmt.Scan(&total_figurinhas,&qtd)%0A%09figs := make(%5B%5Dint, qtd)%0A%0A%0A%09for i:=0; i %3C qtd; i++ %7B%0A%09%09fmt.Scan(&figs%5Bi%5D)%0A%09%7D%0A%0A%09fmt.Println(figurinhasRepetidas(figs))%0A%09fmt.Println(numeroFaltando(figs,total_figurinhas))%0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-28_15-55-18",
+            "content": "package main\nimport \"fmt\"\n\nfunc figurinhasRepetidas (figs[]int) int {\n\trepetidas := make(map[int]int)\n\n\tfor _,valor := range figs {\n\t\trepetidas[valor]++\n\n\t\tif repetidas[valor] > 1 {\n\t\t\treturn valor\n\t\t}\n\t}\n\treturn -1\n}\n\nfunc numeroFaltando(figs []int, total int) string {\n\tcontrole := make(map[int]bool)\n\n\tfor _, valor := range figs {\n\t\tcontrole[valor] = true\n\t}\n\n\tmaior := 0\n\n\tfor _, valor := range figs{\n\t\tif valor > maior {\n\t\t\tmaior = valor\n\t\t}\n\t}\n\n\tfor i := 1; i <= maior; i++ {\n\t\tif controle[i] == false {\n\t\t\treturn fmt.Sprintf( \"%d\", i)\n\t\t}\n\t}\n\treturn \"N\"\n}\n\nfunc main () {\n\tvar total_figurinhas int\n\tvar qtd int\n\n\tfmt.Scan(&total_figurinhas,&qtd)\n\tfigs := make([]int, qtd)\n\n\n\tfor i:=0; i < qtd; i++ {\n\t\tfmt.Scan(&figs[i])\n\t}\n\n\tfmt.Println(figurinhasRepetidas(figs))\n\tfmt.Println(numeroFaltando(figs,total_figurinhas))\n}\n",
+            "lines": "54"
+        }
+    ]
+}
