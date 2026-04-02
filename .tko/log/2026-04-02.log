@@ -1,0 +1,8 @@
+2026-04-02 18:42:34, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-02 18:42:49, EXEC, v:1, k:ed@treinando, mode:FULL, size:132, fail:COMP
+2026-04-02 18:45:00, EXEC, v:1, k:ed@treinando, mode:FULL, rate:66, size:132
+2026-04-02 18:45:51, EXEC, v:1, k:ed@treinando, mode:FULL, rate:83, size:134
+2026-04-02 18:46:32, EXEC, v:1, k:ed@treinando, mode:FULL, rate:100, size:136
+2026-04-02 18:46:34, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-04-02 18:47:21, SELF, v:1, k:ed@treinando, self:1, rate:100, study:140, friend:Matheus, code:1, debug:1
+2026-04-02 18:49:35, SELF, v:1, k:ed@triangulo, self:1, rate:100, study:45, concept:1, code:1

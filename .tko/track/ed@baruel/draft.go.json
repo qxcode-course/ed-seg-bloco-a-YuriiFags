@@ -97,8 +97,58 @@
         },
         {
             "label": "2026-03-28_15-57-01",
-            "content": "package main\nimport (\n    \"fmt\"\n    \"sort\"\n)\nfunc main() {\n    var total_figurinhas int\n    var fig_Baruel int\n\n    fmt.Scan(&total_figurinhas)\n    fmt.Scan(&fig_Baruel)\n    contagem := make(map[int]int)\n\n    for i := 0; i < fig_Baruel; i++ {\n        var num int\n        fmt.Scan(&num)\n        contagem[num]++\n    }\n\n    repetidas := []int{}\n\n    for num,qtd := range contagem {\n        if qtd > 1 {\n            for i := 0; i < qtd - 1; i++ {\n                repetidas = append(repetidas, num)\n            }\n        }\n    }\n\nsort.Ints(repetidas)\n    if len(repetidas)== 0{\n        fmt.Print(\"N\")\n    } else {\n        for i := 0; i < len(repetidas); i++ {\n            if i > 0 {\n                fmt.Print(\" \")\n            }\n            fmt.Print(repetidas[i])\n        }\n    }\n\n    fmt.Println()\n   \n    faltantes := []int{}\n\n    for i := 1 ; i <= total_figurinhas; i++ {\n        if contagem[i] == 0 {\n           faltantes = append(faltantes, i)\n        }\n    }\n\n  if len(faltantes) == 0 {\n    fmt.Print(\"N\")\n  } else {\n    for i := 0; i < len(faltantes); i++ {\n        if i > 0 {\n            fmt.Print(\" \")\n        }\n        fmt.Print(faltantes[i])\n    }\n  }\n\n    fmt.Println()\n}\n\n",
+            "content": "@@ -17,440 +17,605 @@\n ort \n-%22fmt%22%0A%0Afunc figurinhasRepetidas (figs%5B%5Dint) int %7B%0A%09repetidas := make(map%5Bint%5Dint)%0A%0A%09for _,valor := range figs %7B%0A%09%09repetidas%5Bvalor%5D++%0A%0A%09%09if repetidas%5Bvalor%5D %3E 1 %7B%0A%09%09%09return valor%0A%09%09%7D%0A%09%7D%0A%09return -1%0A%7D%0A%0Afunc numeroFaltando(figs %5B%5Dint, total int) string %7B%0A%09controle := make(map%5Bint%5Dbool)%0A%0A%09for _, valor := range figs %7B%0A%09%09controle%5Bvalor%5D = true%0A%09%7D%0A%0A%09maior := 0%0A%0A%09for _, valor := range figs%7B%0A%09%09if valor %3E maior %7B%0A%09%09%09maior = valor%0A%09%09%7D%0A%09%7D%0A%0A%09\n+(%0A    %22fmt%22%0A    %22sort%22%0A)%0Afunc main() %7B%0A    var total_figurinhas int%0A    var fig_Baruel int%0A%0A    fmt.Scan(&total_figurinhas)%0A    fmt.Scan(&fig_Baruel)%0A    contagem := make(map%5Bint%5Dint)%0A%0A    for i := 0; i %3C fig_Baruel; i++ %7B%0A        var num int%0A        fmt.Scan(&num)%0A        contagem%5Bnum%5D++%0A    %7D%0A%0A    repetidas := %5B%5Dint%7B%7D%0A%0A    for num,qtd := range contagem %7B%0A        if qtd %3E 1 %7B%0A            for i := 0; i %3C qtd - 1; i++ %7B%0A                repetidas = append(repetidas, num)%0A            %7D%0A        %7D%0A    %7D%0A%0Asort.Ints(repetidas)%0A    if len(repetidas)== 0%7B%0A        fmt.Print(%22N%22)%0A    %7D else %7B%0A        \n for \n@@ -623,130 +623,227 @@\n  := \n-1\n+0\n ; i %3C\n-= maior; i++ %7B%0A%09%09if controle%5Bi%5D == false %7B%0A%09%09%09return\n+ len(repetidas); i++ %7B%0A            if i %3E 0 %7B%0A               \n  fmt.\n-Sp\n+P\n rint\n-f( %22%25d%22, i)%0A%09%09%7D%0A%09%7D%0A%09return %22N%22%0A%7D%0A%0Afunc main () %7B%0A%09var\n+(%22 %22)%0A            %7D%0A            fmt.Print(repetidas%5Bi%5D)%0A        %7D%0A    %7D%0A%0A    fmt.Println()%0A   %0A    faltantes := %5B%5Dint%7B%7D%0A%0A    for i := 1 ; i %3C=\n  tot\n@@ -859,230 +859,322 @@\n nhas\n+;\n  i\n-nt%0A%09var qtd int%0A%0A%09fmt.Scan(&total_figurinhas,&qtd)%0A%09figs := make(%5B%5Dint, qtd)%0A%0A%0A%09\n+++ %7B%0A        if contagem%5Bi%5D == 0 %7B%0A           faltantes = append(faltantes, i)%0A        %7D%0A    %7D%0A%0A  if len(faltantes) == 0 %7B%0A    fmt.Print(%22N%22)%0A  %7D else %7B%0A    \n for i\n+ \n :=\n+ \n 0; i %3C \n-qtd; i++ %7B%0A%09%09fmt.Scan(&figs%5Bi%5D)%0A%09%7D%0A%0A%09fmt.Println(figurinhasRepetidas(figs))%0A%09fmt.Println(numeroFaltando(figs,total_figurinhas)\n+len(faltantes); i++ %7B%0A        if i %3E 0 %7B%0A            fmt.Print(%22 %22)%0A        %7D%0A        fmt.Print(faltantes%5Bi%5D)%0A    %7D%0A  %7D%0A%0A    fmt.Println(\n )%0A%7D%0A\n+%0A\n",
             "lines": "65"
+        },
+        {
+            "label": "2026-03-28_16-00-15",
+            "content": "@@ -57,22 +57,20 @@\n s%5B%5Dint) \n-string\n+int \n %7B%0A%09repet\n@@ -99,21 +99,8 @@\n nt)%0A\n-%09saida := %22 %22\n %0A%09fo\n@@ -182,49 +182,28 @@\n %0A%09%09%09\n-saida += fmt.Sprintf(%22%25d %22,\n+return \n valor\n-)\n %0A%09%09%7D%0A%09%7D%0A\n %09if \n@@ -202,34 +202,16 @@\n %0A%09%7D%0A\n-%09if saida == %22%22%7B%0A%09\n %09return \n %22N%22%0A\n@@ -210,14 +210,10 @@\n urn \n-%22N%22%0A%09%7D\n+-1\n %0A%7D%0A%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-28_16-05-19",
+            "content": "@@ -271,38 +271,8 @@\n %0A%09%7D%0A\n-%09return saida%5B:len(saida) -1%5D%0A\n %7D%0A%0Af\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-28_16-05-46",
+            "content": "@@ -217,16 +217,17 @@\n intf(%22%25d\n+ \n %22,valor)\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-28_16-05-59",
+            "content": "@@ -230,32 +230,8 @@\n or)%0A\n-%09%09%09repetidas%5Bvalor%5D = 0%0A\n %09%09%7D%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-28_16-06-38",
+            "content": "@@ -165,40 +165,8 @@\n %5D++%0A\n-%09%7D%0A%09for _, valor := range figs %7B\n %0A%09%09i\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-03-28_16-07-57",
+            "content": "@@ -442,21 +442,8 @@\n ool)\n-%0A%09saida := %22%22\n %0A%0A%09f\n@@ -499,16 +499,104 @@\n rue%0A%09%7D%0A%0A\n+%09maior := 0%0A%0A%09for _, valor := range figs%7B%0A%09%09if valor %3E maior %7B%0A%09%09%09maior = valor%0A%09%09%7D%0A%09%7D%0A%0A\n %09for i :\n@@ -603,22 +603,23 @@\n = 1; i %3C\n- total\n+= maior\n ; i++ %7B%0A\n@@ -645,32 +645,30 @@\n  false %7B%0A%09%09%09\n-saida +=\n+return\n  fmt.Sprintf\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-28_16-10-06",
+            "content": "@@ -528,17 +528,16 @@\n = 1; i %3C\n-=\n  total; \n@@ -616,68 +616,18 @@\n %09%7D%0A%09\n-if saida == %22%22%7B%0A%09%09return %22N%22%0A%09%7D%0A%09return saida%5B:len(saida)-1%5D\n+return %22N%22\n %0A%7D%0A%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-28_16-11-18",
+            "content": "@@ -44,22 +44,22 @@\n epetidas\n+ \n (figs\n- \n %5B%5Dint) s\n@@ -63,17 +63,16 @@\n ) string\n- \n %7B%0A%09repet\n@@ -112,20 +112,18 @@\n := %22\n+ \n %22\n-%0A%0A%09\n %0A%09for _,\n  val\n@@ -110,33 +110,32 @@\n a := %22 %22%0A%09for _,\n- \n valor := range f\n@@ -167,35 +167,22 @@\n +%0A%09%7D\n-%0A%0A%09\n %0A%09for \n-numero, quantidade\n+_, valor\n  := \n@@ -187,24 +187,19 @@\n = range \n-repetida\n+fig\n s %7B%0A%09%09if\n@@ -203,65 +203,31 @@\n %09if \n-quantidade %3E 1 %7B%0A%09%09%09for i := 0; i %3C quantidade-1; i++\n+repetidas%5Bvalor%5D %3E 1\n  %7B%0A\n-%09\n %09%09%09s\n@@ -253,32 +253,48 @@\n (%22%25d\n- \n %22,\n- numero)%0A%09%09%09%7D\n+valor)%0A%09%09%09repetidas%5Bvalor%5D = 0\n %0A%09%09%7D%0A%09%7D%0A\n %0A%09if\n@@ -289,17 +289,16 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%0A\n %09if said\n@@ -304,17 +304,16 @@\n da == %22%22\n- \n %7B%0A%09%09retu\n@@ -322,17 +322,16 @@\n  %22N%22%0A%09%7D%0A\n-%0A\n %09return \n@@ -339,32 +339,33 @@\n aida%5B:len(saida)\n+ \n -1%5D%0A%7D%0A%0Afunc nume\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-28_16-12-55",
+            "content": "@@ -594,9 +594,8 @@\n %09if \n-!\n cont\n@@ -601,16 +601,25 @@\n trole%5Bi%5D\n+ == false\n  %7B%0A%09%09%09sa\n@@ -641,17 +641,16 @@\n ntf( %22%25d\n- \n %22, i)%0A%09%09\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-03-28_16-14-03",
+            "content": "package main\nimport \"fmt\"\n\nfunc figurinhasRepetidas(figs []int) string {\n\trepetidas := make(map[int]int)\n\tsaida := \"\"\n\n\t\n\tfor _, valor := range figs {\n\t\trepetidas[valor]++\n\t}\n\n\t\n\tfor numero, quantidade := range repetidas {\n\t\tif quantidade > 1 {\n\t\t\tfor i := 0; i < quantidade-1; i++ {\n\t\t\t\tsaida += fmt.Sprintf(\"%d \", numero)\n\t\t\t}\n\t\t}\n\t}\n\n\tif saida == \"\" {\n\t\treturn \"N\"\n\t}\n\n\treturn saida[:len(saida)-1]\n}\n\nfunc numeroFaltando(figs []int, total int) string {\n\tcontrole := make(map[int]bool)\n\tsaida := \"\"\n\n\tfor _, valor := range figs {\n\t\tcontrole[valor] = true\n\t}\n\n\tfor i := 1; i <= total; i++ {\n\t\tif !controle[i] {\n\t\t\tsaida += fmt.Sprintf( \"%d \", i)\n\t\t}\n\t}\n\tif saida == \"\"{\n\t\treturn \"N\"\n\t}\n\treturn saida[:len(saida)-1]\n}\n\nfunc main () {\n\tvar total_figurinhas int\n\tvar qtd int\n\n\tfmt.Scan(&total_figurinhas,&qtd)\n\tfigs := make([]int, qtd)\n\n\n\tfor i:=0; i < qtd; i++ {\n\t\tfmt.Scan(&figs[i])\n\t}\n\n\tfmt.Println(figurinhasRepetidas(figs))\n\tfmt.Println(numeroFaltando(figs,total_figurinhas))\n}\n",
+            "lines": "62"
         }
     ]
 }
