@@ -1,0 +1,35 @@
+2026-04-07 09:01:19, SELF, v:1, k:ed@manipulacao, self:1, rate:100, study:180, concept:1, debug:1
+2026-04-07 09:01:54, SELF, v:1, k:ed@triangulo, self:1, study:40, concept:1, code:1
+2026-04-07 09:02:08, SELF, v:1, k:ed@triangulo, self:1, study:40, concept:1, code:1
+2026-04-07 09:02:45, MOVE, v:1, k:ed@vetequals, mode:DOWN
+2026-04-07 09:02:47, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-07 09:03:14, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:70, size:49
+2026-04-07 09:07:47, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-07 09:08:35, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-07 09:13:01, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:70, size:54
+2026-04-07 09:15:47, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20, size:54
+2026-04-07 09:16:18, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:30, size:54
+2026-04-07 09:16:43, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:30, size:57
+2026-04-07 09:17:47, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:80, size:58
+2026-04-07 09:19:42, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20, size:57
+2026-04-07 09:20:39, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20, size:55
+2026-04-07 09:21:11, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20, size:58
+2026-04-07 09:23:21, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20, size:58
+2026-04-07 09:25:36, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20, size:57
+2026-04-07 09:26:25, EXEC, v:1, k:ed@vetequals, mode:FULL, size:59, fail:COMP
+2026-04-07 09:26:34, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:20, size:59
+2026-04-07 09:32:33, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:50, size:65
+2026-04-07 09:33:00, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:100, size:65
+2026-04-07 09:33:26, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-07 09:33:44, SELF, v:1, k:ed@vetequals, self:1, rate:100, study:43, concept:1
+2026-04-07 09:36:30, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-07 09:36:34, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:100
+2026-04-07 10:20:21, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-07 10:20:25, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-07 10:20:26, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-07 10:20:39, SELF, v:1, k:ed@vetequals, self:1, rate:100, study:43, concept:1
+2026-04-07 10:32:02, SELF, v:1, k:ed@vetequals, self:1, rate:100, study:40, concept:1
+2026-04-07 10:32:03, MOVE, v:1, k:ed@vetequals, mode:PICK
+2026-04-07 10:32:05, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:100, size:65
+2026-04-07 10:32:25, MOVE, v:1, k:ed@vetequals, mode:BACK
+2026-04-07 15:38:16, SELF, v:1, k:ed@triangulo, self:1, study:30, concept:1, code:1

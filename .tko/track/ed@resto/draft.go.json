@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-02_19-11-52",
+            "content": "@@ -206,16 +206,17 @@\n ntf(%22%25v \n+1\n %25v %22, di\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-02_19-12-25",
+            "content": "@@ -212,10 +212,8 @@\n v %25v\n-%5Cn\n  %22, \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-02_19-12-36",
+            "content": "@@ -210,16 +210,17 @@\n %22%25v %25v%5Cn\n+ \n %22, div, \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-02_19-13-09",
+            "content": "@@ -194,23 +194,8 @@\n  2%0A%0A\n-%09empilhar(div)%0A\n %09fmt\n@@ -225,10 +225,25 @@\n  resto)%0A\n+%09empilhar(div)%0A\n %7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-02_19-47-35",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar value int\n\n\tfmt.Scan(&value)\n\n    empilhar(value)\n\n}\n\nfunc empilhar(value int) {\n\tif value == 0 {\n\t\treturn\n\t}\n\n\tdiv := value / 2\n\tresto := value % 2\n\n\tempilhar(div)\n\tfmt.Printf(\"%v %v\\n\", div, resto)\n}\n",
+            "lines": "24"
+        }
+    ]
+}
