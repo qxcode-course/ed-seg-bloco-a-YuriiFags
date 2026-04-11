@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-10_13-01-31",
+            "content": "@@ -354,27 +354,8 @@\n   %7D%0A\n-    fmt.Print(n)  %0A\n %7D%0Afu\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-10_13-02-07",
+            "content": "@@ -445,17 +445,22 @@\n Println(\n-x\n+%22true%22\n )%0A%09%7D els\n@@ -465,20 +465,34 @@\n lse %7B%0A%09%09\n-return\n+fmt.Println(%22false%22)\n %0A%09%7D%0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-10_13-02-37",
+            "content": "@@ -302,36 +302,21 @@\n  int\n+ \n ) %7B%0A\n-    contar := 0 %0A\n     if \n+!\n eh_p\n@@ -358,11 +358,22 @@\n     \n- go\n+fmt.Print(n)  \n %0A%7D%0Af\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-10_13-10-17",
+            "content": "@@ -164,16 +164,17 @@\n alse%0A%09%7D%0A\n+%09\n %0A%09if x =\n@@ -190,16 +190,17 @@\n %09return \n+ \n true%0A%09%7D%0A\n@@ -208,9 +208,11 @@\n if x\n-%25\n+ %25 \n div \n@@ -259,17 +259,19 @@\n o(x,\n- \n div\n-+\n+ + \n 1)%0A%0A\n+%0A\n %7D%0A%0Af\n@@ -287,88 +287,43 @@\n imo(\n-n int, numeroAtual int, quantidade int)\n+ n int, div\n  int\n+)\n  %7B%0A\n-%09if n == quantidade %7B%0A        %0A%09%7D%0A\n+    contar := 0 \n %0A   \n@@ -340,20 +340,12 @@\n mo(n\n-umeroAtual,2\n+,div\n ) %7B%0A\n@@ -362,54 +362,22 @@\n turn\n- nEnesimo(n, numeroAtual+1, quantidade)\n+%0A    %7D\n %0A    \n-%7D%0A\n+ go\n %0A%7D%0Af\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-10_13-22-36",
+            "content": "@@ -303,17 +303,71 @@\n  int\n-) int %7B%0A%09\n+, quantidade int) int %7B%0A%09if n == quantidade %7B%0A        %0A%09%7D%0A%0A    \n if e\n@@ -392,52 +392,19 @@\n l,2)\n+ \n %7B%0A\n-%09%09if n == 1 %7B%0A%09%09%09return numeroAtual%0A%09%09%7D%0A%09%09\n+        \n retu\n@@ -420,10 +420,8 @@\n mo(n\n--1\n , nu\n@@ -435,49 +435,27 @@\n al+1\n-)%0A%09%7D%0A%09return nEnesimo(n, numeroAtual + 1)\n+, quantidade)%0A    %7D\n %0A%0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-10_21-01-49",
+            "content": "@@ -501,33 +501,65 @@\n x)%0A%09\n-%0A%09fmt.Print(nEnesimo(x,2))\n+if eh_primo(x, 2) %7B%0A%09%09fmt.Println(x)%0A%09%7D else %7B%0A%09%09return%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-10_21-03-51",
+            "content": "@@ -512,10 +512,8 @@\n rint\n-ln\n (nEn\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-10_21-04-17",
+            "content": "package main\n\nimport \"fmt\"\n\n// x: n\u00famero que est\u00e1 sendo testado\n// div: divisor que est\u00e1 sendo testado\nfunc eh_primo(x int, div int) bool {\n\tif x <= 1 {\n\t\treturn false\n\t}\n\n\tif x == div {\n\t\treturn true\n\t}\n\tif x%div == 0 {\n\t\treturn false\n\t}\n\treturn eh_primo(x, div+1)\n\n}\n\nfunc nEnesimo(n int, numeroAtual int) int {\n\tif eh_primo(numeroAtual,2){\n\t\tif n == 1 {\n\t\t\treturn numeroAtual\n\t\t}\n\t\treturn nEnesimo(n-1, numeroAtual+1)\n\t}\n\treturn nEnesimo(n, numeroAtual + 1)\n\n}\nfunc main() {\n\tvar x int\n\tfmt.Scan(&x)\n\t\n\tfmt.Println(nEnesimo(x,2))\n}\n",
+            "lines": "37"
+        }
+    ]
+}

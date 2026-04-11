@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-10_21-15-22",
+            "content": "@@ -204,84 +204,8 @@\n    %7D\n-%0A%0A    if qtdDegraus == 1 %7C%7C qtdDegraus == 2 %7B%0A        fmt.Println(%221%22)%0A    %7D\n %0A   \n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-10_21-18-47",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,20 @@\n ain() %7B%0A\n-%09\n+    \n var qtdD\n@@ -56,17 +56,20 @@\n aus int%0A\n-%09\n+    \n fmt.Scan\n@@ -83,17 +83,20 @@\n graus)%0A%0A\n-%09\n+    \n if qtdDe\n@@ -107,18 +107,24 @@\n s %3E 3 %7B%0A\n-%09%09\n+        \n resultad\n@@ -164,18 +164,24 @@\n us - 3)%0A\n-%09%09\n+        \n fmt.Prin\n@@ -199,120 +199,131 @@\n do)%0A\n-%09%7D else %7B%0A%09%09resultado := qtdDegraus + 1%0A%09%09fmt.Println(resultado)%0A%09%7D%0A%0A%09if qtdDegraus == 1 %7C%7C qtdDegraus == 2 %7B%0A%09%09\n+    %7D%0A%0A    if qtdDegraus == 1 %7C%7C qtdDegraus == 2 %7B%0A        fmt.Println(%221%22)%0A    %7D%0A    %0A    resultado := qtdDegraus + 1%0A    \n fmt.\n@@ -334,15 +334,17 @@\n tln(\n-%221%22)%0A%09%7D%0A\n+resultado)\n %0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-10_21-19-47",
+            "content": "@@ -83,88 +83,9 @@\n s)%0A%0A\n-    if qtdDegraus == 1 %7C%7C qtdDegraus == 2 %7B%0A        fmt.Println(%221%22)%0A    %7D else \n+%09\n if q\n@@ -245,11 +245,74 @@\n do)%0A%09%7D%0A%0A\n+%09if qtdDegraus == 1 %7C%7C qtdDegraus == 2 %7B%0A%09%09fmt.Println(%221%22)%0A%09%7D%0A\n %0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-10_21-20-40",
+            "content": "@@ -157,66 +157,14 @@\n    %7D\n-%0A    if qtdDegraus == 3 %7B%0A        fmt.Println(%222%22)%0A    %7D%0A%09\n+ else \n if q\n@@ -258,13 +258,77 @@\n ado)%0A%09%7D \n+else %7B%0A%09%09resultado := qtdDegraus + 1%0A%09%09fmt.Println(resultado)%0A%09%7D\n %0A%0A%0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-10_21-23-27",
+            "content": "@@ -25,111 +25,158 @@\n t%22%0A%0A\n-%0A\n func \n-calcularDegraus(num int) int %7B%0A    if num == 1 %7C%7C num == 2 %7B%0A        return num\n+main() %7B%0A%09var qtdDegraus int%0A%09fmt.Scan(&qtdDegraus)%0A%0A    if qtdDegraus == 1 %7C%7C qtdDegraus == 2 %7B%0A        fmt.Println(%221%22)\n %0A    %7D%0A\n-%0A\n     if \n-num\n+qtdDegraus\n  == \n@@ -191,150 +191,87 @@\n     \n-return 3%0A    %7D%0A%0A    resultado := (num - 1) + (num + 3)%0A    return calcularDegraus(resultado)%0A%0A%7D%0A%0Afunc main() %7B%0A%09var qtdDegraus int%0A%09fmt.Scan(&\n+fmt.Println(%222%22)%0A    %7D%0A%09if qtdDegraus %3E 3 %7B%0A%09%09resultado := (qtdDegraus - 1) + (\n qtdD\n@@ -276,22 +276,24 @@\n dDegraus\n-)%0A    \n+ - 3)%0A%09%09\n fmt.Prin\n@@ -300,36 +300,23 @@\n tln(\n-calcularDegraus(qtdDegraus))\n+resultado)%0A%09%7D %0A\n %0A%0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-10_21-27-53",
+            "content": "@@ -147,17 +147,17 @@\n  return \n-2\n+3\n %0A    %7D%0A%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-10_21-28-38",
+            "content": "@@ -103,17 +103,19 @@\n  return \n-1\n+num\n %0A    %7D%0A%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-10_21-33-37",
+            "content": "@@ -175,37 +175,20 @@\n  := \n-(calcularDegraus\n (num\n-)\n  - 1) + \n (cal\n@@ -187,29 +187,12 @@\n ) + \n-(calcularDegraus\n (num\n-)\n  + 3\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-10_21-34-19",
+            "content": "@@ -195,14 +195,13 @@\n (num\n+)\n  - 1\n- )\n ) + \n@@ -224,14 +224,14 @@\n (num\n- -\n+) +\n  3)\n-)\n %0A   \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-10_21-35-02",
+            "content": "@@ -195,16 +195,17 @@\n (num - 1\n+ \n )) + (ca\n@@ -238,16 +238,32 @@\n   return\n+ calcularDegraus\n (resulta\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-10_21-38-28",
+            "content": "package main\n\nimport \"fmt\"\n\n\nfunc calcularDegraus(num int) int {\n    if num == 1 || num == 2 {\n        return 1\n    }\n\n    if num == 3 {\n        return 2\n    }\n\n    resultado := (calcularDegraus(num - 1)) + (calcularDegraus(num - 3))\n    return(resultado)\n\n}\n\nfunc main() {\n\tvar qtdDegraus int\n\tfmt.Scan(&qtdDegraus)\n    fmt.Println(calcularDegraus(qtdDegraus))\n\n}\n",
+            "lines": "25"
+        }
+    ]
+}

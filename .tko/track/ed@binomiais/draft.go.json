@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-10_22-14-00",
+            "content": "@@ -252,44 +252,8 @@\n   %7D%0A\n-    return calcularCoeficiente(n,k)%0A\n %7D%0A%0Af\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-10_22-14-58",
+            "content": "@@ -160,17 +160,16 @@\n 1 && k %3C\n-=\n  n - 1 %7B\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-10_22-15-34",
+            "content": "package main\nimport \"fmt\"\n\n\nfunc calcularCoeficiente(n,k int) int {\n    if k == 0 {\n        return 1\n    }\n    if k == n {\n        return 1\n    }\n\n    if k >= 1 && k <= n - 1 {\n        return calcularCoeficiente(n-1,k-1) + calcularCoeficiente(n-1,k)\n    }\n    return calcularCoeficiente(n,k)\n}\n\nfunc main() {\n    var n,k int\n    fmt.Scan(&n,&k)\n\n    fmt.Println(calcularCoeficiente(n,k))\n}\n",
+            "lines": "24"
+        }
+    ]
+}
