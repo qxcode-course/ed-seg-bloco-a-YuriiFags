@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-11_17-50-52",
+            "content": "@@ -26,16 +26,26 @@\n fmt%22%0A   \n+ %22strings%22\n %0A)%0A%0Afunc\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-11_17-50-59",
+            "content": "@@ -100,19 +100,17 @@\n vra) == \n-pos\n+0\n  %7B%0A%09%09ret\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-11_17-51-17",
+            "content": "@@ -193,9 +193,9 @@\n pos \n-+\n+-\n  1)%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-11_17-51-29",
+            "content": "@@ -119,16 +119,51 @@\n urn%0A%09%7D%0A%0A\n+%09fmt.Println(string(palavra%5Bpos%5D))%0A\n     impr\n@@ -198,43 +198,8 @@\n  1)%0A\n-%09fmt.Println(string(palavra%5Bpos%5D))%0A\n %7D%0Afu\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-11_17-52-01",
+            "content": "@@ -158,9 +158,9 @@\n pos \n--\n++\n  1)%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-11_17-52-21",
+            "content": "@@ -158,9 +158,9 @@\n pos \n-+\n+-\n  1)%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-11_17-53-16",
+            "content": "@@ -27,147 +27,13 @@\n mt%22%0A\n-) %0A%0A%0Afunc verificarLetras(palavra string) %7B%0A    if len(palavra) == 0 %7B%0A        return%0A    %7D%0A    verificarLetras(palavra%5B:len(palavra)-1%5D)%0A%7D\n+   %0A)\n %0A%0Afu\n@@ -123,37 +123,8 @@\n %09%7D%0A%0A\n-    verificarLetras(palavra)%0A\n     \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-11_17-58-08",
+            "content": "@@ -317,17 +317,17 @@\n ra, pos \n--\n++\n  1)%0A%09fmt\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-11_17-58-24",
+            "content": "@@ -316,16 +316,20 @@\n vra, pos\n+ - 1\n )%0A%09fmt.P\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-11_17-59-21",
+            "content": "@@ -53,15 +53,22 @@\n ras(\n-qtd int\n+palavra string\n ) %7B%0A\n@@ -74,19 +74,28 @@\n %0A    if \n-qtd\n+len(palavra)\n  == 0 %7B%0A\n@@ -139,15 +139,32 @@\n ras(\n-qtd - 1\n+palavra%5B:len(palavra)-1%5D\n )%0A%7D%0A\n@@ -274,18 +274,22 @@\n Letras(p\n-os\n+alavra\n )%0A    im\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-11_18-53-20",
+            "content": "@@ -27,19 +27,8 @@\n mt%22%0A\n-%09%22strings%22%0A\n ) %0A%0A\n@@ -53,25 +53,11 @@\n ras(\n-palavra string, n\n+qtd\n  int\n@@ -67,28 +67,19 @@\n %0A    if \n-len(palavra)\n+qtd\n  == 0 %7B%0A\n@@ -103,44 +103,8 @@\n   %7D%0A\n-    fmt.Println(string(palavra%5Bn%5D))%0A\n     \n@@ -123,20 +123,13 @@\n ras(\n-palavra, n +\n+qtd -\n  1)%0A\n@@ -224,45 +224,8 @@\n %09%7D%0A%0A\n-    inicio := len(palavra) - 1 - pos%0A\n     \n@@ -245,21 +245,10 @@\n as(p\n-alavra,inici\n o\n+s\n )%0A  \n@@ -283,14 +283,44 @@\n  pos\n- + 1)%0A\n+)%0A%09fmt.Println(string(palavra%5Bpos%5D))\n %0A%7D%0Af\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-11_19-08-17",
+            "content": "@@ -24,16 +24,25 @@\n %09%22fmt%22%0A%09\n+%22strings%22\n %0A) %0A%0A%0Afu\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-11_19-08-22",
+            "content": "@@ -365,26 +365,8 @@\n io)%0A\n-    fmt.Println()%0A\n     \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-11_19-08-37",
+            "content": "@@ -99,17 +99,17 @@\n vra) == \n-n\n+0\n  %7B%0A     \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-11_19-09-24",
+            "content": "@@ -137,16 +137,18 @@\n mt.Print\n+ln\n (string(\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-11_19-09-50",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\n) \n\n\nfunc verificarLetras(palavra string, n int) {\n    if len(palavra) == n {\n        return\n    }\n    fmt.Print(string(palavra[n]))\n    verificarLetras(palavra, n + 1)\n}\n\nfunc imprimirContrario(palavra string, pos int) {\n\tif len(palavra) == pos {\n\t\treturn\n\t}\n\n    inicio := len(palavra) - 1 - pos\n    verificarLetras(palavra,inicio)\n    fmt.Println()\n    imprimirContrario(palavra, pos + 1)\n\n}\nfunc main() {\n\tvar palavra string\n    fmt.Scan(&palavra)\n    imprimirContrario(palavra,0)\n}\n",
+            "lines": "32"
+        }
+    ]
+}

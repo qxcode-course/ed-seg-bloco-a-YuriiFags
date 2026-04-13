@@ -1,0 +1,114 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-11_16-49-07",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func dia\n@@ -90,24 +90,25 @@\n     %7D %0A%0A    \n+ \n fmt.Println(\n@@ -111,18 +111,8 @@\n tln(\n-s%5B0%5D)%0A    \n diag\n@@ -122,16 +122,18 @@\n l(s%5B1:%5D)\n+ )\n %0A    %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-11_16-51-19",
+            "content": "@@ -163,70 +163,35 @@\n     \n-var palavra string%0A    fmt.Scan(&palavra)%0A    diagonal(palavra\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-11_16-53-49",
+            "content": "@@ -43,23 +43,16 @@\n  string)\n- string\n  %7B%0A%0A    \n@@ -86,12 +86,8 @@\n turn\n- %220%22\n %0A   \n@@ -95,22 +95,37 @@\n %7D %0A%0A    \n-return\n+fmt.Println(s%5B0%5D)%0A   \n  diagona\n@@ -127,16 +127,20 @@\n agonal(s\n+%5B1:%5D\n )%0A    %0A%7D\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-11_16-55-56",
+            "content": "@@ -17,80 +17,46 @@\n ort \n-(%0A    %22fmt%22%0A    %22strings%22%0A)%0A%0Afunc diagonal(palavra string, posAtual int)\n+%22fmt%22%0A%0Afunc diagonal(s string) string \n %7B%0A%0A \n@@ -65,23 +65,17 @@\n  if len(\n-palavra\n+s\n ) == 0 %7B\n@@ -90,16 +90,19 @@\n  return \n+%220%22\n %0A    %7D %0A\n@@ -110,110 +110,25 @@\n     \n-espa%C3%A7os := strings.Repeat(%22 %22, posAtual)%0A    fmt.Println(espa%C3%A7os)%0A    diagonal(palavra%5B1:%5D, posAtual+2\n+return diagonal(s\n )%0A  \n@@ -217,11 +217,8 @@\n avra\n-, 0\n )%0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-11_17-06-48",
+            "content": "@@ -244,17 +244,17 @@\n osAtual+\n-1\n+2\n )%0A    %0A%7D\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-11_17-07-05",
+            "content": "@@ -337,13 +337,13 @@\n alavra, \n-1\n+0\n )%0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-11_17-07-24",
+            "content": "@@ -147,20 +147,78 @@\n     \n-fmt.Println(\n+espa%C3%A7os := strings.Repeat(%22 %22, posAtual)%0A    fmt.Println(espa%C3%A7os)%0A    \n diag\n@@ -250,14 +250,8 @@\n l+1)\n-)%0A%0A   \n %0A   \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-11_17-12-54",
+            "content": "@@ -27,16 +27,27 @@\n %22fmt%22%0A  \n+  %22strings%22\n %0A)%0A%0Afunc\n@@ -159,25 +159,8 @@\n tln(\n-palavra%5B0%5D)%0A%0A    \n diag\n@@ -188,16 +188,22 @@\n Atual+1)\n+)%0A%0A   \n %0A    %0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-11_17-14-20",
+            "content": "@@ -284,13 +284,14 @@\n palavra,\n+ \n 1)%0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-11_17-15-04",
+            "content": "@@ -177,16 +177,20 @@\n (palavra\n+%5B1:%5D\n , posAtu\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-11_17-17-18",
+            "content": "@@ -280,13 +280,13 @@\n palavra,\n-0\n+1\n )%0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-11_17-17-40",
+            "content": "@@ -128,16 +128,43 @@\n     %7D %0A%0A\n+    fmt.Println(palavra%5B0%5D)\n %0A%0A    di\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-11_17-17-52",
+            "content": "@@ -29,16 +29,19 @@\n mt%22%0A\n+  %0A\n )%0A%0Afunc \n espa\n@@ -40,36 +40,68 @@\n unc \n-espa%C3%A7os(qtd\n+diagonal(palavra string, posAtual\n  int)%7B%0A\n+%0A\n     if \n-qtd\n+len(palavra)\n  == \n@@ -122,65 +122,23 @@\n turn\n+ \n %0A    %7D\n+ %0A%0A%0A\n %0A   \n- fmt.Println(%22 %22)%0A    espa%C3%A7os(qtd - 1)%0A%7D %0A%0Afunc\n  dia\n@@ -142,39 +142,32 @@\n diagonal(palavra\n- string\n , posAtual int)%7B\n@@ -160,26 +160,19 @@\n posAtual\n- int)%7B%0A%0A  \n++1)\n %0A    %0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-11_17-24-17",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import (\n@@ -15,17 +15,20 @@\n mport (%0A\n-%09\n+    \n %22fmt%22%0A)%0A\n@@ -49,20 +49,22 @@\n qtd int)\n- \n %7B%0A\n-%09\n+    \n if qtd =\n@@ -73,21 +73,33 @@\n 0 %7B%0A\n-%09%09return%0A%09%7D%0A%09\n+        return%0A    %7D%0A    \n fmt.\n@@ -111,17 +111,20 @@\n ln(%22 %22)%0A\n-%09\n+    \n espa%C3%A7os(\n@@ -133,16 +133,17 @@\n d - 1)%0A%7D\n+ \n %0A%0Afunc d\n@@ -173,131 +173,28 @@\n  pos\n+Atual\n  int)\n- \n %7B%0A%0A\n-%09if len(palavra) == pos %7B%0A%09%09return%0A%09%7D%0A%0A%09espa%C3%A7os(pos)%0A    fmt.Println(string(palavra%5Bpos%5D))%0A    diagonal(palavra,0)\n+  %0A    \n %0A%7D%0A%0A\n@@ -207,17 +207,20 @@\n ain() %7B%0A\n-%09\n+    \n var pala\n@@ -230,17 +230,20 @@\n  string%0A\n-%09\n+    \n fmt.Scan\n@@ -257,9 +257,12 @@\n ra)%0A\n-%09\n+    \n diag\n@@ -274,14 +274,13 @@\n palavra,\n- \n 0)%0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-11_17-28-37",
+            "content": "@@ -274,15 +274,9 @@\n vra,\n-pos + 1\n+0\n )%0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-11_17-34-54",
+            "content": "@@ -228,17 +228,11 @@\n rint\n-f(%22%25c/n%22,\n+ln(\n stri\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-11_17-36-29",
+            "content": "@@ -228,17 +228,17 @@\n rintf(%22%25\n-v\n+c\n /n%22,stri\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-11_17-36-35",
+            "content": "@@ -233,9 +233,9 @@\n (%22%25v\n-%5C\n+/\n n%22,s\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-11_17-36-56",
+            "content": "@@ -87,16 +87,18 @@\n mt.Print\n+ln\n (%22 %22)%0A%09e\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-11_17-37-29",
+            "content": "@@ -226,17 +226,17 @@\n rintf(%22%25\n-c\n+v\n %5Cn%22,stri\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-11_17-37-58",
+            "content": "@@ -226,17 +226,17 @@\n rintf(%22%25\n-v\n+c\n %5Cn%22,stri\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-11_17-44-02",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc espa\u00e7os(qtd int) {\n\tif qtd == 0 {\n\t\treturn\n\t}\n\tfmt.Print(\" \")\n\tespa\u00e7os(qtd - 1)\n}\n\nfunc diagonal(palavra string, pos int) {\n\n\tif len(palavra) == pos {\n\t\treturn\n\t}\n\n\tespa\u00e7os(pos)\n    fmt.Printf(\"%v\\n\",string(palavra[pos]))\n    diagonal(palavra,pos + 1)\n}\n\nfunc main() {\n\tvar palavra string\n\tfmt.Scan(&palavra)\n\tdiagonal(palavra, 0)\n}\n",
+            "lines": "30"
+        }
+    ]
+}

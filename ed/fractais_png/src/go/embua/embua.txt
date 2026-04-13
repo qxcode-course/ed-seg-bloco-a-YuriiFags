@@ -17,15 +17,29 @@ func main() {
 	//pen.Walk(100)             // anda 100 pixels
 	//pen.Left(30)              // dobra 30 graus para esquerda
 	//pen.Walk(100)             // anda 100 pixels
-	 
-	pen.DrawCircle(50)        // desenha um círculo de raio 50
+	//pen.DrawCircle(50)        // desenha um círculo de raio 50
 	// pen.Right(60)             // gira para direita 60 graus
 	// pen.Walk(150)
-	
-	
+	var numero float64 = 10.0
 	for range 10 {
-		
+		pen.Right(90)
+		pen.Walk(numero)
+		numero += 10
 
+		pen.Left(90)
+		pen.Walk(numero)
+		numero += 10
+
+		pen.Left(90)
+		pen.Walk(numero)
+		numero += 10
+
+		pen.Left(90)
+		pen.Walk(numero)
+		numero += 10
+
+		pen.SetHeading(90)
+		
 	}
 
 	pen.SavePNG("tree.png")
