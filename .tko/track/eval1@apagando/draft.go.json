@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_17-00-12",
+            "content": "@@ -282,12 +282,11 @@\n %25v%22,\n- \n p)%0A\n+\n %09%09%7D%0A\n@@ -358,31 +358,8 @@\n &qtd\n-, &identificadorPessoas\n )%0A%0A%09\n@@ -440,184 +440,14 @@\n %0A%09%7D%0A\n+%09\n %0A%09saiu\n- := make(%5B%5Dint, identificadorPessoas)%0A%0A%09for i := 0; i %3C identificadorPessoas; i++ %7B%0A%09%09fmt.Scan(&saiu%5Bi%5D)%0A%09%7D%0A%0A%09resultado := verificarSaidas(saiu)%0A%09imprimir(fila, resultado)\n %0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-13_17-07-46",
+            "content": "@@ -355,16 +355,39 @@\n can(&qtd\n+, &identificadorPessoas\n )%0A%0A%09fila\n@@ -466,47 +466,12 @@\n %7D%0A%0A%09\n-fmt.Scan(&identificadorPessoas)%0A%09sairam\n+saiu\n  := \n@@ -565,19 +565,17 @@\n can(&sai\n-ram\n+u\n %5Bi%5D)%0A%09%7D%0A\n@@ -608,19 +608,17 @@\n idas(sai\n-ram\n+u\n )%0A%09impri\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-13_17-10-00",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc verificarSaidas(sairam []int) map[int]bool {\n\tsaidas := make(map[int]bool)\n\n\tfor _, p := range sairam {\n\t\tsaidas[p] = true\n\t}\n\treturn saidas\n}\n\nfunc imprimir(fila []int, saiu map[int]bool) {\n\tfor _, p := range fila {\n\t\tif !saiu[p] {\n\t\t\tfmt.Printf(\"%v\", p)\n\t\t}\n\t}\n}\n\nfunc main() {\n\tvar qtd, identificadorPessoas int\n\tfmt.Scan(&qtd)\n\n\tfila := make([]int, qtd)\n\n\tfor i := 0; i < qtd; i++ {\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\tfmt.Scan(&identificadorPessoas)\n\tsairam := make([]int, identificadorPessoas)\n\n\tfor i := 0; i < identificadorPessoas; i++ {\n\t\tfmt.Scan(&sairam[i])\n\t}\n\n\tresultado := verificarSaidas(sairam)\n\timprimir(fila, resultado)\n}\n",
+            "lines": "41"
+        }
+    ]
+}

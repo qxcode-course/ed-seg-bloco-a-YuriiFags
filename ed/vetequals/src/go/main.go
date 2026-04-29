@@ -52,6 +52,9 @@ func main() {
 	} else {
 		fmt.Println("diferentes")
 	}
+
+	meuVetor := NewVector(0)
+	fmt.Println(meuVetor)
 }
 
 func str2slice(line string) []int {
@@ -63,3 +66,5 @@ func str2slice(line string) []int {
 	}
 	return nums
 }
+
+
