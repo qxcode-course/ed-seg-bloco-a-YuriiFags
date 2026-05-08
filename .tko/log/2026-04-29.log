@@ -7,3 +7,33 @@
 2026-04-29 12:35:31, MOVE, v:1, k:ed@bettersearch, mode:BACK
 2026-04-29 12:35:54, SELF, v:1, k:ed@bettersearch, self:1, rate:100, study:45, concept:1, debug:1
 2026-04-29 12:34:13, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-29 12:38:07, MOVE, v:1, k:ed@magicsearch, mode:DOWN
+2026-04-29 12:38:07, MOVE, v:1, k:ed@magicsearch, mode:PICK
+2026-04-29 12:38:07, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-29 12:38:07, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-29 12:38:07, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-29 12:43:59, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-29 12:52:18, EXEC, v:1, k:ed@magicsearch, mode:FULL, size:37, fail:COMP
+2026-04-29 12:56:06, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-29 12:59:24, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:50, size:45
+2026-04-29 12:59:20, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-29 13:04:00, MOVE, v:1, k:ed@magicsearch, mode:BACK
+2026-04-29 13:04:16, MOVE, v:1, k:ed@magicsearch, mode:PICK
+2026-04-29 13:02:42, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-29 13:11:58, MOVE, v:1, k:ed@magicsearch, mode:BACK
+2026-04-29 13:12:20, MOVE, v:1, k:ed@magicsearch, mode:PICK
+2026-04-29 13:20:02, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:80, size:47
+2026-04-29 13:18:44, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-29 13:24:51, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:100, size:47
+2026-04-29 13:24:52, MOVE, v:1, k:ed@magicsearch, mode:BACK
+2026-04-29 13:25:07, SELF, v:1, k:ed@magicsearch, self:1, rate:100, study:48, concept:1, debug:1
+2026-04-29 13:24:46, MOVE, v:1, k:ed@magicsearch, mode:EDIT
+2026-04-29 13:38:55, MOVE, v:1, k:ed@iterador, mode:DOWN
+2026-04-29 13:38:59, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-04-29 13:38:54, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-04-29 13:38:55, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-04-29 13:43:23, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-04-29 13:38:55, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-04-29 13:48:17, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-04-29 13:52:59, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-04-29 13:56:41, MOVE, v:1, k:ed@iterador, mode:EDIT

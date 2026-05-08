@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-04_12-30-01",
+            "content": "@@ -666,17 +666,17 @@\n eversed%5B\n-j\n+i\n %5D = L.da\n@@ -736,17 +736,16 @@\n %09index: \n--\n 1,%0A%09%7D%0A%7D%0A\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-05-04_12-34-52",
+            "content": "@@ -645,17 +645,16 @@\n - 1; i %3E\n-=\n  0; i-- \n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-05-04_12-35-58",
+            "content": "@@ -153,63 +153,8 @@\n %0A%7D%0A%0A\n-type CyclicIterator struct %7B%0A%09data %5B%5Dint%0A%09index int%0A%0A%7D%0A\n func\n@@ -499,22 +499,8 @@\n += 1\n- %25 len(i.data)\n %0A%09re\n@@ -749,62 +749,8 @@\n %09%7D%0A%7D\n-%0A%0Afunc (L*MyList) CyclicIterator() *CyclicIterator%7B%0A%0A%7D\n %0Afun\n@@ -1492,16 +1492,19 @@\n ic%22:%0A%09%09%09\n+// \n qtd, _ :\n@@ -1526,24 +1526,27 @@\n args%5B1%5D)%0A%09%09%09\n+// \n fmt.Print(%22%5B\n@@ -1552,16 +1552,19 @@\n %5B %22)%0A%09%09%09\n+// \n it := my\n@@ -1584,24 +1584,27 @@\n erator()%0A%09%09%09\n+// \n for range qt\n@@ -1606,24 +1606,27 @@\n ge qtd %7B%0A%09%09%09\n+// \n %09fmt.Printf(\n@@ -1638,37 +1638,43 @@\n , it.Next())%0A%09%09%09\n+// \n %7D%0A%09%09%09\n+// \n fmt.Println(%22%5D%22)\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-05-04_12-48-09",
+            "content": "@@ -870,201 +870,8 @@\n or%7B%0A\n-%09%0A%09n := (len(L.data) - 1) %25 len(L.data) %0A%09rep := make(%5B%5Dint,n)%0A%09%0A%09j := 0%0A%09for i := 0; i %3C len(L.data)-1; i++ %7B%0A%09%09rep%5Bj%5D = L.data%5Bi%5D%0A%09%09j++%0A%09%7D%0A%09return &CyclicIterator%7B%0A%09%09data:rep,%0A%09%09index: -1,%0A%09%7D\n %0A%7D%0Af\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-05-04_12-53-03",
+            "content": "@@ -826,12 +826,17 @@\n nc (\n-it *\n+L*MyList)\n  Cyc\n@@ -850,50 +850,221 @@\n ator\n+(\n ) \n-HasNext() bool%7B%0A%09return len(it.data) %3E 0\n+*CyclicIterator%7B%0A%09%0A%09n := (len(L.data) - 1) %25 len(L.data) %0A%09rep := make(%5B%5Dint,n)%0A%09%0A%09j := 0%0A%09for i := 0; i %3C len(L.data)-1; i++ %7B%0A%09%09rep%5Bj%5D = L.data%5Bi%5D%0A%09%09j++%0A%09%7D%0A%09return &CyclicIterator%7B%0A%09%09data:rep,%0A%09%09index: -1,%0A%09%7D\n %0A%7D%0Af\n",
+            "lines": "117"
+        },
+        {
+            "label": "2026-05-04_13-03-30",
+            "content": "@@ -204,17 +204,16 @@\n  int%0A%0A%7D%0A\n-%0A\n func New\n@@ -889,118 +889,8 @@\n  0%0A%7D\n-%0A%0Afunc (L*MyList) CyclicIterator() *CyclicIterator%7B%0A%09return &CyclicIterator%7B%0A%09%09data: L.data,%0A%09%09index: -1,%0A%09%7D%0A%7D\n %0Afun\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-05-04_13-06-59",
+            "content": "@@ -886,36 +886,41 @@\n a) %3E 0%0A%7D%0A%0Afunc (\n-it *\n+L*MyList)\n  CyclicIterator)\n@@ -922,175 +922,86 @@\n ator\n-) Next() int%7B%0A%09if len(it.data) == 0 %7B%0A%09%09panic(fmt.Errorf(%22No elements%22))%0A%09%7D%0A%0A%09it.index++%0A%09if it.index %3E= len(it\n+() *CyclicIterator%7B%0A%09return &CyclicIterator%7B%0A%09%09data: L\n .data\n-) %7B\n+,\n %0A%09%09\n-it.\n index\n- = 0%0A%09%7D%0A%0A%09return it.data%5Bit.index%5D%0A%7D%0A\n+: -1,%0A%09%7D%0A%7D\n %0Afun\n",
+            "lines": "113"
+        },
+        {
+            "label": "2026-05-04_21-21-20",
+            "content": "@@ -436,111 +436,8 @@\n -1%0A%7D\n-%0Afunc (l *MyList) CyclicIterator() *CyclicIterator %7B%0A%09return &CyclicIterator%7Bdata: l.data, index: -1%7D%0A%7D\n %0A%0Afu\n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-05-04_21-22-09",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype MyList struct {\n\tdata []int\n}\n\ntype Iterator struct {\n\tdata  []int\n\tindex int\n}\n\ntype CyclicIterator struct {\n\tdata []int\n\tindex int\n\n}\n\nfunc NewMyList(values []int) *MyList {\n\treturn &MyList{data: values}\n}\n\nfunc (l *MyList) Iterator() *Iterator {\n\treturn &Iterator{data: l.data, index: -1}\n}\n\nfunc (i *Iterator) HasNext() bool {\n\treturn i.index < len(i.data)-1\n}\nfunc (l *MyList) CyclicIterator() *CyclicIterator {\n\treturn &CyclicIterator{data: l.data, index: -1}\n}\n\nfunc (i *Iterator) Next() int {\n\tif i.index == len(i.data) {\n\t\tpanic(fmt.Errorf(\"No more elements\"))\n\t}\n\ti.index += 1 % len(i.data)\n\treturn i.data[i.index]\n}\n\nfunc (L *MyList) ReverseIterator() *Iterator {\n\tn := len(L.data)\n\treversed := make([]int, n)\n\n\tj := 0\n\tfor i := n - 1; i >= 0; i-- {\n\t\treversed[j] = L.data[i]\n\t\tj++\n\t}\n\treturn &Iterator{\n\t\tdata: reversed,\n\t\tindex: -1,\n\t}\n}\n\nfunc (it * CyclicIterator) HasNext() bool{\n\treturn len(it.data) > 0\n}\n\nfunc (it * CyclicIterator) Next() int{\n\tif len(it.data) == 0 {\n\t\tpanic(fmt.Errorf(\"No elements\"))\n\t}\n\n\tit.index++\n\tif it.index >= len(it.data) {\n\t\tit.index = 0\n\t}\n\n\treturn it.data[it.index]\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tmylist := NewMyList([]int{})\n\tfor scanner.Scan() {\n\t\tline := scanner.Text()\n\t\targs := strings.Fields(line)\n\t\tfmt.Println(\"$\" + line)\n\n\t\tswitch args[0] {\n\t\tcase \"end\":\n\t\t\tbreak\n\t\tcase \"read\":\n\t\t\tfor i := 1; i < len(args); i++ {\n\t\t\t\tslice := make([]int, len(args)-1)\n\t\t\t\tfor i, value := range args[1:] {\n\t\t\t\t\tslice[i], _ = strconv.Atoi(value)\n\t\t\t\t}\n\t\t\t\tmylist = NewMyList(slice)\n\t\t\t}\n\t\tcase \"show\":\n\t\t\tfmt.Print(\"[ \")\n\t\t\tfor it := mylist.Iterator(); it.HasNext(); {\n\t\t\t\tfmt.Printf(\"%v \", it.Next())\n\t\t\t}\n\t\t\tfmt.Println(\"]\")\n\t\tcase \"reverse\":\n\t\t\tfmt.Print(\"[ \")\n\t\t\tfor it := mylist.ReverseIterator(); it.HasNext(); {\n\t\t\t\tfmt.Printf(\"%v \", it.Next())\n\t\t\t}\n\t\t\tfmt.Println(\"]\")\n\t\tcase \"cyclic\":\n\t\t\tqtd, _ := strconv.Atoi(args[1])\n\t\t\tfmt.Print(\"[ \")\n\t\t\tit := mylist.CyclicIterator()\n\t\t\tfor range qtd {\n\t\t\t\tfmt.Printf(\"%v \", it.Next())\n\t\t\t}\n\t\t\tfmt.Println(\"]\")\n\t\t}\n\t}\n\n}\n",
+            "lines": "123"
+        }
+    ]
+}
