@@ -21,7 +21,8 @@ sources:
   writeable: false
   quests: null
   tasks: null
-expanded: []
+expanded:
+- ed@list
 flags:
   inbox: all
   panel: skills

@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-09_17-38-18",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,539 +23,53 @@\n mt%22%0A\n-%0Afunc Rotacionar(vetor %5B%5Dint, rotacoes int)%5B%5Dint %7B%0A%09n := len(vetor)%0A%0A%09rotacoes %25= n%0A%0A%09resultado := make(%5B%5Dint, n)%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09novaPosicao := (i + rotacoes) %25 n%0A%09%09resultado%5BnovaPosicao%5D = vetor%5Bi%5D%0A%09%7D%0A    return resultado %0A%7D%0A%0Afunc main() %7B%0A    tamanho := 0%0A    fmt.Scan(&tamanho)%0A%0A    numerosDeRotacoes := 0%0A    fmt.Scan(&numerosDeRotacoes)%0A%0A    vetor := make(%5B%5Dint,tamanho)%0A%0A    for i:=0;i%3Ctamanho;i++%7B%0A        fmt.Scan(&vetor%5Bi%5D)%0A    %7D%0A    resultado := Rotacionar(vetor,numerosDeRotacoes)%0A%0A    fmt.Print(resultado)%0A\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-09_17-54-55",
+            "content": "@@ -545,102 +545,18 @@\n int(\n-%22%5B%22)%0A%0A    for _, valor := range resultado%7B%0A        fmt.Print(valor,%22 %22)%0A    %7D%0A    fmt.Println()\n+resultado)%0A\n %0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-09_17-56-55",
+            "content": "@@ -623,13 +623,8 @@\n   %7D%0A\n-    %0A\n     \n@@ -639,11 +639,8 @@\n tln(\n-%22%5D%22\n )%0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-05-09_17-57-19",
+            "content": "@@ -543,17 +543,16 @@\n Print(%22%5B\n- \n %22)%0A%0A    \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-05-09_17-57-36",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc Rotacionar(vetor []int, rotacoes int)[]int {\n\tn := len(vetor)\n\n\trotacoes %= n\n\n\tresultado := make([]int, n)\n\n\tfor i := 0; i < n; i++ {\n\t\tnovaPosicao := (i + rotacoes) % n\n\t\tresultado[novaPosicao] = vetor[i]\n\t}\n    return resultado \n}\n\nfunc main() {\n    tamanho := 0\n    fmt.Scan(&tamanho)\n\n    numerosDeRotacoes := 0\n    fmt.Scan(&numerosDeRotacoes)\n\n    vetor := make([]int,tamanho)\n\n    for i:=0;i<tamanho;i++{\n        fmt.Scan(&vetor[i])\n    }\n    resultado := Rotacionar(vetor,numerosDeRotacoes)\n\n    fmt.Print(\"[ \")\n\n    for _, valor := range resultado{\n        fmt.Print(valor,\" \")\n    }\n    \n    fmt.Println(\"]\")\n}\n",
+            "lines": "40"
+        }
+    ]
+}

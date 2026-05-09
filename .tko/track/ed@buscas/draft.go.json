@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-09_16-00-20",
+            "content": "@@ -740,17 +740,16 @@\n .Print(%22\n- \n %22,valor)\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-09_16-09-24",
+            "content": "@@ -742,10 +742,8 @@\n rint\n-ln\n (%22 %22\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-09_16-09-36",
+            "content": "@@ -738,16 +738,18 @@\n mt.Print\n+ln\n (%22 %22,val\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-09_16-09-51",
+            "content": "@@ -214,16 +214,17 @@\n e(%5B%5Dint,\n+ \n 0)%0A%0A%09for\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-09_16-10-05",
+            "content": "@@ -742,17 +742,17 @@\n int(\n+%22 %22,\n valor\n-,%22 %22\n )%0A  \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-09_16-12-25",
+            "content": "@@ -741,10 +741,8 @@\n rint\n-ln\n (val\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-09_16-12-36",
+            "content": "@@ -741,16 +741,18 @@\n rint\n+ln\n (valor,%22\n %22)%0A \n@@ -747,16 +747,17 @@\n (valor,%22\n+ \n %22)%0A    %7D\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-09_16-12-56",
+            "content": "@@ -745,17 +745,16 @@\n (valor,%22\n- \n %22)%0A    %7D\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-09_16-13-02",
+            "content": "@@ -690,17 +690,17 @@\n     for \n-i\n+_\n , valor \n@@ -724,30 +724,8 @@\n o %7B%0A\n-        if i %3E 0%7B%0A    \n     \n@@ -752,18 +752,8 @@\n %22 %22)\n-%7D%0A        \n %0A   \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-09_16-13-47",
+            "content": "@@ -734,17 +734,16 @@\n   if i %3E\n-=\n  0%7B%0A    \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-09_16-14-06",
+            "content": "@@ -734,16 +734,17 @@\n   if i %3E\n+=\n  0%7B%0A    \n@@ -764,61 +764,35 @@\n rint\n-f(%22 %22)%0A        %7D%0A        fmt.Println(valor)\n+(valor,%22 %22)%7D%0A        \n %0A    %7D%0A\n-    \n %0A%7D%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-09_16-16-29",
+            "content": "@@ -759,16 +759,17 @@\n mt.Print\n+f\n (%22 %22)%0A  \n@@ -793,16 +793,18 @@\n mt.Print\n+ln\n (valor)%0A\n@@ -809,11 +809,15 @@\n )%0A    %7D%0A\n+    \n %0A%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-09_16-16-42",
+            "content": "@@ -810,24 +810,7 @@\n   %7D%0A\n-    fmt.Println()\n %0A%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-05-09_16-16-55",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc matchingStrings(strings []string, consultas []string) []int {\n\n\tfrequencia := make(map[string]int)\n\n\tfor _, palavra := range strings {\n\t\tfrequencia[palavra]++\n\t}\n\n\tresultado := make([]int,0)\n\n\tfor _, consulta := range consultas {\n\t\tresultado = append(resultado, frequencia[consulta])\n\t}\n\treturn resultado\n}\n\nfunc main() {\n\tqtd := 0\n\n    fmt.Scan(&qtd)\n    strings := make([]string, qtd)\n\n    for i:=0; i < qtd; i++ {\n        fmt.Scan(&strings[i])\n    }\n\n\n    qtd1 := 0\n    fmt.Scan(&qtd1)\n\n    consultas := make([]string, qtd1)\n    for i := 0; i < qtd1; i++ {\n        fmt.Scan(&consultas[i])\n    }\n    resultado := matchingStrings(strings, consultas)\n    \n    for i, valor := range resultado {\n        if i > 0{\n            fmt.Print(\" \")\n        }\n        fmt.Print(valor)\n    }\n    fmt.Println()\n}\n",
+            "lines": "48"
+        }
+    ]
+}
