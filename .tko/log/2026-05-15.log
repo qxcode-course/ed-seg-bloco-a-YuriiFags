@@ -1,0 +1,11 @@
+2026-05-15 09:19:13, MOVE, v:1, k:ed@controlz, mode:PICK
+2026-05-15 09:19:16, EXEC, v:1, k:ed@controlz, mode:FULL, rate:46
+2026-05-15 09:24:01, MOVE, v:1, k:ed@controlz, mode:EDIT
+2026-05-15 09:29:04, MOVE, v:1, k:ed@controlz, mode:EDIT
+2026-05-15 09:31:48, EXEC, v:1, k:ed@controlz, mode:FULL, size:145, fail:COMP
+2026-05-15 09:31:58, EXEC, v:1, k:ed@controlz, mode:FULL, rate:46, size:144
+2026-05-15 09:33:33, EXEC, v:1, k:ed@controlz, mode:FULL, rate:100, size:148
+2026-05-15 09:33:35, MOVE, v:1, k:ed@controlz, mode:BACK
+2026-05-15 09:34:03, SELF, v:1, k:ed@controlz, self:1, rate:100, study:50, debug:1
+2026-05-15 09:33:28, MOVE, v:1, k:ed@controlz, mode:EDIT
+2026-05-15 09:34:34, SELF, v:1, k:ed@editorint, self:1, rate:80, concept:1, debug:1

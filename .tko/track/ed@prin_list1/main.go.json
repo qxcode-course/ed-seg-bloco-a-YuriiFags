@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-12_13-43-36",
+            "content": "@@ -24,16 +24,25 @@\n %09%22fmt%22%0A%09\n+%22strings%22\n %0A)%0A%0A// m\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-05-12_13-43-45",
+            "content": "@@ -27,21 +27,10 @@\n mt%22%0A\n-%09%22strings%22%0A\n %09%0A\n+\n )%0A%0A/\n@@ -136,266 +136,16 @@\n  %7B%0A%09\n-saida := %22%22%0A%09contar := 0%0A%0A%09n := l.root.next%0A%0A%09for n != l.root %7B%0A%09%09if contar %3E 0 %7B%0A%09%09%09saida += %22 %22%0A%09%09%7D%0A%09%09if n == sword %7B%0A%09%09%09saida += fmt.Sprintf(%22%3E%25v%3C%22,n.Value)%0A%09%09%7D else %7B%0A%09%09%09saida += fmt.Sprint(n.Value)%0A%09%09%7D%0A%09%09n = n.next%0A%09%09contar++%0A%09%7D%0A%09return %22%5B%22 + saida + %22%5D\n+return %22\n %22%0A%7D%0A\n@@ -250,18 +250,19 @@\n urn nil%0A\n-\n %7D%0A\n+%0A\n func mai\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-05-12_13-59-06",
+            "content": "@@ -24,16 +24,25 @@\n %09%22fmt%22%0A%09\n+%22strings%22\n %0A%09%0A)%0A%0A//\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-12_13-59-17",
+            "content": "@@ -495,116 +495,18 @@\n  %7B%0A%09\n-if it == nil %7B%0A%09%09return nil%0A%09%7D%0A%0A%09next := it.Next()%0A%09if next == l.root %7B%0A%09%09return l.root.next%0A%09%7D%0A%09return next\n+return nil\n %0A%7D%0Af\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-12_14-03-16",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\n\t\n)\n\n// mostra a lista com o elemento sword destacado\nfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\tsaida := \"\"\n\tcontar := 0\n\n\tn := l.root.next\n\n\tfor n != l.root {\n\t\tif contar > 0 {\n\t\t\tsaida += \" \"\n\t\t}\n\t\tif n == sword {\n\t\t\tsaida += fmt.Sprintf(\">%v<\",n.Value)\n\t\t} else {\n\t\t\tsaida += fmt.Sprint(n.Value)\n\t\t}\n\t\tn = n.next\n\t\tcontar++\n\t}\n\treturn \"[\" + saida + \"]\"\n}\n\n// move para frente na lista circular\nfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\tif it == nil {\n\t\treturn nil\n\t}\n\n\tnext := it.Next()\n\tif next == l.root {\n\t\treturn l.root.next\n\t}\n\treturn next\n}\nfunc main() {\n\tvar qtd, chosen int\n\tfmt.Scan(&qtd, &chosen)\n\tfmt.Println(qtd, chosen)\n\tl := NewDList[int]()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tl.Erase(Next(l, sword))\n\t\tsword = Next(l, sword)\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n",
+            "lines": "61"
+        }
+    ]
+}

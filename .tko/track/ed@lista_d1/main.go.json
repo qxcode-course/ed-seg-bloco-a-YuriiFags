@@ -1,0 +1,109 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-10_16-03-27",
+            "content": "@@ -837,24 +837,27 @@\n  %22size%22:%0A%09%09%09\n+// \n fmt.Println(\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-05-10_16-04-19",
+            "content": "@@ -42,19 +42,8 @@\n os%22%0A\n-%09%22strconv%22%0A\n %09%22st\n@@ -328,17 +328,16 @@\n t.Value,\n- \n %22,%22)%0A%09sa\n@@ -354,16 +354,17 @@\n %09return \n+ \n saida%0A%7D%0A\n@@ -503,226 +503,8 @@\n %0A%7D%0A%0A\n-func (ll *LList) PushFront(val int) %7B%0A%09novoNo := &Node%7B%0A%09%09Value: val, next: nil, prev: nil,%0A%09%7D%0A%09if ll.root == nil %7B%0A%09%09ll.root = novoNo%0A%09%7D else %7B%0A%09%09novoNo.next = ll.root%0A%09%09ll.root.prev = novoNo%0A%09%09ll.root = novoNo%0A%09%7D%0A%7D%0A%0A\n func\n@@ -1008,16 +1008,19 @@\n nt%22:%0A%09%09%09\n+// \n for _, v\n@@ -1043,16 +1043,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09num, _ \n@@ -1076,16 +1076,19 @@\n i(v)%0A%09%09%09\n+// \n %09ll.Push\n@@ -1101,16 +1101,19 @@\n num)%0A%09%09%09\n+// \n %7D%0A%09%09case\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-05-10_16-15-04",
+            "content": "@@ -310,48 +310,8 @@\n %7D%0A%0A%09\n-atual := ll.root%0A%09for atual != nil %7B%0A%09%09 \n said\n@@ -345,19 +345,16 @@\n e, %22,%22)%0A\n-%09%7D%0A\n %09saida =\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-05-10_16-20-09",
+            "content": "@@ -343,37 +343,16 @@\n = nil %7B%0A\n-%09%09atual = atual.next%0A\n %09%09 saida\n@@ -352,17 +352,16 @@\n %09 saida \n-+\n = fmt.Sp\n@@ -369,23 +369,25 @@\n int(\n-atual.next\n+ll.root.Value\n , %22,\n- \n %22)%0A%09\n@@ -395,17 +395,16 @@\n %0A%09saida \n-+\n = %22%5D%22%0A%09r\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-05-10_16-22-29",
+            "content": "@@ -269,35 +269,35 @@\n %22%5B%22%0A%0A%09if ll.\n-root\n+Size()\n  == \n-nil\n+0\n  %7B%0A%09%09return \n@@ -349,50 +349,15 @@\n %7B%0A%09%09\n-saida += strconv.Itoa(atual.Value)%0A%09%09%0A%09%09if\n+atual =\n  atu\n@@ -367,21 +367,12 @@\n next\n- != nil %7B\n %0A%09%09\n-%09\n+ \n said\n@@ -380,27 +380,19 @@\n  += \n-%22, %22%0A%09%09%7D%0A%09%09atual = \n+fmt.Sprint(\n atua\n@@ -393,24 +393,31 @@\n t(atual.next\n+, %22, %22)\n %0A%09%7D%0A%09saida +\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-05-10_16-26-28",
+            "content": "@@ -841,55 +841,8 @@\n %0A%7D%0A%0A\n-func(ll *LList) Clear() %7B%0A%09fmt.Sprint(%22%5B%5D%22)%0A%7D%0A%0A\n func\n@@ -1529,16 +1529,19 @@\n ar%22:%0A%09%09%09\n+// \n ll.Clear\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-05-10_16-28-36",
+            "content": "@@ -868,22 +868,24 @@\n  %7B%0A%09\n-ll.root = nil \n+fmt.Sprint(%22%5B%5D%22)\n %0A%7D%0A%0A\n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-05-10_16-30-56",
+            "content": "@@ -886,236 +886,8 @@\n %0A%7D%0A%0A\n-func(ll *LList) PushBack(val int) %7B%0A%09novoNo := &Node%7BValue: val, prev: nil,next: nil%7D%0A%0A%09if ll.root == nil  %7B%0A%09%09ll.root = novoNo%0A%09%09return%0A%09%7D%0A%0A%09atual := ll.root%0A%09for atual != nil %7B%0A%09%09atual = atual.next%0A%09%7D%0A%09atual.next = novoNo%0A%0A%7D%0A%0A\n func\n@@ -1266,24 +1266,27 @@\n h_back%22:%0A%09%09%09\n+// \n for _, v := \n@@ -1297,32 +1297,35 @@\n e args%5B1:%5D %7B%0A%09%09%09\n+// \n %09num, _ := strco\n@@ -1330,32 +1330,35 @@\n conv.Atoi(v)%0A%09%09%09\n+// \n %09ll.PushBack(num\n@@ -1354,32 +1354,35 @@\n ushBack(num)%0A%09%09%09\n+// \n %7D%0A%09%09case %22push_f\n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-05-10_16-34-41",
+            "content": "@@ -1047,29 +1047,24 @@\n t%0A%09for atual\n-.next\n  != nil %7B%0A%09%09\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-05-10_16-35-29",
+            "content": "@@ -1119,93 +1119,8 @@\n %0A%7D%0A%0A\n-func(ll *LList) PopFront()%7B%0A%09atual := ll.root%0A%0A%09if atual != nil %7B%0A%09%09atual = nil%0A%09%7D%0A%7D%0A\n func\n@@ -1759,16 +1759,19 @@\n nt%22:%0A%09%09%09\n+// \n ll.PopFr\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-05-10_16-37-59",
+            "content": "@@ -1176,45 +1176,8 @@\n ual \n-== nil %7B%0A%09%09return%0A%09%7D%0A%0A%09if atual.next \n != n\n",
+            "lines": "143"
+        },
+        {
+            "label": "2026-05-10_16-39-58",
+            "content": "@@ -1224,34 +1224,27 @@\n %7B%0A%09%09atual = \n-atual.next\n+nil\n %0A%09%7D%0A%7D%0Afunc m\n",
+            "lines": "147"
+        },
+        {
+            "label": "2026-05-10_16-41-07",
+            "content": "@@ -1229,19 +1229,21 @@\n tual\n-.prev = nil\n+ = atual.next\n %0A%09%7D%0A\n",
+            "lines": "147"
+        },
+        {
+            "label": "2026-05-10_16-42-50",
+            "content": "@@ -1233,26 +1233,19 @@\n .prev = \n-atual.next\n+nil\n %0A%09%7D%0A%7D%0Afu\n",
+            "lines": "147"
+        },
+        {
+            "label": "2026-05-10_16-45-10",
+            "content": "@@ -1144,26 +1144,43 @@\n ont()%7B%0A%09\n-if ll.root\n+atual := ll.root%0A%0A%09if atual\n  == nil \n@@ -1199,31 +1199,59 @@\n %7D%0A%0A%09\n-ll.roo\n+if atual.nex\n t \n+!\n = \n-ll.root\n+nil %7B%0A%09%09atual.prev = atual\n .next\n- \n+%0A%09%7D\n %0A%7D%0Af\n",
+            "lines": "147"
+        },
+        {
+            "label": "2026-05-10_16-46-49",
+            "content": "@@ -1208,177 +1208,8 @@\n  %0A%7D%0A\n-%0A%0Afunc (ll *LList) PopBack() %7B%0A%09if ll.root == nil %7C%7C ll.root.next == nil %7B%0A%09%09return%0A%09%7D%0A%0A%09v := ll.root%0A%0A%09for v.next.next != nil %7B%0A%09%09v = v.next%0A%09%7D%0A%09v.next = nil%0A%09return%0A%7D%0A\n func\n@@ -1805,24 +1805,27 @@\n p_back%22:%0A%09%09%09\n+// \n ll.PopBack()\n",
+            "lines": "143"
+        },
+        {
+            "label": "2026-05-10_16-50-33",
+            "content": "@@ -1364,16 +1364,22 @@\n  = nil%0A%09\n+return\n %0A%7D%0Afunc \n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-05-10_16-50-39",
+            "content": "@@ -1281,26 +1281,22 @@\n nil %7B%0A%09%09\n-ll.Clear()\n+return\n %0A%09%7D%0A%0A%09v \n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-05-10_16-51-22",
+            "content": "@@ -1284,27 +1284,23 @@\n  %7B%0A%09%09ll.\n-root = nil \n+Clear()\n %0A%09%7D%0A%0A%09v \n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-05-10_16-51-56",
+            "content": "@@ -1296,25 +1296,16 @@\n  = nil %0A\n-%09%09return%0A\n %09%7D%0A%0A%09v :\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-05-10_16-53-22",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tnext  *Node\n\tprev  *Node\n}\ntype LList struct {\n\troot *Node\n}\n\nfunc NewLList() *LList {\n\treturn &LList{\n\t\troot: nil,\n\t}\n}\n\nfunc (ll *LList) String() string {\n\tsaida := \"[\"\n\n\tif ll.root == nil {\n\t\treturn \"[]\"\n\t}\n\n\tatual := ll.root\n\tfor atual != nil {\n\t\tsaida += strconv.Itoa(atual.Value)\n\t\t\n\t\tif atual.next != nil {\n\t\t\tsaida += \", \"\n\t\t}\n\t\tatual = atual.next\n\t}\n\tsaida += \"]\"\n\treturn saida\n}\n\nfunc (ll *LList) Size() int {\n\tcontar := 0\n\tatual := ll.root\n\n\tfor atual != nil {\n\t\tcontar++\n\t\tatual = atual.next\n\t}\n\treturn contar\n}\n\nfunc (ll *LList) PushFront(val int) {\n\tnovoNo := &Node{\n\t\tValue: val, next: nil, prev: nil,\n\t}\n\tif ll.root == nil {\n\t\tll.root = novoNo\n\t} else {\n\t\tnovoNo.next = ll.root\n\t\tll.root.prev = novoNo\n\t\tll.root = novoNo\n\t}\n}\n\nfunc(ll *LList) Clear() {\n\tll.root = nil \n}\n\nfunc(ll *LList) PushBack(val int) {\n\tnovoNo := &Node{Value: val, prev: nil,next: nil}\n\n\tif ll.root == nil  {\n\t\tll.root = novoNo\n\t\treturn\n\t}\n\n\tatual := ll.root\n\tfor atual.next != nil {\n\t\tatual = atual.next\n\t}\n\tatual.next = novoNo\n\n}\n\nfunc(ll *LList) PopFront(){\n\tif ll.root == nil {\n\t\treturn\n\t}\n\n\tll.root = ll.root.next \n}\n\n\nfunc (ll *LList) PopBack() {\n\tif ll.root == nil || ll.root.next == nil {\n\t\tll.root = nil \n\t\treturn\n\t}\n\n\tv := ll.root\n\n\tfor v.next.next != nil {\n\t\tv = v.next\n\t}\n\tv.next = nil\n\t\n}\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tll := NewLList()\n\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\tfmt.Println(line)\n\t\targs := strings.Fields(line)\n\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tcmd := args[0]\n\n\t\tswitch cmd {\n\t\tcase \"show\":\n\t\t\tfmt.Println(ll.String())\n\t\tcase \"size\":\n\t\t\tfmt.Println(ll.Size())\n\t\tcase \"push_back\":\n\t\t\tfor _, v := range args[1:] {\n\t\t\t\tnum, _ := strconv.Atoi(v)\n\t\t\t\tll.PushBack(num)\n\t\t\t}\n\t\tcase \"push_front\":\n\t\t\tfor _, v := range args[1:] {\n\t\t\t\tnum, _ := strconv.Atoi(v)\n\t\t\t\tll.PushFront(num)\n\t\t\t}\n\t\tcase \"pop_back\":\n\t\t\tll.PopBack()\n\t\tcase \"pop_front\":\n\t\t\tll.PopFront()\n\t\tcase \"clear\":\n\t\t\tll.Clear()\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "159"
+        }
+    ]
+}

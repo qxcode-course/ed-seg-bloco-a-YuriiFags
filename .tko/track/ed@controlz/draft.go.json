@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-14_21-16-37",
+            "content": "@@ -1206,17 +1206,16 @@\n   editor\n- \n := Edito\n@@ -1623,36 +1623,6 @@\n   %7D%0A\n-    fmt.Printf(editor.Show())%0A\n %7D%0A\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-05-14_21-17-34",
+            "content": "@@ -95,20 +95,26 @@\n ) Right(\n+r rune\n ) %7B%0A\n-\n %09antes :\n@@ -228,16 +228,22 @@\n r) Left(\n+r rune\n ) %7B%0A%09ant\n@@ -362,16 +362,22 @@\n ) Enter(\n+r rune\n ) %7B%0A%09ant\n@@ -502,16 +502,22 @@\n ckspace(\n+r rune\n ) %7B%0A%09if \n@@ -665,16 +665,22 @@\n  delete(\n+r rune\n ) %7B%0A    \n@@ -976,24 +976,24 @@\n + depois%0A%7D%0A%0A\n-\n func (e *Edi\n@@ -1005,16 +1005,22 @@\n Inserir(\n+c rune\n )%7B%0A     \n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-05-14_21-19-03",
+            "content": "@@ -979,14 +979,8 @@\n rir(\n-c rune\n )%7B%0A \n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-05-14_21-19-37",
+            "content": "@@ -447,31 +447,16 @@\n  depois%0A\n-    e.cursor++%0A\n %7D%0A%0A/////\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-05-14_21-20-19",
+            "content": "@@ -104,45 +104,94 @@\n  %7B%0A%09\n-if e.cursor %3C len(e.texto)%7B%0A%0A        \n+antes := e.texto%5B:e.cursor%5D%0A%09depois := e.texto%5Be.cursor:%5D%0A%0A%09e.texto = antes + depois%0A%09\n e.cu\n@@ -197,22 +197,16 @@\n ursor++%0A\n-    %7D%0A\n %7D%0A%0Afunc \n@@ -231,43 +231,94 @@\n  %7B%0A%09\n-if e.cursor %3E 0 %7B%0A        %0A        \n+antes := e.texto%5B:e.cursor%5D%0A%09depois := e.texto%5Be.cursor:%5D%0A%0A%09e.texto = antes + depois%0A%09\n e.cu\n@@ -324,22 +324,16 @@\n ursor--%0A\n-    %7D%0A\n %7D%0A%0Afunc \n@@ -804,24 +804,36 @@\n epois%0A      \n+  e.cursor++\n %0A    %7D%0A   %0A%7D\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-05-14_21-22-16",
+            "content": "@@ -1522,10 +1522,9 @@\n rint\n-ln\n+f\n (edi\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-05-14_21-25-25",
+            "content": "@@ -18,816 +18,62 @@\n ort \n-(%0A%09\n %22fmt%22%0A%0A\n-%09%22golang.org/x/text/cases%22%0A)%0A%0Atype Estado struct %7B%0A    texto string%0A    cursor int%0A%7D%0Atype Editor struct %7B%0A%09texto  string%0A%09cursor int%0A    undo   %5B%5DEstado%0A%09redo   %5B%5DEstado%0A%7D%0A%0Afunc(e *Editor) SalvarEstado() %7B%0A    e.undo = append(e.undo, Estado%7Be.texto,e.cursor%7D)%0A    e.redo = nil%0A%7D%0A%0Afunc(e *Editor) Desfazer()%7B%0A    if len(e.undo) == 0 %7B%0A        return%0A    %7D%0A%0A    e.redo = append(e.redo, Estado%7Be.texto,e.cursor%7D)%0A    ultimo := e.undo%5Blen(e.undo)-1%5D%0A    e.texto = ultimo.texto%0A    e.cursor = ultimo.cursor%0A    e.undo = e.undo%5B:len(e.undo)-1%5D%0A%7D%0A%0A%0Afunc(e *Editor) Refazer() %7B%0A    if len(e.redo) == 0%7B%0A        return%0A    %7D%0A%0A    e.undo = append(e.undo, Estado%7Be.texto,e.cursor%7D)%0A    ultimo := e.redo%5Blen(e.redo)-1%5D%0A    e.texto = ultimo.texto%0A    e.cursor = ultimo.cursor%0A    e.redo = e.redo%5B:len(e.redo)-1%5D\n+type Editor struct %7B%0A%09texto  string%0A%09cursor int\n %0A%7D%0A%0A\n@@ -1145,58 +1145,8 @@\n  0,%0A\n-        undo:   %5B%5DEstado%7B%7D,%0A%09%09redo:   %5B%5DEstado%7B%7D,%0A\n     \n@@ -1441,103 +1441,8 @@\n r()%0A\n-        case 'Z':%0A            editor.Desfazer()%0A        case 'Y':%0A            editor.Refazer()%0A\n     \n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-05-15_09-31-48",
+            "content": "@@ -24,16 +24,43 @@\n %09%22fmt%22%0A%0A\n+%09%22golang.org/x/text/cases%22%0A\n )%0A%0Atype \n",
+            "lines": "145"
+        },
+        {
+            "label": "2026-05-15_09-31-58",
+            "content": "@@ -993,37 +993,16 @@\n ter() %7B%0A\n-    e.SalvarEstado()%0A\n %09antes :\n@@ -1142,37 +1142,16 @@\n ace() %7B%0A\n-    e.SalvarEstado()%0A\n %09if e.cu\n@@ -1299,37 +1299,16 @@\n ete() %7B%0A\n-    e.SalvarEstado()%0A\n     if e\n@@ -1588,24 +1588,24 @@\n + depois%0A%7D%0A%0A\n+\n func (e *Edi\n@@ -1630,29 +1630,8 @@\n e)%7B%0A\n-    e.SalvarEstado()%0A\n     \n",
+            "lines": "144"
+        },
+        {
+            "label": "2026-05-15_09-33-33",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\n)\n\ntype Estado struct {\n    texto string\n    cursor int\n}\ntype Editor struct {\n\ttexto  string\n\tcursor int\n    undo   []Estado\n\tredo   []Estado\n}\n\nfunc(e *Editor) SalvarEstado() {\n    e.undo = append(e.undo, Estado{e.texto,e.cursor})\n    e.redo = nil\n}\n\nfunc(e *Editor) Desfazer(){\n    if len(e.undo) == 0 {\n        return\n    }\n\n    e.redo = append(e.redo, Estado{e.texto,e.cursor})\n    ultimo := e.undo[len(e.undo)-1]\n    e.texto = ultimo.texto\n    e.cursor = ultimo.cursor\n    e.undo = e.undo[:len(e.undo)-1]\n}\n\n\nfunc(e *Editor) Refazer() {\n    if len(e.redo) == 0{\n        return\n    }\n\n    e.undo = append(e.undo, Estado{e.texto,e.cursor})\n    ultimo := e.redo[len(e.redo)-1]\n    e.texto = ultimo.texto\n    e.cursor = ultimo.cursor\n    e.redo = e.redo[:len(e.redo)-1]\n}\n\nfunc (e *Editor) Right() {\n\tif e.cursor < len(e.texto){\n\n        e.cursor++\n    }\n}\n\nfunc (e *Editor) Left() {\n\tif e.cursor > 0 {\n        \n        e.cursor--\n    }\n}\n\nfunc (e *Editor) Enter() {\n    e.SalvarEstado()\n\tantes := e.texto[:e.cursor]\n\tdepois := e.texto[e.cursor:]\n\n\te.texto = antes + \"\\n\" + depois\n    e.cursor++\n}\n\n/////\n\nfunc (e *Editor) Backspace() {\n    e.SalvarEstado()\n\tif e.cursor > 0 {\n\t\tantes := e.texto[:e.cursor-1]\n\t\tdepois := e.texto[e.cursor:]\n\n\t\te.texto = antes + depois\n\t\te.cursor--\n\t}\n}\n\nfunc (e *Editor) delete() {\n    e.SalvarEstado()\n    if e.cursor < len(e.texto) {\n        antes := e.texto[:e.cursor]\n        depois := e.texto[e.cursor+1:]\n\n        e.texto = antes + depois\n      \n    }\n   \n}\n\n\nfunc(e *Editor) Show() string {\n    antes := e.texto[:e.cursor]\n\tdepois := e.texto[e.cursor:]\n\n    return antes + \"|\" + depois\n}\n\nfunc (e *Editor) Inserir(c rune){\n    e.SalvarEstado()\n     antes := e.texto[:e.cursor]\n    depois := e.texto[e.cursor:]\n\n    e.texto = antes + string(c) + depois\n    e.cursor++\n}\n\nfunc main() {\n    entrada := \"\"\n    fmt.Scan(&entrada)\n\n    editor := Editor{\n        texto: \"\",\n        cursor: 0,\n        undo:   []Estado{},\n\t\tredo:   []Estado{},\n    }\n\n\n    for _, c := range entrada{\n       \n        switch c {\n        case  '>':\n            editor.Right()\n        case '<':\n            editor.Left()\n        case 'D':\n            editor.delete()\n        case 'B':\n            editor.Backspace()\n        case 'R':\n            editor.Enter()\n        case 'Z':\n            editor.Desfazer()\n        case 'Y':\n            editor.Refazer()\n            default :\n            editor.Inserir(c)\n        }\n    }\n    fmt.Println(editor.Show())\n}\n",
+            "lines": "148"
+        }
+    ]
+}

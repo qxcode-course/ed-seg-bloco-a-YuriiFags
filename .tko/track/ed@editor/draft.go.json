@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-12_14-22-57",
+            "content": "@@ -10,56 +10,22 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A%0A\n-%09%22golang.org/x/text/cases%22%0A)%0A%0A\n %0Atyp\n@@ -95,17 +95,17 @@\n Editor) \n-I\n+i\n nserir(c\n@@ -254,17 +254,17 @@\n Editor) \n-E\n+e\n nter()%7B%0A\n@@ -386,1168 +386,24 @@\n +%0A%7D%0A\n-%0Afunc (e *Editor) Backspace()%7B%0A    if e.cursor %3E 0 %7B%0A        antes := e.texto%5B:e.cursor -1%5D%0A        depois := e.texto%5Be.cursor:%5D%0A%0A        e.texto = antes + depois%0A        e.cursor--%0A    %7D%0A%7D%0A%0Afunc (e *Editor) Delete() %7B%0A    if e.cursor %3C len(e.texto) %7B%0A        antes := e.texto%5B:e.cursor%5D%0A        depois := e.texto%5Be.cursor+1:%5D%0A%0A        e.texto = antes + depois%0A    %7D%0A%7D%0A%0Afunc (e *Editor) Direita()%7B%0A    if e.cursor %3C len(e.texto)%7B%0A        e.cursor++%0A    %7D%0A%7D%0A%0Afunc (e *Editor) Esquerda() %7B%0A    if e.cursor %3E 0 %7B%0A        e.cursor--%0A    %7D%0A%7D%0Afunc (e *Editor) Show() string%7B%0A    antes := e.texto%5B:e.cursor%5D%0A    depois := e.texto%5Be.cursor:%5D%0A%0A   return  antes + %22%7C%22 + depois%0A%7D%0A%0Afunc main() %7B%0A   entrada :=%22%22%0A   fmt.Scan(&entrada)%0A   %0A   editor := Editor%7B%0A    texto: %22%22,%0A    cursor: 0,%0A   %7D%0A%0A   for _, c := range entrada%7B%0A%0A        switch c %7B%0A        case '%3E':%0A            editor.Direita()%0A        case '%3C':%0A            editor.Esquerda()%0A%0A        case 'D':%0A            editor.Delete()%0A%0A        case 'B':%0A            editor.Backspace()%0A%0A        case 'R':%0A            editor.Enter()%0A%0A        default:%0A            editor.Inserir(c)%0A        %7D%0A   %7D%0A   fmt.Print(editor.Show())\n+func main() %7B%0A   \n %0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-12_14-43-06",
+            "content": "@@ -22,16 +22,44 @@\n (%0A%09%22fmt%22\n+%0A%0A%09%22golang.org/x/text/cases%22\n %0A)%0A%0A%0Atyp\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-05-12_14-43-20",
+            "content": "@@ -1538,10 +1538,8 @@\n rint\n-ln\n (edi\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-05-12_14-43-42",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\n\ntype Editor struct {\n    texto string\n    cursor int\n}\n\n\nfunc (e *Editor) Inserir(c rune){\n    antes := e.texto[:e.cursor]\n    depois := e.texto[e.cursor:]\n\n    e.texto = antes + string(c) + depois\n    e.cursor++\n}\n\nfunc (e *Editor) Enter(){\n    antes := e.texto[:e.cursor]\n    depois := e.texto[e.cursor:]\n\n    e.texto = antes + \"\\n\" + depois\n    e.cursor++\n}\n\nfunc (e *Editor) Backspace(){\n    if e.cursor > 0 {\n        antes := e.texto[:e.cursor -1]\n        depois := e.texto[e.cursor:]\n\n        e.texto = antes + depois\n        e.cursor--\n    }\n}\n\nfunc (e *Editor) Delete() {\n    if e.cursor < len(e.texto) {\n        antes := e.texto[:e.cursor]\n        depois := e.texto[e.cursor+1:]\n\n        e.texto = antes + depois\n    }\n}\n\nfunc (e *Editor) Direita(){\n    if e.cursor < len(e.texto){\n        e.cursor++\n    }\n}\n\nfunc (e *Editor) Esquerda() {\n    if e.cursor > 0 {\n        e.cursor--\n    }\n}\nfunc (e *Editor) Show() string{\n    antes := e.texto[:e.cursor]\n    depois := e.texto[e.cursor:]\n\n   return  antes + \"|\" + depois\n}\n\nfunc main() {\n   entrada :=\"\"\n   fmt.Scan(&entrada)\n   \n   editor := Editor{\n    texto: \"\",\n    cursor: 0,\n   }\n\n   for _, c := range entrada{\n\n        switch c {\n        case '>':\n            editor.Direita()\n        case '<':\n            editor.Esquerda()\n\n        case 'D':\n            editor.Delete()\n\n        case 'B':\n            editor.Backspace()\n\n        case 'R':\n            editor.Enter()\n\n        default:\n            editor.Inserir(c)\n        }\n   }\n   fmt.Println(editor.Show())\n}\n",
+            "lines": "98"
+        }
+    ]
+}
