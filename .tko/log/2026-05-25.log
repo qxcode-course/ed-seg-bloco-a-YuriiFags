@@ -1,0 +1,36 @@
+2026-05-25 10:05:47, MOVE, v:1, k:ed@permutacoes, mode:DOWN
+2026-05-25 10:05:48, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-05-25 10:06:37, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-05-25 10:06:44, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-05-25 10:05:47, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-25 10:05:47, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-25 10:05:47, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-25 10:30:11, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-25 10:34:57, EXEC, v:1, k:ed@permutacoes, mode:FULL, size:37, fail:COMP
+2026-05-25 10:35:18, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-25 10:39:40, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-05-25 10:38:08, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-25 10:42:28, SELF, v:1, k:ed@editorint, self:1, rate:100, study:120, concept:1, debug:1
+2026-05-25 10:44:29, SELF, v:1, k:ed@fractais_png, self:1, rate:10, study:120, guided:1, code:1
+2026-05-25 10:46:00, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-05-25 10:55:12, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-25 11:10:36, EXEC, v:1, k:ed@permutacoes, mode:FULL, size:46, fail:COMP
+2026-05-25 11:10:43, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-05-25 12:26:54, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-05-25 12:28:21, EXEC, v:1, k:ed@permutacoes, mode:FULL, size:55, fail:COMP
+2026-05-25 12:28:52, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:100, size:55
+2026-05-25 12:28:53, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-05-25 12:29:17, SELF, v:1, k:ed@permutacoes, self:1, rate:100, study:75, code:1, debug:1
+2026-05-25 12:29:30, SELF, v:1, k:ed@permutacoes, self:1, rate:100, study:75, code:1
+2026-05-25 12:29:42, SELF, v:1, k:ed@permutacoes, self:1, rate:100, study:75
+2026-05-25 12:29:47, SELF, v:1, k:ed@permutacoes, self:1, rate:100, study:75, debug:1
+2026-05-25 12:29:52, SELF, v:1, k:ed@permutacoes, self:1, rate:100, study:75, problem:1, debug:1
+2026-05-25 12:30:13, SELF, v:1, k:ed@permutacoes, self:1, rate:100, study:75, code:1
+2026-05-25 12:30:25, SELF, v:1, k:ed@permutacoes, self:1, rate:100, study:75, problem:1, code:1
+2026-05-25 12:30:35, SELF, v:1, k:ed@permutacoes, self:1, rate:100, study:75, code:1
+2026-05-25 12:30:45, SELF, v:1, k:ed@permutacoes, self:1, rate:100, study:75, problem:1, debug:1
+2026-05-25 12:31:20, SELF, v:1, k:ed@distancia, self:1, rate:100, code:1, debug:1
+2026-05-25 12:31:46, SELF, v:1, k:ed@distancia, self:1, rate:100, code:1
+2026-05-25 12:28:50, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-05-25 12:32:19, SELF, v:1, k:ed@setbuild, self:1, rate:100
+2026-05-25 12:32:25, SELF, v:1, k:ed@setbuild, self:1, rate:100, debug:1

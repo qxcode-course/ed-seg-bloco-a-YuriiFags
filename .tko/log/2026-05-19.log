@@ -1,0 +1,42 @@
+2026-05-19 13:34:57, MOVE, v:1, k:ed@wordsearch, mode:DOWN
+2026-05-19 13:34:58, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-19 13:34:57, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-19 13:34:57, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-19 13:34:57, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-19 13:34:57, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-19 13:44:28, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-19 13:48:36, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-19 13:59:35, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-19 14:00:28, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-19 14:00:33, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-19 14:00:34, EXEC, v:1, k:ed@wordsearch, mode:FULL, size:91, fail:COMP
+2026-05-19 14:00:35, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-19 14:00:47, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-19 15:41:15, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-19 15:45:19, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-19 15:48:37, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-05-19 16:03:14, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-19 16:10:37, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-19 16:11:40, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-19 16:11:40, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-19 16:11:53, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-19 16:11:55, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100, size:113
+2026-05-19 16:11:59, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-19 16:12:22, SELF, v:1, k:ed@wordsearch, self:1, rate:100, study:61, concept:1, debug:1
+2026-05-19 16:12:56, MOVE, v:1, k:ed@subset_sum, mode:DOWN
+2026-05-19 16:13:03, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-05-19 16:12:56, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-05-19 16:12:56, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-05-19 16:12:56, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-05-19 16:27:16, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-05-19 16:28:44, SELF, v:1, k:ed@princesa, self:1, study:110, concept:1, code:1, debug:1
+2026-05-19 16:29:01, SELF, v:1, k:ed@apagando, self:1, rate:100, study:70, concept:1
+2026-05-19 16:29:29, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-05-19 16:36:46, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-05-19 16:39:30, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:32
+2026-05-19 16:39:36, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-05-19 16:39:48, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-05-19 16:39:25, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-05-19 16:50:20, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-05-19 16:50:52, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-05-19 16:51:01, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0

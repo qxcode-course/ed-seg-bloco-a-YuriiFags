@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-19_16-39-30",
+            "content": "@@ -10,63 +10,22 @@\n ain%0A\n-%0A\n import \n-(%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A%09%22strconv%22%0A%09%22strings%22%0A)\n+%22fmt%22%0A%0A\n %0A%0Afu\n@@ -58,25 +58,26 @@\n , k int)\n- \n bool\n- \n %7B%0A\n-%09\n+    \n var dfs \n@@ -96,18 +96,25 @@\n t) bool%0A\n-%0A%09\n+    %0A    \n dfs = fu\n@@ -136,20 +136,24 @@\n  bool %7B%0A\n-%09%0A%09%09\n+        \n if soma \n@@ -163,33 +163,51 @@\n k %7B%0A\n-%09%09%09return true%0A%09%09%7D%0A%0A%09%09%0A%09%09\n+            return true%0A        %7D%0A%0A        \n if i\n@@ -217,27 +217,36 @@\n  len(num) %7B%0A\n-%09%09%09\n+            \n return false\n@@ -246,26 +246,35 @@\n n false%0A\n-%09%09%7D%0A%0A%09%09%0A%09%09\n+        %7D%0A%0A        \n if dfs(i\n@@ -285,44 +285,62 @@\n soma\n-+\n+ + \n num%5Bi%5D)\n- \n %7B%0A\n-%09%09%09return true%0A%09%09%7D%0A%0A%09%09%0A%09%09\n+            return true%0A        %7D%0A        \n if d\n@@ -348,41 +348,68 @@\n s(i+\n-1\n+2\n , soma\n-) %7B%0A%09%09%09return true%0A%09%09%7D%0A%0A%09%09\n+ +num%5Bi%5D)%7B%0A            return true%0A        %7D%0A        \n retu\n@@ -417,21 +417,26 @@\n n false%0A\n-%09%7D%0A%0A%09\n+    %7D%0A    \n return d\n@@ -444,15 +444,15 @@\n s(0,\n- \n 0)%0A%7D%0A%0A\n+%0A\n func\n@@ -465,414 +465,39 @@\n ) %7B%0A\n-%09scanner := bufio.NewScanner(os.Stdin)%0A%0A%09%0A%09scanner.Scan()%0A%09linha1 := strings.Fields(scanner.Text())%0A%09n, _ := strconv.Atoi(linha1%5B0%5D)%0A%09k, _ := strconv.Atoi(linha1%5B1%5D)%0A%0A%09%0A%09scanner.Scan()%0A%09elementos := strings.Fields(scanner.Text())%0A%09num := make(%5B%5Dint, n)%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09num%5Bi%5D, _ = strconv.Atoi(elementos%5Bi%5D)%0A%09%7D%0A%0A%09%0A%09if encontrarSoma(num, k) %7B%0A%09%09fmt.Println(%22%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22false%22)%0A%09%7D\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-23_09-01-21",
+            "content": "@@ -773,20 +773,16 @@\n rintln(%22\n-true\n %22)%0A%09%7D el\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-05-23_09-22-55",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc encontrarSoma(num []int, k int) bool {\n\tvar dfs func(int, int) bool\n\n\tdfs = func(i, soma int) bool {\n\t\n\t\tif soma == k {\n\t\t\treturn true\n\t\t}\n\n\t\t\n\t\tif i == len(num) {\n\t\t\treturn false\n\t\t}\n\n\t\t\n\t\tif dfs(i+1, soma+num[i]) {\n\t\t\treturn true\n\t\t}\n\n\t\t\n\t\tif dfs(i+1, soma) {\n\t\t\treturn true\n\t\t}\n\n\t\treturn false\n\t}\n\n\treturn dfs(0, 0)\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\t\n\tscanner.Scan()\n\tlinha1 := strings.Fields(scanner.Text())\n\tn, _ := strconv.Atoi(linha1[0])\n\tk, _ := strconv.Atoi(linha1[1])\n\n\t\n\tscanner.Scan()\n\telementos := strings.Fields(scanner.Text())\n\tnum := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tnum[i], _ = strconv.Atoi(elementos[i])\n\t}\n\n\t\n\tif encontrarSoma(num, k) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "64"
+        }
+    ]
+}

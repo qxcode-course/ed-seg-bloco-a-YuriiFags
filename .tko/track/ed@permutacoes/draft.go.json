@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-25_10-34-57",
+            "content": "@@ -548,217 +548,37 @@\n i%5D)%0A\n-%0A                backtracking()%0A%0A                atual = atual%5B:len(atual)-1%5D%0A                usados%5B%5D = false%0A            %7D%0A        %7D%0A    %7D%0A%0A    backtracking()%0A    sort.Strings(resultado)%0A    return resultado\n+            %7D%0A        %7D%0A    %7D\n %0A%0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-25_11-10-36",
+            "content": "@@ -641,25 +641,24 @@\n      usados%5B\n-i\n %5D = false%0A  \n@@ -655,16 +655,16 @@\n = false%0A\n+\n         \n@@ -705,21 +705,16 @@\n cking()%0A\n-    %0A\n     sort\n@@ -777,133 +777,39 @@\n ) %7B%0A\n-%09var s string%0A%09fmt.Scanln(&s)%0A%09%0A%09permutations := Permutacao(s)%0A%09%0A%09%0A%09for _, perm := range permutations %7B%0A%09%09fmt.Println(perm)%0A%09%7D\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-25_12-28-21",
+            "content": "@@ -40,16 +40,25 @@\n rt%22%0A    \n+%22strings%22\n   )%0A    \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-25_12-28-52",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"sort\"\n      )\n    \n\nfunc Permutacao(s string) []string{\n    chars := []rune(s)\n    n := len(chars)\n\n    usados := make([]bool,n)\n    atual := make([]rune,0,n)\n\n    resultado := []string{}\n\n    var backtracking func() \n    backtracking = func() {\n        if len(atual) == n {\n            resultado = append(resultado, string(atual))\n            return \n        }\n\n        for i := 0; i < n; i++ {\n            if !usados[i] {\n                usados[i] = true\n                atual = append(atual, chars[i])\n\n                backtracking()\n\n                atual = atual[:len(atual)-1]\n                usados[i] = false\n            }\n        }\n    }\n\n    backtracking()\n    \n    sort.Strings(resultado)\n    return resultado\n\n}\n\n\nfunc main() {\n\tvar s string\n\tfmt.Scanln(&s)\n\t\n\tpermutations := Permutacao(s)\n\t\n\t\n\tfor _, perm := range permutations {\n\t\tfmt.Println(perm)\n\t}\n}\n",
+            "lines": "55"
+        }
+    ]
+}
