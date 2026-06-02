@@ -1,0 +1,40 @@
+2026-06-01 09:31:34, MOVE, v:1, k:ed@padroes3, mode:DOWN
+2026-06-01 09:31:35, MOVE, v:1, k:ed@padroes3, mode:PICK
+2026-06-01 09:31:34, MOVE, v:1, k:ed@padroes3, mode:EDIT
+2026-06-01 09:31:34, MOVE, v:1, k:ed@padroes3, mode:EDIT
+2026-06-01 09:31:34, MOVE, v:1, k:ed@padroes3, mode:EDIT
+2026-06-01 09:39:29, MOVE, v:1, k:ed@padroes3, mode:EDIT
+2026-06-01 10:14:10, MOVE, v:1, k:ed@padroes3, mode:BACK
+2026-06-01 10:14:13, MOVE, v:1, k:ed@padroes3, mode:PICK
+2026-06-01 10:14:14, EXEC, v:1, k:ed@padroes3, mode:FULL, size:8, fail:COMP
+2026-06-01 10:14:15, MOVE, v:1, k:ed@padroes3, mode:BACK
+2026-06-01 10:14:18, MOVE, v:1, k:ed@padroes3, mode:PICK
+2026-06-01 10:17:05, MOVE, v:1, k:ed@padroes3, mode:EDIT
+2026-06-01 10:30:10, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:10, size:22
+2026-06-01 10:30:20, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:12, size:22
+2026-06-01 10:30:18, MOVE, v:1, k:ed@padroes3, mode:EDIT
+2026-06-01 10:31:19, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:30, size:22
+2026-06-01 10:32:28, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:12, size:18
+2026-06-01 10:32:22, MOVE, v:1, k:ed@padroes3, mode:EDIT
+2026-06-01 10:51:35, MOVE, v:1, k:ed@padroes3, mode:BACK
+2026-06-01 10:51:41, MOVE, v:1, k:ed@padroes3, mode:PICK
+2026-06-01 10:51:47, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:12
+2026-06-01 10:52:01, MOVE, v:1, k:ed@padroes3, mode:BACK
+2026-06-01 10:52:16, MOVE, v:1, k:ed@padroes3, mode:PICK
+2026-06-01 16:09:47, MOVE, v:1, k:ed@padroes3, mode:PICK
+2026-06-01 16:11:00, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:10, size:19
+2026-06-01 16:11:53, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:100, size:19
+2026-06-01 16:11:55, MOVE, v:1, k:ed@padroes3, mode:BACK
+2026-06-01 16:12:18, SELF, v:1, k:ed@padroes3, self:1, rate:100, study:80, code:1
+2026-06-01 16:12:35, SELF, v:1, k:ed@padroes3, self:1, rate:100, study:80, debug:1
+2026-06-01 16:12:42, SELF, v:1, k:ed@padroes3, self:1, rate:100, study:80
+2026-06-01 16:12:47, SELF, v:1, k:ed@padroes3, self:1, rate:100, study:80, code:1
+2026-06-01 16:13:00, MOVE, v:1, k:ed@quadrado, mode:DOWN
+2026-06-01 16:13:00, MOVE, v:1, k:ed@quadrado, mode:PICK
+2026-06-01 16:11:51, MOVE, v:1, k:ed@padroes3, mode:EDIT
+2026-06-01 16:13:00, MOVE, v:1, k:ed@quadrado, mode:EDIT
+2026-06-01 16:13:00, MOVE, v:1, k:ed@quadrado, mode:EDIT
+2026-06-01 16:13:00, MOVE, v:1, k:ed@quadrado, mode:EDIT
+2026-06-01 16:50:56, EXEC, v:1, k:ed@quadrado, mode:FULL, rate:0, size:5
+2026-06-01 16:50:56, MOVE, v:1, k:ed@quadrado, mode:BACK
+2026-06-01 16:50:59, MOVE, v:1, k:ed@quadrado, mode:PICK

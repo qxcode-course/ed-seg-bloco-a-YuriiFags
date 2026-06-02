@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-29_13-15-41",
+            "content": "@@ -10,28 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-)%0A%0A\n func\n@@ -37,1546 +37,39 @@\n ) %7B%0A\n-%09var n int%0A%09fmt.Scan(&n)%0A%0A%09%0A%09grid := make(%5B%5D%5B%5Drune, n)%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09var line string%0A%09%09fmt.Scan(&line)%0A%09%09grid%5Bi%5D = %5B%5Drune(line)%0A%09%7D%0A%0A%09%0A%09solve(grid, 0, n)%0A%0A%09%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09for j := 0; j %3C n; j++ %7B%0A%09%09%09fmt.Printf(%22%25c%22, grid%5Bi%5D%5Bj%5D)%0A%09%09%7D%0A%09%09fmt.Println()%0A%09%7D%0A%7D%0A%0Afunc solve(grid %5B%5D%5B%5Drune, index int, n int) bool %7B%0A%09if index == n*n %7B%0A%09%09return true%0A%09%7D%0A%0A%09row := index / n%0A%09col := index / n%0A%0A%09%0A%09if grid%5Brow%5D%5Bcol%5D != '.' %7B%0A%09%09return solve(grid, index+1, n)%0A%09%7D%0A%0A%09%0A%09for num := 1; num %3C= n; num++ %7B%0A%09%09numChar := rune('0' + num)%0A%0A%09%09if isValid(grid, row, col, numChar, n) %7B%0A%09%09%09grid%5Brow%5D%5Bcol%5D = numChar%0A%0A%09%09%09if solve(grid, index+1, n) %7B%0A%09%09%09%09return true%0A%09%09%09%7D%0A%0A%09%09%09grid%5Brow%5D%5Bcol%5D = '.'%0A%09%09%7D%0A%09%7D%0A%0A%09return false%0A%7D%0A%0Afunc isValid(grid %5B%5D%5B%5Drune, row, col int, num rune, n int) bool %7B%0A%09%0A%09for j := 0; j %3C n; j++ %7B%0A%09%09if grid%5Brow%5D%5Bj%5D == num %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A%0A%09%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09if grid%5Bi%5D%5Bcol%5D == num %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A%0A%0A%09if n == 4 %7B%0A%09%09quadrantSize := 2%0A%09%09startRow := (row / quadrantSize) * quadrantSize%0A%09%09startCol := (col / quadrantSize) * quadrantSize%0A%0A%09%09for i := 0; i %3C quadrantSize; i++ %7B%0A%09%09%09for j := 0; j %3C quadrantSize; j++ %7B%0A%09%09%09%09if grid%5BstartRow+i%5D%5BstartCol+j%5D == num %7B%0A%09%09%09%09%09return false%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D else if n == 9 %7B%0A%09%09quadrantSize := 3%0A%09%09startRow := (row / quadrantSize) * quadrantSize%0A%09%09startCol := (col / quadrantSize) * quadrantSize%0A%0A%09%09for i := 0; i %3C quadrantSize; i++ %7B%0A%09%09%09for j := 0; j %3C quadrantSize; j++ %7B%0A%09%09%09%09if grid%5BstartRow+i%5D%5BstartCol+j%5D == num %7B%0A%09%09%09%09%09return false%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09return true\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-29_13-24-25",
+            "content": "@@ -41,16 +41,19 @@\n in() %7B%0A%09\n+var\n  n int%0A%09\n@@ -441,17 +441,17 @@\n = index \n-%25\n+/\n  n%0A%0A%09%0A%09i\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-05-29_13-53-59",
+            "content": "@@ -41,19 +41,16 @@\n in() %7B%0A%09\n-var\n  n int%0A%09\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-05-29_14-26-01",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\n\t\n\tgrid := make([][]rune, n)\n\tfor i := 0; i < n; i++ {\n\t\tvar line string\n\t\tfmt.Scan(&line)\n\t\tgrid[i] = []rune(line)\n\t}\n\n\t\n\tsolve(grid, 0, n)\n\n\t\n\tfor i := 0; i < n; i++ {\n\t\tfor j := 0; j < n; j++ {\n\t\t\tfmt.Printf(\"%c\", grid[i][j])\n\t\t}\n\t\tfmt.Println()\n\t}\n}\n\nfunc solve(grid [][]rune, index int, n int) bool {\n\tif index == n*n {\n\t\treturn true\n\t}\n\n\trow := index / n\n\tcol := index % n\n\n\t\n\tif grid[row][col] != '.' {\n\t\treturn solve(grid, index+1, n)\n\t}\n\n\t\n\tfor num := 1; num <= n; num++ {\n\t\tnumChar := rune('0' + num)\n\n\t\tif isValid(grid, row, col, numChar, n) {\n\t\t\tgrid[row][col] = numChar\n\n\t\t\tif solve(grid, index+1, n) {\n\t\t\t\treturn true\n\t\t\t}\n\n\t\t\tgrid[row][col] = '.'\n\t\t}\n\t}\n\n\treturn false\n}\n\nfunc isValid(grid [][]rune, row, col int, num rune, n int) bool {\n\t\n\tfor j := 0; j < n; j++ {\n\t\tif grid[row][j] == num {\n\t\t\treturn false\n\t\t}\n\t}\n\n\t\n\tfor i := 0; i < n; i++ {\n\t\tif grid[i][col] == num {\n\t\t\treturn false\n\t\t}\n\t}\n\n\n\tif n == 4 {\n\t\tquadrantSize := 2\n\t\tstartRow := (row / quadrantSize) * quadrantSize\n\t\tstartCol := (col / quadrantSize) * quadrantSize\n\n\t\tfor i := 0; i < quadrantSize; i++ {\n\t\t\tfor j := 0; j < quadrantSize; j++ {\n\t\t\t\tif grid[startRow+i][startCol+j] == num {\n\t\t\t\t\treturn false\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t} else if n == 9 {\n\t\tquadrantSize := 3\n\t\tstartRow := (row / quadrantSize) * quadrantSize\n\t\tstartCol := (col / quadrantSize) * quadrantSize\n\n\t\tfor i := 0; i < quadrantSize; i++ {\n\t\t\tfor j := 0; j < quadrantSize; j++ {\n\t\t\t\tif grid[startRow+i][startCol+j] == num {\n\t\t\t\t\treturn false\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\treturn true\n}\n",
+            "lines": "105"
+        }
+    ]
+}

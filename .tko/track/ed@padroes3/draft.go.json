@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-01_10-14-14",
+            "content": "@@ -10,256 +10,74 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-)\n %0A%0Afunc \n-calcularPontos(n int, m int) int %7B%0A%09if m == 1 %7B%0A%09%09return 1%0A%09%7D%0A%09return calcularPontos(n, m-1) + (m + n - 5)%0A%7D%0A%0Afunc main() %7B%0A%09var n int%0A%09var m int%0A%0A%09fmt.Scan(&n, &m)%0A%0A%09resultado := calcularPontos(n, m)%0A%09fmt.Println(resultado\n+%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-06-01_10-30-10",
+            "content": "@@ -139,9 +139,9 @@\n n - \n-2\n+5\n )%0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-01_10-30-20",
+            "content": "@@ -139,9 +139,9 @@\n n - \n-3\n+2\n )%0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-01_10-31-19",
+            "content": "@@ -139,9 +139,9 @@\n n - \n-2\n+3\n )%0A%7D%0A\n@@ -165,16 +165,25 @@\n ar n\n-,\n+ int%0A%09var\n  m int%0A\n+%0A\n %09fmt\n@@ -200,21 +200,23 @@\n &m)%0A\n-%09fmt.Println(\n+%0A%09resultado := \n calc\n@@ -231,12 +231,35 @@\n os(n, m)\n+%0A%09fmt.Println(resultado\n )%0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-01_10-32-28",
+            "content": "@@ -18,28 +18,45 @@\n ort \n+(%0A%09\n %22fmt%22\n+%0A)\n %0A%0Afunc \n-p\n+calcularP\n ontos(n\n+ int\n , m \n@@ -97,17 +97,16 @@\n %0A%09%7D%0A\n-%0A\n %09return \n pont\n@@ -101,17 +101,25 @@\n %09return \n-p\n+calcularP\n ontos(n,\n@@ -130,21 +130,17 @@\n ) + \n-1 + (m-2)*(n-\n+(m + n - \n 2)%0A%7D\n@@ -169,17 +169,16 @@\n , m int%0A\n-%0A\n %09fmt.Sca\n@@ -187,17 +187,16 @@\n &n, &m)%0A\n-%0A\n %09fmt.Pri\n@@ -200,17 +200,25 @@\n Println(\n-p\n+calcularP\n ontos(n,\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_16-11-00",
+            "content": "@@ -106,23 +106,23 @@\n ) + \n-(n-2)*(m-1) + 1\n+1 + (m-2)*(n-2)\n %0A%7D%0A%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-06-01_16-11-53",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc pontos(n, m int) int {\n\tif m == 1 {\n\t\treturn 1\n\t}\n\n\treturn pontos(n, m-1) + (n-2)*(m-1) + 1\n}\n\nfunc main() {\n\tvar n, m int\n\n\tfmt.Scan(&n, &m)\n\n\tfmt.Println(pontos(n, m))\n}\n",
+            "lines": "19"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-01_16-50-56",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,344 +23,53 @@\n mt%22%0A\n-%0A\n func \n-quadrado(n int) int %7B%0A%09if n == 1 %7B%0A%09%09fmt.Println(%221%5E2 = 1%22)%0A%09%09return 1%0A%09%7D%0A%0A%09fmt.Printf(%22%25d%5E2 = %25d%5E2 + 2*%25d + 1 = ?%5Cn%22, n, n-1, n-3)%0A%0A%09anterior := quadrado(n - 1)%0A%09atual := anterior + 3*(n-1) + 1%0A%0A%09fmt.Printf(%22%25d%5E2 = %25d%5E2 + 2*%25d + 1 = %25d%5Cn%22, n, n-1, n-1, atual)%0A%0A%09return atual%0A%7D%0A%0Afunc main() %7B%0A%09var n int%0A%09fmt.Scan(&n)%0A%0A%09quadrado(n\n+main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-02_13-22-27",
+            "content": "@@ -155,17 +155,17 @@\n  n-1, n-\n-1\n+3\n )%0A%0A%09ante\n@@ -209,17 +209,17 @@\n erior + \n-2\n+3\n *(n-1) +\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-06-02_13-48-55",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc quadrado(n int) int {\n\tif n == 1 {\n\t\tfmt.Println(\"1^2 = 1\")\n\t\treturn 1\n\t}\n\n\tfmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = ?\\n\", n, n-1, n-1)\n\n\tanterior := quadrado(n - 1)\n\tatual := anterior + 2*(n-1) + 1\n\n\tfmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = %d\\n\", n, n-1, n-1, atual)\n\n\treturn atual\n}\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\n\tquadrado(n)\n}\n",
+            "lines": "26"
+        }
+    ]
+}

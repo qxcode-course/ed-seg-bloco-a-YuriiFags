@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-31_16-15-20",
+            "content": "@@ -10,625 +10,66 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-)%0A%0Avar (%0A%09n      int%0A%09count  int%0A%09cols   %5B%5Dbool%0A%09diag1  %5B%5Dbool%0A%09diag2  %5B%5Dbool%0A)%0A%0Afunc solve(row int) %7B%0A%09if row == n %7B%0A%09%09count++%0A%09%09return%0A%09%7D%0A%0A%09for col := 0; col %3C n; col++ %7B%0A%09%09d1 := row - col + (n - 3)%0A%09%09d2 := row + col%0A%0A%09%09if !cols%5Bcol%5D && !diag1%5Bd1%5D && !diag2%5Bd2%5D %7B%0A%09%09%09cols%5Bcol%5D = true%0A%09%09%09diag1%5Bd1%5D = true%0A%09%09%09diag2%5Bd2%5D = true%0A%0A%09%09%09solve(row + 1)%0A%0A%09%09%09cols%5Bcol%5D = false%0A%09%09%09diag1%5Bd1%5D = false%0A%09%09%09diag2%5Bd2%5D = false%0A%09%09%7D%0A%09%7D%0A%7D%0A%0Afunc main() %7B%0A%09if _, err := fmt.Scan(&n); err != nil %7B%0A%09%09return%0A%09%7D%0A%0A%09cols = make(%5B%5Dbool, n)%0A%09diag1 = make(%5B%5Dbool, 2*n-1)%0A%09diag2 = make(%5B%5Dbool, 2*n-1)%0A%0A%09solve(0)%0A%0A%09fmt.Println(count\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n-%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-31_17-00-02",
+            "content": "@@ -221,17 +221,17 @@\n  + (n - \n-1\n+3\n )%0A%09%09d2 :\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-05-31_17-00-08",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nvar (\n\tn      int\n\tcount  int\n\tcols   []bool\n\tdiag1  []bool\n\tdiag2  []bool\n)\n\nfunc solve(row int) {\n\tif row == n {\n\t\tcount++\n\t\treturn\n\t}\n\n\tfor col := 0; col < n; col++ {\n\t\td1 := row - col + (n - 1)\n\t\td2 := row + col\n\n\t\tif !cols[col] && !diag1[d1] && !diag2[d2] {\n\t\t\tcols[col] = true\n\t\t\tdiag1[d1] = true\n\t\t\tdiag2[d2] = true\n\n\t\t\tsolve(row + 1)\n\n\t\t\tcols[col] = false\n\t\t\tdiag1[d1] = false\n\t\t\tdiag2[d2] = false\n\t\t}\n\t}\n}\n\nfunc main() {\n\tif _, err := fmt.Scan(&n); err != nil {\n\t\treturn\n\t}\n\n\tcols = make([]bool, n)\n\tdiag1 = make([]bool, 2*n-1)\n\tdiag2 = make([]bool, 2*n-1)\n\n\tsolve(0)\n\n\tfmt.Println(count)\n}\n\n",
+            "lines": "52"
+        }
+    ]
+}

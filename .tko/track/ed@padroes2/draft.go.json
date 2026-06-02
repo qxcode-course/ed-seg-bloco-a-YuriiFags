@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-30_18-38-53",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,163 +23,53 @@\n mt%22%0A\n-%0A\n func \n-pecas(n int) int %7B%0A%09%0A    if n == 88 %7B%0A%09%09return 3%0A%09%7D%0A%0A%09return pecas(n-1) + (2*n + 1)%0A%7D%0A%0Afunc main() %7B%0A%09var n int%0A%0A%09fmt.Scan(&n)%0A%0A%09fmt.Println(pecas(n)\n+main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-30_19-01-23",
+            "content": "@@ -60,16 +60,17 @@\n f n == 8\n+8\n  %7B%0A%09%09ret\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-05-30_19-13-40",
+            "content": "@@ -59,17 +59,17 @@\n if n == \n-1\n+8\n  %7B%0A%09%09ret\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-05-30_19-14-08",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc pecas(n int) int {\n\t\n    if n == 1 {\n\t\treturn 3\n\t}\n\n\treturn pecas(n-1) + (2*n + 1)\n}\n\nfunc main() {\n\tvar n int\n\n\tfmt.Scan(&n)\n\n\tfmt.Println(pecas(n))\n}\n",
+            "lines": "20"
+        }
+    ]
+}
