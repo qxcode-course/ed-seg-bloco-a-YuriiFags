@@ -97,7 +97,12 @@
         },
         {
             "label": "2026-03-22_09-24-01",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc imprimir(num[]int, pos int) {\n    fmt.Print(\"[ \")\n    for i, valor := range num {\n        if i == pos {\n            fmt.Printf(\"%v> \",valor)\n        } else {\n            fmt.Printf(\"%v \",valor)\n        }\n    }\n    fmt.Println(\"]\")\n}\n\nfunc main() {\n   var qtd_Numeros, num_Escolhido int\n   fmt.Scan(&qtd_Numeros,&num_Escolhido)\n   num := make([]int,qtd_Numeros)\n\n   for i := 0 ; i < qtd_Numeros; i++{\n    num[i] = i + 1\n   }\n\n   pos_Atual := num_Escolhido - 1\n   for len(num) > 0 {\n    imprimir(num,pos_Atual)\n\n    if len(num) == 1 {\n        break\n    }\n   \n    morto := (pos_Atual + 1) % len(num)\n    num = append(num[:morto],num[morto + 1:]...)\n    pos_Atual = morto % len(num)\n   }\n}",
+            "content": "@@ -711,9 +711,8 @@\n )%0A   %7D%0A%7D\n-%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-21_18-12-05",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc imprimir(num[]int, pos int) {\n    fmt.Print(\"[ \")\n    for i, valor := range num {\n        if i == pos {\n            fmt.Printf(\"%v> \",valor)\n        } else {\n            fmt.Printf(\"%v \",valor)\n        }\n    }\n    fmt.Println(\"]\")\n}\n\nfunc main() {\n   var qtd_Numeros, num_Escolhido int\n   fmt.Scan(&qtd_Numeros,&num_Escolhido)\n   num := make([]int,qtd_Numeros)\n\n   for i := 0 ; i < qtd_Numeros; i++{\n    num[i] = i + 1\n   }\n\n   pos_Atual := num_Escolhido - 1\n   for len(num) > 0 {\n    imprimir(num,pos_Atual)\n\n    if len(num) == 1 {\n        break\n    }\n   \n    morto := (pos_Atual + 1) % len(num)\n    num = append(num[:morto],num[morto + 1:]...)\n    pos_Atual = morto % len(num)\n   }\n}\n",
             "lines": "38"
         }
     ]

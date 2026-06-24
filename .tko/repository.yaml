@@ -19,13 +19,15 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@rec
+- ed@map_set
 flags:
   inbox: all
   panel: skills
-  show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
+audit:
+  enabled: true
+  interval_seconds: null
 lang: go
-selected: ed@quadrado
-selected_index: 22
+selected: ed@especiais
+selected_index: 6

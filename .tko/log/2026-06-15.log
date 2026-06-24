@@ -1,0 +1,5 @@
+2026-06-15 20:59:52, MOVE, v:1, k:ed@serial, mode:PICK
+2026-06-15 20:59:53, EXEC, v:1, k:ed@serial, mode:FULL, fail:COMP
+2026-06-15 21:00:31, EXEC, v:1, k:ed@serial, mode:FULL, rate:100, size:83
+2026-06-15 21:00:37, MOVE, v:1, k:ed@serial, mode:BACK
+2026-06-15 21:01:04, SELF, v:1, k:ed@serial, self:1, rate:100, study:68, problem:1, debug:1

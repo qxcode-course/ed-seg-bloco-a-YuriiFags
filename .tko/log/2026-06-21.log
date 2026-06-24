@@ -1,0 +1,18 @@
+2026-06-21 18:07:03, MOVE, v:1, k:sandbox@user_001, mode:PICK
+2026-06-21 18:07:14, EXEC, v:1, k:sandbox@user_001, mode:LOCK, rate:0, size:5
+2026-06-21 18:07:16, MOVE, v:1, k:sandbox@user_001, mode:BACK
+2026-06-21 18:08:02, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-06-21 18:08:29, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:100
+2026-06-21 18:09:02, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-06-21 18:10:09, SELF, v:1, k:ed@iterador, self:1, rate:100, study:120, code:1
+2026-06-21 18:10:41, SELF, v:1, k:ed@lista_d4, self:1, rate:100, study:55, debug:1
+2026-06-21 18:10:48, SELF, v:1, k:ed@lista_d4, self:1, rate:100, study:55, debug:1
+2026-06-21 18:10:58, SELF, v:1, k:ed@editorint, self:1, rate:100, study:45, concept:1, debug:1
+2026-06-21 18:12:04, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-06-21 18:12:05, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100, size:38
+2026-06-21 18:12:07, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-06-21 18:12:20, SELF, v:1, k:ed@princesa, self:1, rate:100, study:138, concept:1, code:1, debug:1
+2026-06-21 18:12:30, SELF, v:1, k:ed@princesa, self:1, rate:100, study:138, concept:1, code:1
+2026-06-21 18:12:49, MOVE, v:1, k:ed@especiais, mode:DOWN
+2026-06-21 18:12:52, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-21 18:15:27, MOVE, v:1, k:ed@especiais, mode:BACK
