@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-26_10-50-54",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\n\tfila := NewQueue[string]()\n\n\tfor i := 'A'; i <= 'P'; i++{\n\t\tfila.Enqueue(string(i))\n\t\t//Aqui os times est\u00e3o enfileirados\n\t}\n\n\tfor i := 0; i < 15; i++ {\n\t\tvar gols1, gols2 int\n\t\tfmt.Scan(&gols1,&gols2)\n\n\t\ttime1 := fila.Dequeue()\n\t\ttime2 := fila.Dequeue()\n\n\t\tif gols1 > gols2 {\n\t\t\tfila.Enqueue(time1)\n\t\t} else {\n\t\t\tfila.Enqueue(time2)\n\t\t}\n\t}\n\n\tfmt.Println(fila.Dequeue())\n}\n",
+            "lines": "29"
+        }
+    ]
+}
