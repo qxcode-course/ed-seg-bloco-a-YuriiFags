@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-29_21-35-20",
+            "content": "@@ -1370,221 +1370,8 @@\n  := \n-0; j %3C nc; j++ %7B%0A%09%09%09if linha%5Bj%5D == 'I'%7B%0A%09%09%09%09inicio = Pos%7Bi,j%7D%0A%09%09%09%7D%0A%09%09%09if linha%5Bj%5D == 'F'%7B%0A%09%09%09%09fim = Pos%7Bi,j%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09resolverLabirinto(mat,inicio,fim)%0A%09for _, linha := range mat %7B%0A%09%09fmt.Println(string(linha))\n %0A%09%7D%0A\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-06-29_21-37-26",
+            "content": "@@ -39,16 +39,30 @@\n %0A%09%22os%22%0A%09\n+%22text/scanner%22\n %0A)%0Atype \n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-06-29_21-37-46",
+            "content": "@@ -815,60 +815,8 @@\n %09%09%7D%0A\n-%09%09%09if visitado%5Bnlinha%5D%5Bncoluna%5D %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A\n %09%09%09i\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-06-29_21-38-28",
+            "content": "@@ -1247,24 +1247,8 @@\n &nc)\n-%0A%09scanner.Scan()\n %0A%0A%09m\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-06-29_21-41-43",
+            "content": "@@ -38,19 +38,20 @@\n %22%0A%09%22os%22%0A\n+%09%0A\n )%0A\n-%0A\n type Pos\n@@ -63,17 +63,16 @@\n ct %7B%0A%09l,\n- \n c int%0A%7D%0A\n@@ -336,15 +336,12 @@\n %7B-1,\n- \n 1,\n- \n 0,\n- \n 0%7D%0A%09\n@@ -358,16 +358,13 @@\n t%7B0,\n- \n 0,\n- \n -1,\n- \n 1%7D%0A%0A\n@@ -405,25 +405,24 @@\n ho.IsEmpty()\n- \n %7B%0A%09%09atual :=\n@@ -437,16 +437,17 @@\n .Top()%0A%0A\n+%0A\n %09%09if !vi\n@@ -470,17 +470,16 @@\n atual.c%5D\n- \n %7B%0A%09%09%09vis\n@@ -544,17 +544,16 @@\n %5D == ' '\n- \n %7B%0A%09%09%09%09ma\n@@ -1047,17 +1047,16 @@\n %5D == '.'\n- \n %7B%0A%09%09%09%09be\n@@ -1072,16 +1072,19 @@\n p)%0A%09%09%09%7D%0A\n+%09%09%09\n %0A%09%09%7D%0A%09%7D%0A\n@@ -1104,17 +1104,16 @@\n sEmpty()\n- \n %7B%0A%09%09p :=\n@@ -1212,68 +1212,58 @@\n )%0A%0A%09\n-scanner.Scan()\n+var nl, nc int%0A\n %0A%09fmt.S\n-s\n can\n-f(scanner.Text(), %22%25d %25d%22, &nl, &nc\n+(&nl, &nc)%0A%09scanner.Scan(\n )%0A%0A%09\n@@ -1408,16 +1408,17 @@\n  linha%0A%0A\n+%0A\n %09%09for j \n@@ -1458,17 +1458,16 @@\n %5D == 'I'\n- \n %7B%0A%09%09%09%09in\n@@ -1471,33 +1471,32 @@\n %09inicio = Pos%7Bi,\n- \n j%7D%0A%09%09%09%7D%0A%09%09%09if li\n@@ -1508,17 +1508,16 @@\n %5D == 'F'\n- \n %7B%0A%09%09%09%09fi\n@@ -1526,17 +1526,16 @@\n = Pos%7Bi,\n- \n j%7D%0A%09%09%09%7D%0A\n@@ -1564,25 +1564,23 @@\n nto(mat,\n- \n inicio,\n- \n fim)%0A%09fo\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-06-29_21-44-01",
+            "content": "@@ -1218,26 +1218,8 @@\n n)%0A%0A\n-%09var nl, nc int%0A%0A%0A\n %09sca\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-06-29_21-44-36",
+            "content": "@@ -545,25 +545,25 @@\n tual.c%5D == '\n-#\n+ \n ' %7B%0A%09%09%09%09mat%5B\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-06-29_21-45-36",
+            "content": "@@ -885,27 +885,26 @@\n mat%5B\n-atual.l%5D%5Batual.c%5D !\n+nlinha%5D%5Bncoluna%5D =\n = '#\n@@ -915,35 +915,16 @@\n %09%09%09%09\n-mat%5Batual.l%5D%5Batual.c%5D = '.'\n+continue\n %0A%09%09%09\n@@ -1231,16 +1231,17 @@\n nc int%0A%0A\n+%0A\n %09scanner\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-06-29_21-46-34",
+            "content": "@@ -549,17 +549,17 @@\n .c%5D == '\n- \n+#\n ' %7B%0A%09%09%09%09\n@@ -885,26 +885,27 @@\n mat%5B\n-nlinha%5D%5Bncoluna%5D =\n+atual.l%5D%5Batual.c%5D !\n = '#\n@@ -908,32 +908,51 @@\n = '#' %7B%0A%09%09%09%09\n-continue\n+mat%5Batual.l%5D%5Batual.c%5D = '.'\n %0A%09%09%09%7D%0A%09%09%09cam\n@@ -1194,16 +1194,16 @@\n ain() %7B%0A\n-\n %09scanner\n@@ -1234,16 +1234,33 @@\n Stdin)%0A%0A\n+%09var nl, nc int%0A%0A\n %09scanner\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-06-29_21-47-02",
+            "content": "@@ -1218,26 +1218,8 @@\n n)%0A%0A\n-%09var nl, nc int%0A%0A%0A\n %09sca\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-06-29_21-47-12",
+            "content": "@@ -898,17 +898,17 @@\n coluna%5D \n-!\n+=\n = '#' %7B%0A\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-06-29_21-48-36",
+            "content": "@@ -898,17 +898,17 @@\n coluna%5D \n-=\n+!\n = '#' %7B%0A\n@@ -1013,307 +1013,87 @@\n %0A%09%09%09\n-becos.Push(atual)%0A%09%09%09caminho.Pop()%0A%0A%09%09%7D%0A%09%7D%0A%0A%09temp := NewStack%5BPos%5D()%0A%09for !caminho.IsEmpty() %7B%0A%09%09p := caminho.Pop()%0A%09%09temp.Push(p)%0A%09%7D%0A%09for !temp.IsEmpty() %7B%0A%09%09p := temp.Pop()%0A%09%09if mat%5Bp.l%5D%5Bp.c%5D != 'I' && mat%5Bp.l%5D%5Bp.c%5D != 'F' && mat%5Bp.l%5D%5Bp.c%5D != '#' %7B%0A%09%09%09mat%5Bp.l%5D%5Bp.c%5D = '.'%0A%09%09%7D%0A%09%09caminho.Push(p)%0A%09%7D%0A\n+p := caminho.Pop()%0A%0A%09%09%09if mat%5Bp.l%5D%5Bp.c%5D == '.' %7B%0A%09%09%09%09becos.Push(p)%0A%09%09%09%7D%0A%0A%09%09%7D%0A%09%7D\n %0A%09fo\n@@ -1110,16 +1110,17 @@\n sEmpty()\n+ \n %7B%0A%09%09p :=\n@@ -1134,19 +1134,16 @@\n Pop()%0A%09%09\n-if \n mat%5Bp.l%5D\n@@ -1153,42 +1153,12 @@\n c%5D =\n-=\n  '\n-.' %7B%0A%09%09%09mat%5Bp.l%5D%5Bp.c%5D = ' '%0A%09%09%7D\n+ '\n %0A%09%7D%0A\n@@ -1231,16 +1231,17 @@\n nc int%0A%0A\n+%0A\n %09scanner\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-06-29_21-58-21",
+            "content": "@@ -517,16 +517,90 @@\n = true%0A%0A\n+%09%09%09if mat%5Batual.l%5D%5Batual.c%5D == ' ' %7B%0A%09%09%09%09mat%5Batual.l%5D%5Batual.c%5D = '.'%0A%09%09%09%7D%0A\n %09%09%7D%0A%09%09if\n@@ -1199,29 +1199,77 @@\n t%5Bp.l%5D%5Bp.c%5D \n-== ' \n+!= 'I' && mat%5Bp.l%5D%5Bp.c%5D != 'F' && mat%5Bp.l%5D%5Bp.c%5D != '#\n ' %7B%0A%09%09%09mat%5Bp\n@@ -1322,33 +1322,32 @@\n !becos.IsEmpty()\n- \n %7B%0A%09%09p := becos.P\n",
+            "lines": "123"
+        },
+        {
+            "label": "2026-06-29_22-02-21",
+            "content": "@@ -1232,16 +1232,41 @@\n Pop()%0A%09%09\n+if mat%5Bp.l%5D%5Bp.c%5D == '.' %7B\n %0A%09%09%09mat%5B\n@@ -1281,16 +1281,20 @@\n %5D = ' '%0A\n+%09%09%7D%0A\n %09%7D%0A%7D%0A%0Afu\n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-06-29_22-06-24",
+            "content": "@@ -1236,33 +1236,8 @@\n )%0A%09%09\n-if mat%5Bp.l%5D%5Bp.c%5D == '.' %7B\n %0A%09%09%09\n@@ -1260,16 +1260,8 @@\n ' '%0A\n-%09%09%7D%0A%09%09%09%0A\n %09%7D%0A%7D\n",
+            "lines": "119"
+        },
+        {
+            "label": "2026-06-29_22-11-32",
+            "content": "@@ -1133,61 +1133,13 @@\n .c%5D \n-!= 'I' && mat%5Bp.l%5D%5Bp.c%5D != 'F' && mat%5Bp.l%5D%5Bp.c%5D != '#\n+== ' \n ' %7B%0A\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-06-29_22-12-38",
+            "content": "@@ -333,12 +333,12 @@\n int%7B\n+-\n 1, \n--\n 1, 0\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-06-29_22-14-03",
+            "content": "@@ -1137,17 +1137,64 @@\n != '\n-#' %7B%0A    \n+I' && mat%5Bp.l%5D%5Bp.c%5D != 'F' && mat%5Bp.l%5D%5Bp.c%5D != '#' %7B%0A%09%09%09\n mat%5B\n@@ -1209,16 +1209,18 @@\n %5D = '.'%0A\n+%09%09\n %7D%0A%09%09cami\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-06-29_22-15-36",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc resolverLabirinto(mat [][]rune, inicio, fim Pos) {\n\tcaminho := NewStack[Pos]()\n\tbecos := NewStack[Pos]()\n\n\tnl := len(mat)\n\tnc := len(mat[0])\n\n\tvisitado := make([][]bool, nl)\n\n\tfor i := range visitado {\n\t\tvisitado[i] = make([]bool, nc)\n\t}\n\n\tdl := []int{1, -1, 0, 0}\n\tdc := []int{0, 0, -1, 1}\n\n\tcaminho.Push(inicio)\n\n\tfor !caminho.IsEmpty() {\n\t\tatual := caminho.Top()\n\n\t\tif !visitado[atual.l][atual.c] {\n\t\t\tvisitado[atual.l][atual.c] = true\n\n\t\t}\n\t\tif atual == fim {\n\t\t\tbreak\n\t\t}\n\n\t\tachou := false\n\n\t\tfor i := 0; i < 4; i++ {\n\t\t\tnlinha := atual.l + dl[i]\n\t\t\tncoluna := atual.c + dc[i]\n\n\t\t\tif nlinha < 0 || nlinha >= nl || ncoluna < 0 || ncoluna >= nc {\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tif visitado[nlinha][ncoluna] {\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tif mat[nlinha][ncoluna] == '#' {\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tcaminho.Push(Pos{nlinha, ncoluna})\n\t\t\tachou = true\n\t\t\tbreak\n\t\t}\n\t\tif !achou {\n\t\t\tbecos.Push(atual)\n\t\t\tcaminho.Pop()\n\n\t\t}\n\t}\n\n\ttemp := NewStack[Pos]()\n\tfor !caminho.IsEmpty() {\n\t\tp := caminho.Pop()\n\t\ttemp.Push(p)\n\t}\n\tfor !temp.IsEmpty() {\n\t\tp := temp.Pop()\n\t\tif mat[p.l][p.c] != '#' {\n    mat[p.l][p.c] = '.'\n}\n\t\tcaminho.Push(p)\n\t}\n\n\tfor !becos.IsEmpty() {\n\t\tp := becos.Pop()\n\t\tif mat[p.l][p.c] == '.' {\n\t\t\tmat[p.l][p.c] = ' '\n\t\t}\n\t\t\t\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tvar nl, nc int\n\n\tscanner.Scan()\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nl, &nc)\n\n\tmat := make([][]rune, nl)\n\n\tvar inicio, fim Pos\n\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tlinha := []rune(scanner.Text())\n\n\t\tmat[i] = linha\n\n\t\tfor j := 0; j < nc; j++ {\n\t\t\tif linha[j] == 'I' {\n\t\t\t\tinicio = Pos{i, j}\n\t\t\t}\n\t\t\tif linha[j] == 'F' {\n\t\t\t\tfim = Pos{i, j}\n\t\t\t}\n\t\t}\n\t}\n\tresolverLabirinto(mat, inicio, fim)\n\tfor _, linha := range mat {\n\t\tfmt.Println(string(linha))\n\t}\n}\n",
+            "lines": "121"
+        }
+    ]
+}

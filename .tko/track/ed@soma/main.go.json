@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-01_14-56-44",
+            "content": "@@ -473,20 +473,8 @@\n %0A%09%7D%0A\n-%09return min%0A\n %7D%0A%0A/\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-01_14-57-21",
+            "content": "@@ -472,114 +472,8 @@\n %7D%0A%09%7D\n-%0A%0A%09if node.Right != nil %7B%0A%09%09rightMin := rec_min(node.Right)%0A%09%09if rightMin %3C min %7B%0A%09%09%09min = rightMin%0A%09%09%7D%0A%09%7D\n %0A%09re\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-07-01_15-06-53",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc rec_sum(node *Node) int {\n\tif node == nil {\n\t\treturn 0\n\t}\n\treturn node.Value + rec_sum(node.Left) + rec_sum(node.Right)\n}\n\nfunc rec_min(node *Node) int {\n\tif node.Left == nil && node.Right == nil {\n\t\treturn node.Value\n\t}\n\tmin := node.Value\n\n\tif node.Left != nil {\n\t\tleftMin := rec_min(node.Left)\n\t\tif leftMin < min {\n\t\t\tmin = leftMin\n\t\t}\n\t}\n\n\tif node.Right != nil {\n\t\trightMin := rec_min(node.Right)\n\t\tif rightMin < min {\n\t\t\tmin = rightMin\n\t\t}\n\t}\n\treturn min\n}\n\n// MyShow imprime a \u00e1rvore bin\u00e1ria de forma formatada.\nfunc MyShow(node *Node, nivel int) {\n\t_, _ = node, nivel\n\t// TODO\n}\n\nfunc BShow(node *Node, heranca string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, heranca+\"l\")\n\t}\n\tfor i := 0; i < len(heranca)-1; i++ {\n\t\tif heranca[i] != heranca[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif heranca != \"\" {\n\t\tif heranca[len(heranca)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, heranca+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\troot := create(&parts)\n\tfmt.Println(\"Arvore:\")\n\tBShow(root, \"\")\n\tfmt.Printf(\"Soma: %d, Minimo: %d\\n\", rec_sum(root), rec_min(root))\n}\n",
+            "lines": "102"
+        }
+    ]
+}
