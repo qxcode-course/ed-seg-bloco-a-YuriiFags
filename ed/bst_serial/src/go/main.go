@@ -25,11 +25,10 @@ func BstInsert(values []int) *Node {
 		atual := raiz
 
 		for {
-
 			if value == atual.Value {
 				break
 			}
-			if value < atual.Value {
+			if atual.Value > value {
 				if atual.Left == nil {
 					atual.Left = &Node {
 						Value: value,
@@ -39,35 +38,37 @@ func BstInsert(values []int) *Node {
 				atual = atual.Left
 			} else {
 				if atual.Right == nil {
-					atual.Right = &Node{Value: value}
-					break
+						atual.Right = &Node{Value: value}
+						break
+					}
+					atual = atual.Right
 				}
-				atual = atual.Right
 			}
 		}
+		return raiz
 	}
-	return raiz
-}
+
 
 // Dica: crie um vetor compartilhado e vá preenchendo conforme anda na recursão
 // Depois use o strings.Join para gerar o serial
 func Serialize(root *Node) string {
-	var result []string
+	var resultado []string
 
 	var dfs func(*Node)
+	
+	dfs = func(node *Node) {
 
-	dfs = func(node *Node)  {
 		if node == nil {
-			result = append(result, "#")
+			resultado = append(resultado, "#")
 			return 
 		}
-		result = append(result, strconv.Itoa(node.Value))
+		resultado = append(resultado, strconv.Itoa(node.Value))
 		dfs(node.Left)
 		dfs(node.Right)
 	}
-		dfs(root)
-		return strings.Join(result," ")
-}
+	dfs(root)
+	return strings.Join(resultado," ")
+	}
 
 // -----------------------------------------------------------------------------------
 func BShow(node *Node, history string) {

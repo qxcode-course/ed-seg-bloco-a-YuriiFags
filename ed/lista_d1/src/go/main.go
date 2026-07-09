@@ -8,12 +8,12 @@ import (
 	"strings"
 )
 
-type Node struct {
+type Node struct{
 	Value int
-	next  *Node
-	prev  *Node
+	next *Node
+	prev *Node
 }
-type LList struct {
+type LList struct{
 	root *Node
 }
 
@@ -29,11 +29,10 @@ func (ll *LList) String() string {
 	if ll.root == nil {
 		return "[]"
 	}
-
 	atual := ll.root
+
 	for atual != nil {
 		saida += strconv.Itoa(atual.Value)
-		
 		if atual.next != nil {
 			saida += ", "
 		}
@@ -51,11 +50,11 @@ func (ll *LList) Size() int {
 		contar++
 		atual = atual.next
 	}
-	return contar
+	return contar 
 }
 
-func (ll *LList) PushFront(val int) {
-	novoNo := &Node{
+func (ll *LList) PushFront(val int){
+	novoNo := &Node {
 		Value: val, next: nil, prev: nil,
 	}
 	if ll.root == nil {
@@ -67,48 +66,42 @@ func (ll *LList) PushFront(val int) {
 	}
 }
 
-func(ll *LList) Clear() {
-	ll.root = nil 
+func(ll *LList) Clear(){
+	ll.root = nil
 }
 
 func(ll *LList) PushBack(val int) {
-	novoNo := &Node{Value: val, prev: nil,next: nil}
+	novoNo := &Node{Value: val, prev: nil, next: nil}
 
-	if ll.root == nil  {
+	if ll.root == nil {
 		ll.root = novoNo
 		return
 	}
-
 	atual := ll.root
 	for atual.next != nil {
 		atual = atual.next
 	}
 	atual.next = novoNo
-
 }
 
-func(ll *LList) PopFront(){
-	if ll.root == nil {
-		return
-	}
-
-	ll.root = ll.root.next 
-}
-
-
-func (ll *LList) PopBack() {
+func(ll *LList) PopBack() {
 	if ll.root == nil || ll.root.next == nil {
-		ll.root = nil 
+		ll.root = nil
 		return
 	}
-
 	v := ll.root
 
 	for v.next.next != nil {
 		v = v.next
 	}
 	v.next = nil
-	
+}
+
+func(ll *LList) PopFront(){
+	if ll.root == nil {
+		return
+	}
+	ll.root = ll.root.next
 }
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)

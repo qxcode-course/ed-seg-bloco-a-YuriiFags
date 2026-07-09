@@ -5,7 +5,7 @@
 -- | -- | --
 <!-- toch -->
 
-![_](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/lista_d1/assets/cover.jpg)
+![_](assets/cover.jpg)
 
 ## Intro
 

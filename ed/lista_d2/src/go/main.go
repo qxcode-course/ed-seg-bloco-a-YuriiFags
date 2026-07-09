@@ -4,14 +4,14 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
+	"strconv"
 )
 
-type Node struct {
+type Node struct{
 	value int
-	next  *Node
-	prev  *Node
+	next *Node
+	prev *Node
 }
 
 type LList struct {
@@ -19,20 +19,19 @@ type LList struct {
 	size int
 }
 
-func NewLList() *LList {
+func NewLList() *LList{
 	return &LList{
 		root: nil,
 		size: 0,
 	}
 }
 
-func (ll *LList) String() string {
+func (ll *LList) String() string{
 	saida := "["
 
 	if ll.root == nil {
 		return "[]"
 	}
-
 	atual := ll.root
 	for atual != nil {
 		saida += fmt.Sprintf("%v", atual.value)
@@ -44,14 +43,12 @@ func (ll *LList) String() string {
 	}
 	saida += "]"
 	return saida
-
 }
 
-func (ll *LList) Size() int {
+func(ll *LList) Size()int {
 	return ll.size
 }
-
-func (ll *LList) PushBack(val int) {
+func(ll *LList) PushBack(val int) {
 	novoNo := &Node{
 		value: val,
 	}
@@ -61,22 +58,19 @@ func (ll *LList) PushBack(val int) {
 		return
 	}
 	atual := ll.root
-
 	for atual.next != nil {
 		atual = atual.next
 	}
 	atual.next = novoNo
 	novoNo.prev = atual
 	ll.size++
-
 }
 
 func (ll *LList) PushFront(val int) {
 	novoNo := &Node{
 		value: val,
 	}
-
-	if ll.root == nil {
+	if ll.root == nil{
 		ll.root = novoNo
 		ll.size++
 		return
@@ -86,23 +80,21 @@ func (ll *LList) PushFront(val int) {
 		ll.root = novoNo
 		ll.size++
 	}
-
 }
 
-func (ll *LList) Clear() {
+func(ll *LList) Clear(){
 	ll.root = nil
-	ll.size = 0 
+	ll.size = 0
 }
 
-func (ll *LList) Front() *Node{
+func (ll *LList) Front() *Node {
 	return ll.root
 }
 
-func (ll *LList) Back() *Node {
+func (ll *LList) Back() *Node{
 	if ll.root == nil {
 		return nil
 	}
-
 	atual := ll.root
 
 	for atual.next != nil {
@@ -115,20 +107,19 @@ func (ll *LList) replace(valorAntigo, valorNovo int) {
 	atual := ll.root
 
 	for atual != nil {
-		if atual.value == valorAntigo {
+		if atual.value == valorAntigo{
 			atual.value = valorNovo
 			return
 		}
 		atual = atual.next
 	}
-
 }
 
-func (ll *LList) Search(valorAntigo int) *Node {
+func(ll *LList) Search(valorAntigo int) *Node {
 	atual := ll.root
 
 	for atual != nil {
-		if atual.value == valorAntigo {
+		if atual.value == valorAntigo{
 			return atual
 		}
 		atual = atual.next
@@ -136,11 +127,10 @@ func (ll *LList) Search(valorAntigo int) *Node {
 	return nil
 }
 
-func (ll *LList) Insert(node *Node, valorNovo int) {
-		novoNo:= &Node {
+func (ll *LList) Insert(node *Node, valorNovo int){
+	novoNo := &Node{
 		value: valorNovo,
 	}
-
 	novoNo.next = node
 	novoNo.prev = node.prev
 
@@ -149,20 +139,17 @@ func (ll *LList) Insert(node *Node, valorNovo int) {
 	} else {
 		ll.root = novoNo
 	}
-
 	node.prev = novoNo
-
 	ll.size++
 }
 
+
 func (ll *LList) Remove(node *Node){
-	
 	if node.prev != nil {
 		node.prev.next = node.next
-	} else {
+	} else{
 		ll.root = node.next
 	}
-
 	if node.next != nil {
 		node.next.prev = node.prev
 	}
@@ -203,9 +190,9 @@ func main() {
 				ll.PushFront(num)
 			}
 		case "pop_back":
-			// ll.PopBack()
+			//ll.PopBack()
 		case "pop_front":
-			// ll.PopFront()
+		//	ll.PopFront()
 		case "clear":
 			ll.Clear()
 		case "walk":

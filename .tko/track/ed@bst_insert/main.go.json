@@ -7,8 +7,28 @@
         },
         {
             "label": "2026-07-02_11-06-43",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc BstInsert(values []int) *Node {\n\tvar raiz *Node\n\n\tfor _, value := range values {\n\t\tif raiz == nil {\n\t\t\traiz = &Node{Value: value}\n\t\t\tcontinue\n\t\t}\n\t\tatual := raiz\n\n\t\tfor {\n\t\t\tif value < atual.Value {\n\t\t\t\tif atual.Left == nil {\n\t\t\t\t\tatual.Left =  &Node{Value: value}\n\t\t\t\t\tbreak\n\t\t\t\t}\n\t\t\t\tatual = atual.Left\n\t\t\t} else if value > atual.Value {\n\t\t\t\tif atual.Right == nil {\n\t\t\t\t\tatual.Right = &Node{Value: value}\n\t\t\t\t\tbreak\n\t\t\t\t}\n\t\t\t\tatual = atual.Right\n\t\t\t} else {\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\t}\n\treturn raiz\n}\n\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tvalues := make([]int, 0, len(parts))\n\tfor _, elem := range parts {\n\t\tv, err := strconv.Atoi(elem)\n\t\tif err == nil {\n\t\t\tvalues = append(values, v)\n\t\t}\n\t}\n\troot := BstInsert(values)\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n}\n",
+            "content": "@@ -299,24 +299,32 @@\n %09for %7B%0A%09%09%09if\n+ value %3C\n  atual.Value\n@@ -328,16 +328,8 @@\n lue \n-%3E value \n %7B%0A%09%09\n@@ -329,28 +329,34 @@\n ue %7B%0A%09%09%09%09if \n-raiz\n+atual.Left\n  == nil %7B%0A%09%09\n@@ -370,16 +370,17 @@\n l.Left =\n+ \n  &Node%7BV\n@@ -401,32 +401,32 @@\n %09%09%09%09break%0A%09%09%09%09%7D%0A\n+\n %09%09%09%09atual := atu\n@@ -419,17 +419,16 @@\n %09%09atual \n-:\n = atual.\n@@ -579,16 +579,17 @@\n ght%0A%09%09%09%7D\n+ \n else %7B%0A%09\n",
             "lines": "90"
+        },
+        {
+            "label": "2026-07-05_10-16-09",
+            "content": "@@ -333,26 +333,20 @@\n %0A%09%09%09%09if \n-atual.Left\n+raiz\n  == nil \n@@ -406,16 +406,35 @@\n %09%09%7D%0A%09%09%09%09\n+atual := atual.Left\n %0A%09%09%09%7D el\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-07-05_10-18-26",
+            "content": "@@ -308,23 +308,23 @@\n %09if \n-value %3C atual.V\n+atual.Value %3E v\n alue\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-07-05_10-18-53",
+            "content": "@@ -412,31 +412,8 @@\n %09%09%7D%0A\n-%09%09%09%09atual = atual.Left%0A\n %09%09%09%09\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-07-05_10-19-07",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc BstInsert(values []int) *Node {\n\tvar raiz *Node\n\n\tfor _, value := range values {\n\t\tif raiz == nil {\n\t\t\traiz = &Node{Value: value}\n\t\t\tcontinue\n\t\t}\n\t\tatual := raiz\n\n\t\tfor {\n\t\t\tif value < atual.Value {\n\t\t\t\tif atual.Left == nil {\n\t\t\t\t\tatual.Left = &Node{Value: value}\n\t\t\t\t\tbreak\n\t\t\t\t}\n\t\t\t\tatual = atual.Left\n\t\t\t\t\n\t\t\t} else if value > atual.Value {\n\t\t\t\tif atual.Right == nil {\n\t\t\t\t\tatual.Right = &Node{Value: value}\n\t\t\t\t\tbreak\n\t\t\t\t}\n\t\t\t\tatual = atual.Right\n\t\t\t}else {\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\t}\n\treturn raiz\n}\n\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tvalues := make([]int, 0, len(parts))\n\tfor _, elem := range parts {\n\t\tv, err := strconv.Atoi(elem)\n\t\tif err == nil {\n\t\t\tvalues = append(values, v)\n\t\t}\n\t}\n\troot := BstInsert(values)\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n}\n",
+            "lines": "91"
         }
     ]
 }

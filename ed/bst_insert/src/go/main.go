@@ -27,17 +27,18 @@ func BstInsert(values []int) *Node {
 		for {
 			if value < atual.Value {
 				if atual.Left == nil {
-					atual.Left =  &Node{Value: value}
+					atual.Left = &Node{Value: value}
 					break
 				}
 				atual = atual.Left
+				
 			} else if value > atual.Value {
 				if atual.Right == nil {
 					atual.Right = &Node{Value: value}
 					break
 				}
 				atual = atual.Right
-			} else {
+			}else {
 				break
 			}
 		}

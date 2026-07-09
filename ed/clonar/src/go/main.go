@@ -18,7 +18,6 @@ func Clone(node *Node) *Node {
 	if node == nil {
 		return nil
 	}
-
 	newNode := Node{
 		Value: node.Value,
 		Left: Clone(node.Left),

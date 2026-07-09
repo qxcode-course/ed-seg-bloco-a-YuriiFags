@@ -1,6 +1,6 @@
 # Colocando os números no lugar certo
 
-![_](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/distancia/assets/cover.jpg)
+![_](assets/cover.jpg)
 
 - Seja uma string formada por dígitos e underlines `.`.
 - Seja um valor de limite L.

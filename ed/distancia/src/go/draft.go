@@ -1,86 +1,65 @@
 package main
 
 import (
-    "bufio"
-    "fmt"
-    "os"
-    "strconv"
-    "strings"
+	"bufio"
+	"fmt"
+	"os"
+	
 )
 
-func podColocarDígito(s []rune, posição int, digito rune, L int) bool {
-   
-    for i := 0; i < posição; i++ {
-        if s[i] == digito {
-            distância := posição - i
-            if distância <= L {
-                return false
-            }
-        }
+
+func podeColocar(seq []rune,pos int, valor rune, L int) bool {
+    inicio := pos - L
+
+    if inicio < 0{
+        inicio = 0
     }
 
-   
-    for i := posição + 1; i < len(s); i++ {
-        if s[i] != '.' && s[i] == digito {
-            distância := i - posição
-            if distância <= L {
-                return false
-            }
-        }
+    fim := pos + L
+    if fim >= len(seq) {
+        fim = len(seq)-1
     }
 
+    for i := inicio; i <= fim; i++ {
+        if i == pos {
+            continue
+        }
+        if seq[i] == valor {
+            return false
+        }
+    }
     return true
 }
 
-func preencherString(s []rune, posição int, L int) bool {
-    
-    if posição == len(s) {
+func backtracking(seq[]rune, pos int, L int)bool {
+    if pos == len(seq){
         return true
     }
-
-   
-    if s[posição] != '.' {
-        return preencherString(s, posição+1, L)
+    if seq[pos] != '.' {
+        return backtracking(seq, pos+ 1, L)
     }
-
-    
-    for dígito := 0; dígito < L; dígito++ {
-        caractere := rune('0' + dígito)
-
-        if podColocarDígito(s, posição, caractere, L) {
-            s[posição] = caractere
-
-           
-            if preencherString(s, posição+1, L) {
+    for d := 0; d <= L; d++{
+        valor := rune('0' + d)
+        if podeColocar(seq,pos, valor,L){
+            seq[pos] = valor
+            if backtracking(seq,pos+1,L){
                 return true
             }
-
-            
-            s[posição] = '.'
+            seq[pos] = '.'
         }
     }
-
     return false
 }
 
-func mainDist() {
-    scanner := bufio.NewScanner(os.Stdin)
+func main(){
+    in := bufio.NewReader(os.Stdin)
+    var s string
+    var L int
 
-    
-    scanner.Scan()
-    sequência := strings.TrimSpace(scanner.Text())
+    fmt.Fscan(in, &s)
+    fmt.Fscan(in,&L)
 
-    
-    scanner.Scan()
-    L, _ := strconv.Atoi(strings.TrimSpace(scanner.Text()))
-
-    
-    caracteres := []rune(sequência)
-
-   
-    preencherString(caracteres, 0, L)
-
-  
-    resultado := string(caracteres)
-    fmt.Println(resultado)
+    seq := []rune(s)
+    backtracking(seq,0,L)
+    fmt.Println(string(seq))
 }

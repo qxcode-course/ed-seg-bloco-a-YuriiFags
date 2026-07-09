@@ -22,11 +22,10 @@ func findPath(node *Node, value int) string {
 	if node == nil {
 		return "!"
 	}
-
 	if node.Value == value {
 		return "x"
 	}
-	left := findPath(node.Left,value)
+	left := findPath(node.Left, value)
 	if left != "!" {
 		return "l" + left
 	}

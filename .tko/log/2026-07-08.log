@@ -1,0 +1,17 @@
+2026-07-08 10:32:22, MOVE, v:1, k:ed@caminho, mode:PICK
+2026-07-08 10:32:54, MOVE, v:1, k:ed@caminho, mode:BACK
+2026-07-08 10:33:28, MOVE, v:1, k:ed@caminho, mode:DOWN
+2026-07-08 10:33:28, MOVE, v:1, k:ed@caminho, mode:PICK
+2026-07-08 10:33:28, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-07-08 10:33:28, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-07-08 10:34:55, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-07-08 10:44:43, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-07-08 10:47:18, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-07-08 10:54:58, MOVE, v:1, k:ed@caminho, mode:EDIT
+2026-07-08 10:55:31, EXEC, v:1, k:ed@caminho, mode:FULL, size:146, fail:COMP
+2026-07-08 10:55:38, EXEC, v:1, k:ed@caminho, mode:FULL, rate:100, size:146
+2026-07-08 10:55:42, MOVE, v:1, k:ed@caminho, mode:BACK
+2026-07-08 10:56:04, SELF, v:1, k:ed@caminho, self:1, rate:100, problem:1, debug:1
+2026-07-08 10:56:14, MOVE, v:1, k:ed@rotten, mode:DOWN
+2026-07-08 10:56:15, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-07-08 10:56:40, MOVE, v:1, k:ed@rotten, mode:BACK

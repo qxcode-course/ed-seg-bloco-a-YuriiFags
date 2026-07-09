@@ -12,8 +12,23 @@
         },
         {
             "label": "2026-05-23_09-22-55",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc encontrarSoma(num []int, k int) bool {\n\tvar dfs func(int, int) bool\n\n\tdfs = func(i, soma int) bool {\n\t\n\t\tif soma == k {\n\t\t\treturn true\n\t\t}\n\n\t\t\n\t\tif i == len(num) {\n\t\t\treturn false\n\t\t}\n\n\t\t\n\t\tif dfs(i+1, soma+num[i]) {\n\t\t\treturn true\n\t\t}\n\n\t\t\n\t\tif dfs(i+1, soma) {\n\t\t\treturn true\n\t\t}\n\n\t\treturn false\n\t}\n\n\treturn dfs(0, 0)\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\t\n\tscanner.Scan()\n\tlinha1 := strings.Fields(scanner.Text())\n\tn, _ := strconv.Atoi(linha1[0])\n\tk, _ := strconv.Atoi(linha1[1])\n\n\t\n\tscanner.Scan()\n\telementos := strings.Fields(scanner.Text())\n\tnum := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tnum[i], _ = strconv.Atoi(elementos[i])\n\t}\n\n\t\n\tif encontrarSoma(num, k) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "content": "@@ -64,32 +64,16 @@\n gs%22%0A\n-%09%22text/scanner%22%0A\n )%0A%0Afunc \n loca\n@@ -72,15 +72,15 @@\n unc \n-localiz\n+encontr\n arSo\n@@ -104,22 +104,20 @@\n nt) bool\n+ \n %7B%0A\n-    \n+%09\n var dfs \n@@ -136,19 +136,18 @@\n t) bool%0A\n-   \n+%0A%09\n dfs = fu\n@@ -169,24 +169,20 @@\n  bool %7B%0A\n-        \n+%09%0A%09%09\n if soma \n@@ -192,50 +192,33 @@\n k %7B%0A\n-            return true%0A        %7D%0A        \n+%09%09%09return true%0A%09%09%7D%0A%0A%09%09%0A%09%09\n if i\n@@ -228,36 +228,27 @@\n  len(num) %7B%0A\n-            \n+%09%09%09\n return false\n@@ -248,34 +248,26 @@\n n false%0A\n-        %7D%0A        \n+%09%09%7D%0A%0A%09%09%0A%09%09\n if dfs(i\n@@ -278,11 +278,9 @@\n soma\n- + \n++\n num%5B\n@@ -289,50 +289,33 @@\n ) %7B%0A\n-            return true%0A        %7D%0A        \n+%09%09%09return true%0A%09%09%7D%0A%0A%09%09%0A%09%09\n if d\n@@ -325,16 +325,17 @@\n i+1,\n+ \n soma) %7B%0A\n     \n@@ -334,50 +334,30 @@\n ) %7B%0A\n-            return true%0A        %7D%0A        \n+%09%09%09return true%0A%09%09%7D%0A%0A%09%09\n retu\n@@ -365,24 +365,21 @@\n n false%0A\n-   %7D%0A   \n+%09%7D%0A%0A%09\n return d\n@@ -383,16 +383,17 @@\n n dfs(0,\n+ \n 0)%0A%7D%0A%0Afu\n@@ -404,19 +404,17 @@\n ain() %7B%0A\n-   \n+%09\n scanner \n@@ -444,19 +444,19 @@\n Stdin)%0A%0A\n-   \n+%09%0A%09\n scanner.\n@@ -462,19 +462,17 @@\n .Scan()%0A\n-   \n+%09\n linha1 :\n@@ -504,19 +504,17 @@\n Text())%0A\n-   \n+%09\n n, _ := \n@@ -537,19 +537,17 @@\n ha1%5B0%5D)%0A\n-   \n+%09\n k, _ := \n@@ -571,19 +571,19 @@\n a1%5B1%5D)%0A%0A\n-   \n+%09%0A%09\n scanner.\n@@ -589,19 +589,17 @@\n .Scan()%0A\n-   \n+%09\n elemento\n@@ -634,19 +634,17 @@\n Text())%0A\n-   \n+%09\n num := m\n@@ -657,20 +657,17 @@\n int, n)%0A\n-%0A   \n+%09\n for i :=\n@@ -687,12 +687,10 @@\n + %7B%0A\n-    \n+%09%09\n num%5B\n@@ -728,34 +728,98 @@\n i%5D)%0A\n-   %7D%0A   fmt.Println(num, k)\n+%09%7D%0A%0A%09%0A%09if encontrarSoma(num, k) %7B%0A%09%09fmt.Println(%22true%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22false%22)%0A%09%7D\n %0A%7D%0A\n",
             "lines": "64"
+        },
+        {
+            "label": "2026-07-06_21-11-12",
+            "content": "@@ -60,16 +60,31 @@\n trings%22%0A\n+%09%22text/scanner%22\n %0A)%0A%0Afunc\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-07-06_21-11-20",
+            "content": "@@ -847,29 +847,14 @@\n tln(\n-localizarSoma(\n num, k)\n-)\n %0A%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-07-06_21-11-40",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n\n)\n\nfunc localizarSoma(num []int, k int) bool{\n    var dfs func(int, int) bool\n   dfs = func(i, soma int) bool {\n        if soma == k {\n            return true\n        }\n        if i == len(num) {\n            return false\n        }\n        if dfs(i+1, soma + num[i]) {\n            return true\n        }\n        if dfs(i+1,soma) {\n            return true\n        }\n        return false\n   }\n   return dfs(0,0)\n}\n\nfunc main() {\n   scanner := bufio.NewScanner(os.Stdin)\n\n   scanner.Scan()\n   linha1 := strings.Fields(scanner.Text())\n   n, _ := strconv.Atoi(linha1[0])\n   k, _ := strconv.Atoi(linha1[1])\n\n   scanner.Scan()\n   elementos := strings.Fields(scanner.Text())\n   num := make([]int, n)\n\n   for i := 0; i < n; i++ {\n    num[i], _ = strconv.Atoi(elementos[i])\n   }\n   fmt.Println(localizarSoma(num, k))\n}\n",
+            "lines": "48"
         }
     ]
 }

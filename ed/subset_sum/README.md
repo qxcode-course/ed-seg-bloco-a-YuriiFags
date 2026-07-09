@@ -1,6 +1,6 @@
 # Soma subconjuntos
 
-![_](../../.tko/cache/6421490caf670842e74ba5681e807eeaa53f9028/base/subset_sum/assets/cover.jpg)
+![_](assets/cover.jpg)
 
 O problema da **Soma dos Subconjuntos** consiste em verificar se existe algum subconjunto de um conjunto de inteiros que tenha a soma igual a um valor alvo. É um problema clássico da ciência da computação e pode ser resolvido eficientemente para pequenos conjuntos usando a técnica de **Backtracking**.
 

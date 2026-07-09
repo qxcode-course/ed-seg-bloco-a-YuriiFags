@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-06_21-54-40",
+            "content": "@@ -782,29 +782,27 @@\n ln(%22nao balancea\n-do\n %22)%0A    %7D%0A%7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-07-06_21-54-50",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var s string\n    fmt.Scan(&s)\n\n    pilha := []rune{}\n    balanceado := true\n\n    for _, c := range s {\n        switch c {\n        case '(', '[':\n            pilha = append(pilha, c)\n        case ')':\n            if len(pilha) == 0 || pilha[len(pilha)-1] != '('{\n                balanceado = false\n                break\n            }\n            pilha = pilha[:len(pilha)-1]\n        case ']':\n            if len(pilha) == 0 || pilha[len(pilha)-1] != '['{\n                balanceado = false\n                break\n            }\n            pilha = pilha[:len(pilha)-1]\n        }\n        if !balanceado{\n            break\n        }\n    }\n    if balanceado && len(pilha) == 0 {\n        fmt.Println(\"balanceado\")\n    } else {\n        fmt.Println(\"nao balanceado\")\n    }\n}\n",
+            "lines": "36"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-07_15-38-30",
+            "content": "@@ -1284,17 +1284,17 @@\n or i := \n-0\n+5\n ; i %3C nl\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-07_15-38-38",
+            "content": "@@ -1030,17 +1030,29 @@\n  '.'%0A%7D%0A%0A\n-%0A\n+func voltar()\n %0A%0Afunc m\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-07_15-39-04",
+            "content": "@@ -1276,16 +1276,22 @@\n  := \n-range nl\n+0; i %3C nl; i++\n  %7B%0A%09\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-07-07_15-41-30",
+            "content": "@@ -41,49 +41,8 @@\n %22os%22\n-%0A%0A%09%22golang.org/x/text/unicode/rangetable%22\n %0A)%0A%0A\n@@ -168,16 +168,17 @@\n l, p.c -\n+ \n 1%7D,%0A%09%09%7Bp\n@@ -176,25 +176,24 @@\n  1%7D,%0A%09%09%7Bp.l,\n- \n p.c + 1%7D,%0A%09%7D\n@@ -541,16 +541,17 @@\n %5BPos%5D()%0A\n+%0A\n %09visited\n@@ -742,18 +742,16 @@\n for _, v\n-is\n  := rang\n@@ -789,18 +789,16 @@\n (grid, v\n-is\n , ' ')%7B%0A\n@@ -830,18 +830,16 @@\n isited%5Bv\n-is\n %5D %7B%0A%09%09%09%09\n@@ -864,18 +864,16 @@\n isited%5Bv\n-is\n %5D = true\n@@ -884,18 +884,16 @@\n parent%5Bv\n-is\n %5D = atua\n@@ -908,18 +908,16 @@\n nqueue(v\n-is\n )%0A%09%09%7D%0A%09%7D\n@@ -963,17 +963,16 @@\n arent%5Bp%5D\n- \n %7B%0A%09%09grid\n@@ -1027,20 +1027,20 @@\n %5D = '.'%0A\n-%0A\n %7D%0A%0A\n+%0A\n %0A%0Afunc m\n@@ -1455,38 +1455,50 @@\n  := \n-range nl %7B%0A%09%09for c := range nc\n+0; l %3C nl; l++ %7B%0A%09%09for c := 0; c %3C nc; c++\n  %7B%0A%09\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-07-08_10-55-31",
+            "content": "@@ -39,16 +39,55 @@\n %0A%09%22os%22%0A%0A\n+%09%22golang.org/x/text/unicode/rangetable%22\n %0A)%0A%0Atype\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-08_10-55-38",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\n\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc (p Pos) getNeig() []Pos {\n\treturn []Pos {\n\t\t{p.l - 1, p.c},\n\t\t{p.l + 1, p.c},\n\t\t{p.l, p.c -1},\n\t\t{p.l, p.c + 1},\n\t}\n}\n\nfunc inside(grid [][]rune, pos Pos) bool {\n\tnrows := len(grid)\n\tncols := len(grid[0])\n\treturn pos.l >= 0 && pos.l < nrows && pos.c >= 0 && pos.c < ncols\n}\n\nfunc match(grid [][]rune, pos Pos, char rune) bool {\n\treturn inside(grid, pos) && grid[pos.l][pos.c] == char\n}\n\nfunc search(grid [][]rune, startPos Pos, endPos Pos) {\n\tq := NewQueue[Pos]()\n\tvisited := make(map[Pos]bool)\n\tparent := make(map[Pos]Pos)\n\n\tq.Enqueue(startPos)\n\tvisited[startPos] = true\n\n\tfor !q.IsEmpty(){\n\t\tatual, _ := q.Dequeue()\n\t\tif atual == endPos {\n\t\t\tbreak\n\t\t}\n\t\tfor _, vis := range atual.getNeig(){\n\t\t\tif !match(grid, vis, ' '){\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tif visited[vis] {\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tvisited[vis] = true\n\t\t\tparent[vis] = atual\n\t\t\tq.Enqueue(vis)\n\t\t}\n\t}\n\tfor p := endPos; p != startPos; p = parent[p] {\n\t\tgrid[p.l][p.c] = '.'\n\t}\n\tgrid[startPos.l][startPos.c] = '.'\n\n}\n\n\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tvar nl, nc int\n\tscanner.Scan()\n\tline := scanner.Text()\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tmat := make([][]rune, nl) // Inicializa a matriz de runes\n\n\t// Carregando matriz\n\tfor i := range nl {\n\t\tscanner.Scan()\n\t\tline := scanner.Text()\n\t\tmat[i] = []rune(line)\n\t}\n\n\tvar inicio, fim Pos\n\n\t// Procurando inicio e fim e colocando ' ' nas posi\u00e7\u00f5es iniciais\n\tfor l := range nl {\n\t\tfor c := range nc {\n\t\t\tif mat[l][c] == 'I' {\n\t\t\t\tmat[l][c] = ' '\n\t\t\t\tinicio = Pos{l, c}\n\t\t\t}\n\t\t\tif mat[l][c] == 'F' {\n\t\t\t\tmat[l][c] = ' '\n\t\t\t\tfim = Pos{l, c}\n\t\t\t}\n\t\t}\n\t}\n\n\tsearch(mat, inicio, fim)\n\n\tfor _, line := range mat {\n\t\tfmt.Println(string(line)) // Converte o slice de runes de volta para string para imprimir\n\t}\n}\n",
+            "lines": "105"
+        }
+    ]
+}

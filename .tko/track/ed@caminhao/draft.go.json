@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-06_22-40-28",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n int\n\n    fmt.Scan(&n)\n\n    total := 0\n    tanque := 0 \n    inicio := 0\n\n    for i := 0; i < n; i++ {\n        var gas, dist int\n        fmt.Scan(&gas, &dist)\n\n        saldo := gas - dist\n        total += saldo\n        tanque += saldo\n\n        if tanque < 0 {\n            inicio = i + 1\n            tanque = 0\n        }\n    }\n    if total < 0 {\n        fmt.Println(-1)\n    } else {\n        fmt.Println(inicio)\n    }\n}\n",
+            "lines": "30"
+        }
+    ]
+}

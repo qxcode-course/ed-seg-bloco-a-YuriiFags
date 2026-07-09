@@ -27,3 +27,9 @@
 2026-07-04 11:12:49, SELF, v:1, k:ed@arvore-path, self:1, rate:100, code:1
 2026-07-04 20:57:53, SELF, v:1, k:ed@bst_insert, self:1, rate:100, study:38, code:1
 2026-07-04 20:58:02, SELF, v:1, k:ed@arvore-path, self:1, rate:100, study:37, code:1
+2026-07-04 20:58:59, SELF, v:1, k:ed@bst_serial, self:1, rate:100, concept:1, debug:1
+2026-07-04 20:59:07, SELF, v:1, k:ed@bst_insert, self:1, rate:100, study:38, debug:1
+2026-07-04 20:59:12, SELF, v:1, k:ed@arvore-path, self:1, rate:100, study:37, debug:1
+2026-07-04 20:59:22, SELF, v:1, k:ed@bst_serial, self:1, rate:100, concept:1, code:1
+2026-07-04 20:59:26, SELF, v:1, k:ed@bst_insert, self:1, rate:100, study:38, code:1
+2026-07-04 20:59:30, SELF, v:1, k:ed@arvore-path, self:1, rate:100, study:37, code:1
