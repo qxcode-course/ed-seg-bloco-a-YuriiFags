@@ -6,60 +6,42 @@ import (
 	"os"
 )
 
-
+// Não mude a assinatura desta função, ela é a função chamada pelo LeetCode
 func exist(grid [][]byte, word string) bool {
+	lin := len(grid)
+	col := len(grid[0])
 
-	linhas := len(grid)
-	colunas := len(grid[0])
 
 	var dfs func(int, int, int) bool
-
+	 
 	dfs = func(l, c, idx int) bool {
-
-		
 		if idx == len(word) {
 			return true
 		}
-
-		
-		if l < 0 || l >= linhas || c < 0 || c >= colunas {
+		if l < 0 || l >= lin || c < 0 || c >= col{
 			return false
 		}
-
-
 		if grid[l][c] != word[idx] {
 			return false
 		}
-
-		// salva letra original
-		temp := grid[l][c]
-
-		// marca como visitado
+		t := grid[l][c]
 		grid[l][c] = '#'
 
-		
-		encontrou :=
-			dfs(l+1, c, idx+1) || // baixo
-				dfs(l-1, c, idx+1) || // cima
-				dfs(l, c+1, idx+1) || // direita
-				dfs(l, c-1, idx+1) // esquerda
+		achou := dfs(l+1,c,idx+1)||
+		dfs(l-1,c,idx+1)||
+		dfs(l,c+1,idx+1)||
+		dfs(l,c-1, idx+1)
 
-		// desfaz marcação
-		grid[l][c] = temp
-
-		return encontrou
+		grid[l][c] = t
+		return achou
 	}
-
-	// percorre toda matriz
-	for i := 0; i < linhas; i++ {
-		for j := 0; j < colunas; j++ {
-
-			if dfs(i, j, 0) {
+	for i := 0; i < lin;i++ {
+		for j := 0; j < col; j++ {
+			if dfs(i,j,0){
 				return true
 			}
 		}
 	}
-
 	return false
 }
 
